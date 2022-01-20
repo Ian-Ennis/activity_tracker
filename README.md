@@ -4,6 +4,7 @@ Leg-up is an activity tracker that helps keep track of all your daily activities
 Whether it's meditating, running, or hiking, see how much you've progressed and start
 building your habits for a healthier future. 
 
+![Screen Shot 2022-01-20 at 12 13 53 PM](https://user-images.githubusercontent.com/89321676/150406593-4f2955d4-0338-44db-a282-2aa9177b5912.png)
 
 User Stories
 
