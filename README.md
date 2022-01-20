@@ -22,6 +22,10 @@ Stretch Goals
 
 - A progress bar
 - See data that's been logged over time
+- Add a difficulty/intesity and a way to sort by difficulty
+
+
+
 
 
 ![Screen Shot 2022-01-20 at 8 34 32 AM](https://user-images.githubusercontent.com/67617842/150400839-bae9bbc5-dd26-4b9a-97c8-1bdbbc815416.png)
