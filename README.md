@@ -25,10 +25,6 @@ Stretch Goals
 - See data that's been logged over time
 - Add a difficulty/intesity and a way to sort by difficulty
 
-
-
-
-
 ![Screen Shot 2022-01-20 at 8 34 32 AM](https://user-images.githubusercontent.com/67617842/150400839-bae9bbc5-dd26-4b9a-97c8-1bdbbc815416.png)
 ![Screen Shot 2022-01-20 at 8 34 48 AM](https://user-images.githubusercontent.com/67617842/150400870-412d6fbc-eea3-4aae-886b-c487d6260abf.png)
 ![Screen Shot 2022-01-20 at 8 35 03 AM](https://user-images.githubusercontent.com/67617842/150400908-6392b936-d3fd-431c-96dc-dbe61d28a0a3.png)
