@@ -5,9 +5,7 @@ export default function App () {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
 
-  const header = () => {
-    return <h1>Welcome!</h1>
-  }
+  const header = <h1>Welcome!</h1>
 
   return (
     <div className='App'>
