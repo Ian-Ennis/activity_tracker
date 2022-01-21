@@ -1,11 +1,13 @@
 import { useState } from 'react'
 import User from './components/User'
+import Login from './components/Login'
 
 export default function App () {
-  const [username, setUsername] = useState('')
-  const [password, setPassword] = useState('')
+  const [user, setUser] = useState();
 
-  const header = <h1>Welcome!</h1>
+  if (!user) return <Login onLogin={setUser} />;
+  
+  const header = <h1>Leg Up</h1>
 
   return (
     <div className='App'>
