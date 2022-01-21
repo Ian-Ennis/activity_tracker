@@ -1,13 +1,14 @@
-import './App.css';
-import User from "./components/User"
+import "./App.css";
+import User from "./components/User";
 
 export default function App() {
 
-  const header = () => <h1>Header</h1>
+  const header = <h1>Leg-Up</h1>
+
 
   return (
     <div className="App">
-      <User header={header}/>
+      <User header={header} />
     </div>
   );
 }
