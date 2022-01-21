@@ -1,16 +1,7 @@
-puts "Deleting..."
+# puts "Deleting..."
+# puts "Done"
 
-User.destroy_all
-
-puts "Done"
-
-
-puts "Creating users"
-User.create(name: "Billy Jean", password: "W@sNotmyM0ther$")
-User.create(name: "Buffy Summers", password: "D@wntheKey!")
-User.create(name: "Boo Radley", password: "M0ck1ngB1rd")
-User.create(name: "Britney Spears", password: "HitMeB@by1M0reT1me!")
-puts "Created users"
+# User data
 
 # Meditation data
 
