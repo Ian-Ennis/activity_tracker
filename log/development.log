@@ -244,3 +244,11 @@ app/controllers/api/v1/users_controller.rb:8: syntax error, unexpected '}', expe
 app/controllers/api/v1/users_controller.rb:10: syntax error, unexpected '}', expecting '}'
 app/controllers/api/v1/users_controller.rb:8: syntax error, unexpected '}', expecting `end'
 app/controllers/api/v1/users_controller.rb:10: syntax error, unexpected '}', expecting '}'
+Started GET "/api/v1/profile" for ::1 at 2022-01-24 11:24:38 -0700
+Processing by Api::V1::UsersController#profile as */*
+  Parameters: {"user"=>{"username"=>"ian", "password"=>"[FILTERED]"}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 3ms (Views: 2.9ms | Allocations: 690)
+
+
