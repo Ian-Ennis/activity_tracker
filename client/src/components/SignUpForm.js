@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 export default function SignUpForm ({ onLogin }) {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
+  const [email, setEmail] = useState('')
   const [errors, setErrors] = useState([])
   const [isLoading, setIsLoading] = useState(false)
 
@@ -16,6 +17,7 @@ export default function SignUpForm ({ onLogin }) {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
+        email,
         username,
         password
       })
@@ -31,6 +33,13 @@ export default function SignUpForm ({ onLogin }) {
 
   return (
     <form onSubmit={handleSubmit}>
+      <label htmlFor='email'>Email</label>
+      <input
+        type='text'
+        id='email'
+        value={email}
+        onChange={e => setEmail(e.target.value)}
+      />
       <label htmlFor='username'>Username</label>
       <input
         type='text'
