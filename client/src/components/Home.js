@@ -13,6 +13,14 @@ export default function Home({ header, activity, setActivity }) {
     { value: "create_new", label: "✏️ Add your own activity!" },
   ];
   const [activityOptions, setActivityOptions] = useState(initialOptions);
+  const [stateUpdater, setStateUpdater] = useState("");
+  // const [activityState, setActivityState] = useState('');
+
+  function selectActivity(e) {
+    console.log("inside update activity function");
+    console.log(e.value);
+    setActivity(e.value);
+  }
 
   useEffect(() => {
     fetch(`/activities`)
@@ -20,79 +28,76 @@ export default function Home({ header, activity, setActivity }) {
         if (response.ok) {
           return response.json();
         } else {
-          throw new Error("Bad response");
+          console.log("Reponse was bad");
         }
       })
-      .then(setActivityOptions)
+      .then(console.log("attempt to fetch activities"))
       .catch((err) => {
-        console.log(`failed to fetch activities`);
+        console.log(`${err}; failed to fetch activities`);
       });
   }, []);
-
-  function updateActivity(e) {
-    console.log("inside update activity function");
-    console.log(e.value);
-    setActivity(e.value);
-  }
 
   function handleMeditationSubmit(e) {
     e.preventDefault();
     console.log(e.target);
-    // POST request
-    const medSession = {
-      time,
-      date,
-    };
+    setStateUpdater(activity);
+    // console.log(stateUpdater)
 
-    fetch("/meditation"),
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(medSession),
-      };
+    // POST request
+    // const medSession = {
+    //   time,
+    //   date,
+    // };
+
+    // fetch("/meditation"),
+    //   {
+    //     method: "POST",
+    //     headers: {
+    //       "Content-Type": "application/json",
+    //     },
+    //     body: JSON.stringify(medSession),
+    //   };
   }
 
   function handleYogaSubmit(e) {
     e.preventDefault();
     console.log(e.target);
     // POST request
-    const yogaSession = {
-      type,
-      time,
-      date,
-    };
+    // const yogaSession = {
+    //   type,
+    //   time,
+    //   date,
+    // };
 
-    fetch("/yoga"),
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(yogaSession),
-      };
+    // fetch("/yoga"),
+    //   {
+    //     method: "POST",
+    //     headers: {
+    //       "Content-Type": "application/json",
+    //     },
+    //     body: JSON.stringify(yogaSession),
+    //   };
   }
 
   function handleCardioSubmit(e) {
     e.preventDefault();
     console.log(e.target);
     // POST request
-    const cardioSession = {
-      type,
-      distance,
-      time,
-      date,
-    };
+    // const cardioSession = {
+    //   type,
+    //   distance,
+    //   time,
+    //   date,
+    // };
 
-    fetch("/cardio"),
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(cardioSession),
-      };
+    // fetch("/cardio"),
+    //   {
+    //     method: "POST",
+    //     headers: {
+    //       "Content-Type": "application/json",
+    //     },
+    //     body: JSON.stringify(cardioSession),
+    //   };
   }
 
   function handleNewActivitySubmit(e) {
@@ -116,8 +121,7 @@ export default function Home({ header, activity, setActivity }) {
         autofocus
         isSearchable
         placeholder="Select activity"
-        // onClick={fetchActivities()}
-        onChange={updateActivity}
+        onChange={selectActivity}
         options={activityOptions}
       />
       {activity === "meditation" ? (
@@ -136,10 +140,22 @@ export default function Home({ header, activity, setActivity }) {
   );
 }
 
-// Learn how to set state based on e.value
+// Learn how to do a POST on a submit event
 // For monday: learn how to do a fetch on a click event
-// Create a form to be rendered for each activity selection
+// Create a form to be rendered for each activity selection..?
 // Learn how to update state upon setState if needed
+// I think setting state on submit button will re-render and re-fetch updated tables?
+
+// Back end
+// Add login database code by merging ian_practice with main
+// I think the routes we'll need for home are... /activities [:index] (GET)
+// And /activities/meditation [:create] ()
+// And /activities/yoga [:create]
+// And /activities/cardio [:create]
+
+// Goals:
+// Decide how to show and build the database entries for meditation, yoga and cardio in their own tables
+// Make a [:update] (PATCH) route, and [:destroy] (DELETE route) for these tables
 
 // code for later
 //   function customTheme(theme) {
