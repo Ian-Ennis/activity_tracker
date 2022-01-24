@@ -1,0 +1,2 @@
+class CardiosController < ApplicationController
+end

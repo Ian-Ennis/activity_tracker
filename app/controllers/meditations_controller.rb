@@ -1,0 +1,2 @@
+class MeditationsController < ApplicationController
+end
