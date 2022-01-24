@@ -1,14 +1,15 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Select from "react-select";
-import MeditationForm from './MeditationForm'
+import MeditationForm from "./MeditationForm";
 import YogaForm from "./YogaForm";
-import CardioForm from './CardioForm'
+import CardioForm from "./CardioForm";
+import NewActivityForm from "./NewActivityForm";
 
 export default function Home({ header, activity, setActivity }) {
   const initialOptions = [
-      { value: "meditation", label: "🧘 Meditation" },
-      { value: "yoga", label: "🤸‍♂️ Yoga" },
-      { value: "cardio", label: "🏃🏽 Cardio" },
+    { value: "meditation", label: "🧘 Meditation" },
+    { value: "yoga", label: "🤸‍♂️ Yoga" },
+    { value: "cardio", label: "🏃🏽 Cardio" },
     { value: "create_new", label: "✏️ Add your own activity!" },
   ];
   const [activityOptions, setActivityOptions] = useState(initialOptions);
@@ -30,24 +31,75 @@ export default function Home({ header, activity, setActivity }) {
 
   function updateActivity(e) {
     console.log("inside update activity function");
-    //   console.log(e.value)
+    console.log(e.value);
     setActivity(e.value);
   }
 
   function handleMeditationSubmit(e) {
-      e.preventDefault();
-      console.log(e.target)
+    e.preventDefault();
+    console.log(e.target);
+    // POST request
+    const medSession = {
+      time,
+      date,
+    };
+
+    fetch("/meditation"),
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(medSession),
+      };
   }
 
   function handleYogaSubmit(e) {
     e.preventDefault();
-    console.log(e.target)
-}
+    console.log(e.target);
+    // POST request
+    const yogaSession = {
+      type,
+      time,
+      date,
+    };
 
-function handleCardioSubmit(e) {
-  e.preventDefault();
-  console.log(e.target)
-}
+    fetch("/yoga"),
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(yogaSession),
+      };
+  }
+
+  function handleCardioSubmit(e) {
+    e.preventDefault();
+    console.log(e.target);
+    // POST request
+    const cardioSession = {
+      type,
+      distance,
+      time,
+      date,
+    };
+
+    fetch("/cardio"),
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(cardioSession),
+      };
+  }
+
+  function handleNewActivitySubmit(e) {
+    e.preventDefault();
+    console.log(e.target);
+    // POST request
+  }
 
   return (
     <div>
@@ -68,9 +120,18 @@ function handleCardioSubmit(e) {
         onChange={updateActivity}
         options={activityOptions}
       />
-    {activity === 'meditation' ? <MeditationForm handleMeditationSubmit={handleMeditationSubmit}/> : null}
-    {activity === 'yoga' ? <YogaForm handleYogaSubmit={handleYogaSubmit}/> : null}
-    {activity === 'cardio' ? <CardioForm handleCardioSubmit={handleCardioSubmit}/> : null}
+      {activity === "meditation" ? (
+        <MeditationForm handleMeditationSubmit={handleMeditationSubmit} />
+      ) : null}
+      {activity === "yoga" ? (
+        <YogaForm handleYogaSubmit={handleYogaSubmit} />
+      ) : null}
+      {activity === "cardio" ? (
+        <CardioForm handleCardioSubmit={handleCardioSubmit} />
+      ) : null}
+      {activity === "create_new" ? (
+        <NewActivityForm handleNewActivitySubmit={handleNewActivitySubmit} />
+      ) : null}
     </div>
   );
 }
