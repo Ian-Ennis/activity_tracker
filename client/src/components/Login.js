@@ -2,12 +2,11 @@ import { useState } from 'react'
 import LoginForm from './LoginForm'
 import SignUpForm from './SignUpForm'
 
-export default function Login ({ header, onLogin }) {
+export default function Login ({ onLogin }) {
   const [showLogin, setShowLogin] = useState(true)
 
   return (
     <div>
-      {header}
       {showLogin ? (
         <div>
           <LoginForm onLogin={onLogin} />
