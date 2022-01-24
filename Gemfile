@@ -53,4 +53,6 @@ gem "active_model_serializers", "~> 0.10.12"
 gem "faker", "~> 2.19"
 
 # need jwt gem 
+gem 'jwt', '~> 1.5', '>= 1.5.4'
+
 
