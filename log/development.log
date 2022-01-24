@@ -96,3 +96,151 @@ Started GET "/api/v1/users" for ::1 at 2022-01-21 11:41:42 -0700
   
 ActionController::RoutingError (No route matches [GET] "/api/v1/users"):
   
+Started PATCH "/api/v1/login" for ::1 at 2022-01-24 10:55:32 -0700
+  
+SyntaxError (/Users/Ian/Development/code/mod4/activity_tracker/leg_up_activity_app/config/routes.rb:7: syntax error, unexpected ':', expecting `end'
+      get: '/profile', to: 'users#profi...
+         ^
+/Users/Ian/Development/code/mod4/activity_tracker/leg_up_activity_app/config/routes.rb:7: syntax error, unexpected ',', expecting `end'
+      get: '/profile', to: 'users#profile' 
+                     ^
+/Users/Ian/Development/code/mod4/activity_tracker/leg_up_activity_app/config/routes.rb:9: syntax error, unexpected `end', expecting end-of-input
+  end
+  ^~~
+):
+  
+config/routes.rb:7: syntax error, unexpected ':', expecting `end'
+config/routes.rb:7: syntax error, unexpected ',', expecting `end'
+config/routes.rb:9: syntax error, unexpected `end', expecting end-of-input
+config/routes.rb:7: syntax error, unexpected ':', expecting `end'
+config/routes.rb:7: syntax error, unexpected ',', expecting `end'
+config/routes.rb:9: syntax error, unexpected `end', expecting end-of-input
+Error occurred while parsing request parameters.
+Contents:
+
+{
+    "user" {
+        "username" : "ian",
+        "password": "nonyabuziness"
+    }
+}
+Started PATCH "/api/v1/login" for ::1 at 2022-01-24 10:55:51 -0700
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [PATCH] "/api/v1/login"):
+  
+Started PATCH "/api/v1/login" for ::1 at 2022-01-24 10:56:41 -0700
+  
+SyntaxError (/Users/Ian/Development/code/mod4/activity_tracker/leg_up_activity_app/config/routes.rb:7: syntax error, unexpected ':', expecting `end'
+      get: '/profile', to: 'users#profi...
+         ^
+/Users/Ian/Development/code/mod4/activity_tracker/leg_up_activity_app/config/routes.rb:7: syntax error, unexpected ',', expecting `end'
+      get: '/profile', to: 'users#profile' 
+                     ^
+/Users/Ian/Development/code/mod4/activity_tracker/leg_up_activity_app/config/routes.rb:9: syntax error, unexpected `end', expecting end-of-input
+  end
+  ^~~
+):
+  
+config/routes.rb:7: syntax error, unexpected ':', expecting `end'
+config/routes.rb:7: syntax error, unexpected ',', expecting `end'
+config/routes.rb:9: syntax error, unexpected `end', expecting end-of-input
+config/routes.rb:7: syntax error, unexpected ':', expecting `end'
+config/routes.rb:7: syntax error, unexpected ',', expecting `end'
+config/routes.rb:9: syntax error, unexpected `end', expecting end-of-input
+Started PATCH "/api/v1/login" for ::1 at 2022-01-24 10:57:19 -0700
+  
+ActionController::RoutingError (No route matches [PATCH] "/api/v1/login"):
+  
+Started GET "/api/v1/login" for ::1 at 2022-01-24 10:58:01 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/login"):
+  
+Started POST "/api/v1/login" for ::1 at 2022-01-24 10:58:09 -0700
+  
+SyntaxError (/Users/Ian/Development/code/mod4/activity_tracker/leg_up_activity_app/app/controllers/api/v1/auth_controller.rb:8: syntax error, unexpected '}', expecting `end'
+...wt: token }, status: :accepted}
+...                              ^
+/Users/Ian/Development/code/mod4/activity_tracker/leg_up_activity_app/app/controllers/api/v1/auth_controller.rb:10: syntax error, unexpected '}', expecting '}'
+...e: "Invalid password/username"}, status: :unauthorized
+...                              ^
+):
+  
+app/controllers/api/v1/auth_controller.rb:8: syntax error, unexpected '}', expecting `end'
+app/controllers/api/v1/auth_controller.rb:10: syntax error, unexpected '}', expecting '}'
+app/controllers/api/v1/auth_controller.rb:8: syntax error, unexpected '}', expecting `end'
+app/controllers/api/v1/auth_controller.rb:10: syntax error, unexpected '}', expecting '}'
+Started GET "/api/v1/profile" for ::1 at 2022-01-24 10:58:21 -0700
+  
+SyntaxError (/Users/Ian/Development/code/mod4/activity_tracker/leg_up_activity_app/app/controllers/api/v1/users_controller.rb:8: syntax error, unexpected '}', expecting `end'
+...jwt: token }, status: :created}
+...                              ^
+/Users/Ian/Development/code/mod4/activity_tracker/leg_up_activity_app/app/controllers/api/v1/users_controller.rb:10: syntax error, unexpected '}', expecting '}'
+...rror: "Could not create user!"}, status: :unprocessable_enti...
+...                              ^
+/Users/Ian/Development/code/mod4/activity_tracker/leg_up_activity_app/app/controllers/api/v1/users_controller.rb:23: syntax error, unexpected `end', expecting end-of-input):
+  
+app/controllers/api/v1/users_controller.rb:8: syntax error, unexpected '}', expecting `end'
+app/controllers/api/v1/users_controller.rb:10: syntax error, unexpected '}', expecting '}'
+app/controllers/api/v1/users_controller.rb:23: syntax error, unexpected `end', expecting end-of-input
+app/controllers/api/v1/users_controller.rb:8: syntax error, unexpected '}', expecting `end'
+app/controllers/api/v1/users_controller.rb:10: syntax error, unexpected '}', expecting '}'
+app/controllers/api/v1/users_controller.rb:23: syntax error, unexpected `end', expecting end-of-input
+Started GET "/api/v1/profile" for ::1 at 2022-01-24 11:00:25 -0700
+  
+SyntaxError (/Users/Ian/Development/code/mod4/activity_tracker/leg_up_activity_app/app/controllers/api/v1/users_controller.rb:8: syntax error, unexpected '}', expecting `end'
+... jwt: token}, status: :created}
+...                              ^
+/Users/Ian/Development/code/mod4/activity_tracker/leg_up_activity_app/app/controllers/api/v1/users_controller.rb:10: syntax error, unexpected '}', expecting '}'
+...rror: "Could not create user!"}, status: :unprocessable_enti...
+...                              ^
+/Users/Ian/Development/code/mod4/activity_tracker/leg_up_activity_app/app/controllers/api/v1/users_controller.rb:23: syntax error, unexpected `end', expecting end-of-input):
+  
+app/controllers/api/v1/users_controller.rb:8: syntax error, unexpected '}', expecting `end'
+app/controllers/api/v1/users_controller.rb:10: syntax error, unexpected '}', expecting '}'
+app/controllers/api/v1/users_controller.rb:23: syntax error, unexpected `end', expecting end-of-input
+app/controllers/api/v1/users_controller.rb:8: syntax error, unexpected '}', expecting `end'
+app/controllers/api/v1/users_controller.rb:10: syntax error, unexpected '}', expecting '}'
+app/controllers/api/v1/users_controller.rb:23: syntax error, unexpected `end', expecting end-of-input
+Started GET "/api/v1/profile" for ::1 at 2022-01-24 11:00:36 -0700
+  
+SyntaxError (/Users/Ian/Development/code/mod4/activity_tracker/leg_up_activity_app/app/controllers/api/v1/users_controller.rb:8: syntax error, unexpected '}', expecting `end'
+... jwt: token}, status: :created}
+...                              ^
+/Users/Ian/Development/code/mod4/activity_tracker/leg_up_activity_app/app/controllers/api/v1/users_controller.rb:10: syntax error, unexpected '}', expecting '}'
+...rror: "Could not create user!"}, status: :unprocessable_enti...
+...                              ^
+):
+  
+app/controllers/api/v1/users_controller.rb:8: syntax error, unexpected '}', expecting `end'
+app/controllers/api/v1/users_controller.rb:10: syntax error, unexpected '}', expecting '}'
+app/controllers/api/v1/users_controller.rb:8: syntax error, unexpected '}', expecting `end'
+app/controllers/api/v1/users_controller.rb:10: syntax error, unexpected '}', expecting '}'
+Started GET "/api/v1/profile" for ::1 at 2022-01-24 11:00:48 -0700
+  
+SyntaxError (/Users/Ian/Development/code/mod4/activity_tracker/leg_up_activity_app/app/controllers/api/v1/users_controller.rb:8: syntax error, unexpected '}', expecting `end'
+... jwt: token}, status: :created}
+...                              ^
+/Users/Ian/Development/code/mod4/activity_tracker/leg_up_activity_app/app/controllers/api/v1/users_controller.rb:10: syntax error, unexpected '}', expecting '}'
+...rror: "Could not create user!"}, status: :unprocessable_enti...
+...                              ^
+):
+  
+app/controllers/api/v1/users_controller.rb:8: syntax error, unexpected '}', expecting `end'
+app/controllers/api/v1/users_controller.rb:10: syntax error, unexpected '}', expecting '}'
+app/controllers/api/v1/users_controller.rb:8: syntax error, unexpected '}', expecting `end'
+app/controllers/api/v1/users_controller.rb:10: syntax error, unexpected '}', expecting '}'
+Started GET "/api/v1/profile" for ::1 at 2022-01-24 11:01:06 -0700
+  
+SyntaxError (/Users/Ian/Development/code/mod4/activity_tracker/leg_up_activity_app/app/controllers/api/v1/users_controller.rb:8: syntax error, unexpected '}', expecting `end'
+... jwt: token}, status: :created}
+...                              ^
+/Users/Ian/Development/code/mod4/activity_tracker/leg_up_activity_app/app/controllers/api/v1/users_controller.rb:10: syntax error, unexpected '}', expecting '}'
+...rror: "Could not create user!"}, status: :unprocessable_enti...
+...                              ^
+):
+  
+app/controllers/api/v1/users_controller.rb:8: syntax error, unexpected '}', expecting `end'
+app/controllers/api/v1/users_controller.rb:10: syntax error, unexpected '}', expecting '}'
+app/controllers/api/v1/users_controller.rb:8: syntax error, unexpected '}', expecting `end'
+app/controllers/api/v1/users_controller.rb:10: syntax error, unexpected '}', expecting '}'
