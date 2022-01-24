@@ -7,6 +7,8 @@ export default function SignUpForm ({ onLogin }) {
   const [errors, setErrors] = useState([])
   const [isLoading, setIsLoading] = useState(false)
 
+  // using the path to grab information
+
   function handleSubmit (e) {
     e.preventDefault()
     setErrors([])
@@ -40,19 +42,19 @@ export default function SignUpForm ({ onLogin }) {
         value={username}
         onChange={e => setUsername(e.target.value)}
       />
-      <label htmlFor='password'>Password</label>
-      <input
-        type='password'
-        id='password'
-        value={password}
-        onChange={e => setPassword(e.target.value)}
-      />
       <label htmlFor='email'>Email</label>
       <input
         type='text'
         id='email'
         value={email}
         onChange={e => setEmail(e.target.value)}
+      />
+      <label htmlFor='password'>Password</label>
+      <input
+        type='password'
+        id='password'
+        value={password}
+        onChange={e => setPassword(e.target.value)}
       />
       <button type='submit'>{isLoading ? 'Loading...' : 'Sign Up'}</button>
     </form>
