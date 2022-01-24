@@ -11,7 +11,7 @@ export default function App () {
 
   return (
     <div className='App'>
-      <User header={header} />
+      <Login header={header} />
     </div>
   )
 }
