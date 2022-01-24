@@ -11,15 +11,15 @@ export default function SignUpForm ({ onLogin }) {
     e.preventDefault()
     setErrors([])
     setIsLoading(true)
-    fetch('/signup', {
+    fetch('/api/v1/profile', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        email,
         username,
-        password
+        password,
+        email
       })
     }).then(r => {
       setIsLoading(false)
@@ -33,13 +33,6 @@ export default function SignUpForm ({ onLogin }) {
 
   return (
     <form onSubmit={handleSubmit}>
-      <label htmlFor='email'>Email</label>
-      <input
-        type='text'
-        id='email'
-        value={email}
-        onChange={e => setEmail(e.target.value)}
-      />
       <label htmlFor='username'>Username</label>
       <input
         type='text'
@@ -53,6 +46,13 @@ export default function SignUpForm ({ onLogin }) {
         id='password'
         value={password}
         onChange={e => setPassword(e.target.value)}
+      />
+      <label htmlFor='email'>Email</label>
+      <input
+        type='text'
+        id='email'
+        value={email}
+        onChange={e => setEmail(e.target.value)}
       />
       <button type='submit'>{isLoading ? 'Loading...' : 'Sign Up'}</button>
     </form>
