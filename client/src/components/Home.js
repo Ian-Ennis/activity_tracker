@@ -8,9 +8,8 @@ export default function Home({ header, activity, setActivity }) {
   const initialOptions = [
     { value: "meditation", label: "🧘 Meditation" },
     { value: "yoga", label: "🤸‍♂️ Yoga" },
-    { value: "cardio", label: "🏃🏽 Cardio" },
-    { value: "create_new", label: "✏️ Add your own activity!" },
-  ];
+    { value: "cardio", label: "🏃🏽 Cardio" }
+    ];
   const [activityOptions, setActivityOptions] = useState(initialOptions);
   const [meditationSessions, setmeditationSessions] = useState(false);
   const [yogaSessions, setyogaSessions] = useState(false);
@@ -101,7 +100,7 @@ export default function Home({ header, activity, setActivity }) {
 
   function seeProgress() {
     console.log(activity);
-    
+
   }
 
   return (
