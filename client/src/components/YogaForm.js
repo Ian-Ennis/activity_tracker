@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function YogaForm({ handleYogaSubmit, seeProgress}) {
+export default function YogaForm({ handleYogaSubmit, seeProgress }) {
   return (
     <div class="yoga_form">
       <h3>Yoga Session</h3>

@@ -4,7 +4,6 @@ import MeditationForm from "./MeditationForm";
 import YogaForm from "./YogaForm";
 import CardioForm from "./CardioForm";
 
-
 export default function Home({ header, activity, setActivity }) {
   const initialOptions = [
     { value: "meditation", label: "🧘 Meditation" },
@@ -13,10 +12,9 @@ export default function Home({ header, activity, setActivity }) {
     { value: "create_new", label: "✏️ Add your own activity!" },
   ];
   const [activityOptions, setActivityOptions] = useState(initialOptions);
-  const [meditationSessions, setmeditationSessions] = useState(false)
-  const [yogaSessions, setyogaSessions] = useState(false)
-  const [cardioSessions, setcardioSessions] = useState(false)
-
+  const [meditationSessions, setmeditationSessions] = useState(false);
+  const [yogaSessions, setyogaSessions] = useState(false);
+  const [cardioSessions, setcardioSessions] = useState(false);
 
   function selectActivity(e) {
     console.log("inside update activity function");
@@ -40,7 +38,7 @@ export default function Home({ header, activity, setActivity }) {
 
   function handleMeditationSubmit(e) {
     e.preventDefault();
-    // setmeditationSessions(true)
+    setmeditationSessions(true)
 
     const time = e.target.time.value;
     const date = e.target.date.value;
@@ -52,14 +50,14 @@ export default function Home({ header, activity, setActivity }) {
       },
       body: JSON.stringify({
         time: time,
-        date: date,
+        date: date
       }),
     });
   }
 
   function handleYogaSubmit(e) {
     e.preventDefault();
-    // setyogaSessions(true)
+    setyogaSessions(true)
 
     const time = e.target.time.value;
     const type = e.target.type.value;
@@ -80,7 +78,7 @@ export default function Home({ header, activity, setActivity }) {
 
   function handleCardioSubmit(e) {
     e.preventDefault();
-    // setcardioSessions(true)
+    setcardioSessions(true)
 
     const type = e.target.type.value;
     const distance = e.target.distance.value;
@@ -102,7 +100,8 @@ export default function Home({ header, activity, setActivity }) {
   }
 
   function seeProgress() {
-    console.log(activity)
+    console.log(activity);
+    
   }
 
   return (
@@ -124,21 +123,29 @@ export default function Home({ header, activity, setActivity }) {
         options={activityOptions}
       />
       {activity === "meditation" ? (
-        <MeditationForm handleMeditationSubmit={handleMeditationSubmit} activity={activity} seeProgress={seeProgress}/>
+        <MeditationForm
+          handleMeditationSubmit={handleMeditationSubmit}
+          activity={activity}
+          seeProgress={seeProgress}
+        />
       ) : null}
       {activity === "yoga" ? (
-        <YogaForm handleYogaSubmit={handleYogaSubmit} activity={activity} seeProgress={seeProgress}/>
+        <YogaForm
+          handleYogaSubmit={handleYogaSubmit}
+          activity={activity}
+          seeProgress={seeProgress}
+        />
       ) : null}
       {activity === "cardio" ? (
-        <CardioForm handleCardioSubmit={handleCardioSubmit} activity={activity} seeProgress={seeProgress}/>
+        <CardioForm
+          handleCardioSubmit={handleCardioSubmit}
+          activity={activity}
+          seeProgress={seeProgress}
+        />
       ) : null}
     </div>
   );
 }
-
-
-
-
 
 // Learn how to do a POST on a submit event
 // For monday: learn how to do a fetch on a click event
@@ -166,4 +173,3 @@ export default function Home({ header, activity, setActivity }) {
 //           }
 //       }
 //   }
-
