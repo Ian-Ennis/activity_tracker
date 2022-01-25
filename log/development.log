@@ -252,6 +252,99 @@ Filter chain halted as :authorized rendered or redirected
 Completed 401 Unauthorized in 3ms (Views: 2.9ms | Allocations: 690)
 
 
+<<<<<<< HEAD
+Started POST "/login" for 127.0.0.1 at 2022-01-24 12:08:05 -0700
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [POST] "/login"):
+  
+Started POST "/signup" for 127.0.0.1 at 2022-01-24 12:09:24 -0700
+  
+ActionController::RoutingError (No route matches [POST] "/signup"):
+  
+Started POST "/profile" for 127.0.0.1 at 2022-01-24 12:09:57 -0700
+  
+ActionController::RoutingError (No route matches [POST] "/profile"):
+  
+Started POST "/api/v1/profile" for ::1 at 2022-01-24 12:11:50 -0700
+  
+ActionController::RoutingError (No route matches [POST] "/api/v1/profile"):
+  
+Started POST "/api/v1/profile" for 127.0.0.1 at 2022-01-24 12:12:09 -0700
+  
+ActionController::RoutingError (No route matches [POST] "/api/v1/profile"):
+  
+Started POST "/profile" for 127.0.0.1 at 2022-01-24 12:14:09 -0700
+  
+ActionController::RoutingError (No route matches [POST] "/profile"):
+  
+Started POST "/api/v1/profile" for 127.0.0.1 at 2022-01-24 12:15:08 -0700
+  
+ActionController::RoutingError (No route matches [POST] "/api/v1/profile"):
+  
+Started POST "/api/v1/profile" for 127.0.0.1 at 2022-01-24 12:15:32 -0700
+  
+ActionController::RoutingError (No route matches [POST] "/api/v1/profile"):
+  
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/api/v1/profile" for 127.0.0.1 at 2022-01-24 12:19:18 -0700
+  
+ActionController::RoutingError (No route matches [POST] "/api/v1/profile"):
+  
+Started POST "/api/v1/profile" for 127.0.0.1 at 2022-01-24 12:21:33 -0700
+  
+ActionController::RoutingError (No route matches [POST] "/api/v1/profile"):
+  
+Started POST "/api/v1/profile" for 127.0.0.1 at 2022-01-24 12:22:19 -0700
+Processing by Api::V1::UsersController#profile as */*
+  Parameters: {"username"=>"sparks626", "password"=>"[FILTERED]", "email"=>"ipatrickenn7@gmail.com", "user"=>{"username"=>"sparks626"}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 1.3ms | ActiveRecord: 14.8ms | Allocations: 652)
+
+
+Started POST "/profile" for 127.0.0.1 at 2022-01-24 12:22:55 -0700
+  
+ActionController::RoutingError (No route matches [POST] "/profile"):
+  
+Started POST "/api/v1/profile" for 127.0.0.1 at 2022-01-24 12:23:40 -0700
+  
+ActionController::RoutingError (No route matches [POST] "/api/v1/profile"):
+  
+Started POST "/api/v1/profile" for 127.0.0.1 at 2022-01-24 12:24:27 -0700
+Processing by Api::V1::UsersController#profile as */*
+  Parameters: {"user"=>{"username"=>"ian", "password"=>"[FILTERED]"}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 1.1ms | ActiveRecord: 0.0ms | Allocations: 391)
+
+
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/api/v1/profile" for 127.0.0.1 at 2022-01-24 12:26:08 -0700
+Processing by Api::V1::UsersController#profile as */*
+  Parameters: {"user"=>{"username"=>"ian", "password"=>"[FILTERED]", "email"=>"ipatrickenn7@gmail.com"}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 199)
+
+
+Started POST "/api/v1/profile" for 127.0.0.1 at 2022-01-24 12:26:11 -0700
+Processing by Api::V1::UsersController#profile as */*
+  Parameters: {"user"=>{"username"=>"ian", "password"=>"[FILTERED]", "email"=>"ipatrickenn7@gmail.com"}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 202)
+
+
+Started POST "/api/v1/profile" for 127.0.0.1 at 2022-01-24 12:26:42 -0700
+Processing by Api::V1::UsersController#profile as */*
+  Parameters: {"username"=>"ian", "password"=>"[FILTERED]", "email"=>"ipatrickenn7@gmail.com", "user"=>{"username"=>"ian"}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.5ms | ActiveRecord: 4.4ms | Allocations: 200)
+
+
+=======
 Started POST "/api/v1/users" for ::1 at 2022-01-24 13:10:47 -0700
   [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
 Processing by Api::V1::UsersController#create as */*
@@ -900,3 +993,205 @@ Migrating to CreateUsers (20220121162353)
   [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(1087325618115650655)[0m
   [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+>>>>>>> debug_login
+Started POST "/api/v1/users" for ::1 at 2022-01-24 14:30:24 -0700
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"marc02", "email"=>"majcher@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "marc02"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "marc02"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 422 Unprocessable Entity in 246ms (Views: 6.6ms | ActiveRecord: 8.1ms | Allocations: 9595)
+
+
+Started POST "/api/v1/users" for ::1 at 2022-01-24 14:30:30 -0700
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"marc03", "email"=>"majcher@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "marc03"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `create'
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "marc03"], ["password_digest", "$2a$12$hke63tnkq8KGtfi0MFwxiu18atGX50Fo/iivgiBnp6diyGpZsNTIG"], ["email", "majcher@gmail.com"], ["created_at", "2022-01-24 21:30:30.847438"], ["updated_at", "2022-01-24 21:30:30.847438"]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (5.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) AND "users"."id" != $2 LIMIT $3[0m  [["username", "marc03"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (2.89ms)
+Completed 201 Created in 236ms (Views: 3.4ms | ActiveRecord: 6.9ms | Allocations: 4600)
+
+
+Started POST "/api/v1/profile" for 127.0.0.1 at 2022-01-24 14:31:02 -0700
+Processing by Api::V1::UsersController#profile as */*
+  Parameters: {"username"=>"marc03", "password"=>"[FILTERED]", "email"=>"majcher@gmail.com", "user"=>{"username"=>"marc03", "email"=>"majcher@gmail.com"}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 205)
+
+
+Started POST "/api/v1/profile" for 127.0.0.1 at 2022-01-24 14:32:07 -0700
+Processing by Api::V1::UsersController#profile as */*
+  Parameters: {"username"=>"marc03", "password"=>"[FILTERED]", "email"=>"majcher@gmail.com", "user"=>{"username"=>"marc03", "email"=>"majcher@gmail.com"}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 203)
+
+
+Started POST "/api/v1/profile" for 127.0.0.1 at 2022-01-24 14:44:19 -0700
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UsersController#profile as */*
+  Parameters: {"username"=>"marc03", "password"=>"[FILTERED]", "email"=>"majcher@gmail.com", "user"=>{"username"=>"marc03", "email"=>"majcher@gmail.com"}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 1.9ms | ActiveRecord: 1.8ms | Allocations: 656)
+
+
+Started POST "/api/v1/users" for ::1 at 2022-01-24 14:44:46 -0700
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"marc03", "email"=>"majcher@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "marc03"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "marc03"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 422 Unprocessable Entity in 246ms (Views: 0.4ms | ActiveRecord: 6.9ms | Allocations: 7947)
+
+
+Started POST "/api/v1/users" for ::1 at 2022-01-24 14:44:51 -0700
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"marc04", "email"=>"majcher@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "marc04"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "marc04"], ["password_digest", "$2a$12$MWCt8dJOV5xx8MSkLi7.duRcryIFTrgjzTbDBGXtNw774xQjovP6."], ["email", "majcher@gmail.com"], ["created_at", "2022-01-24 21:44:52.058468"], ["updated_at", "2022-01-24 21:44:52.058468"]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (5.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) AND "users"."id" != $2 LIMIT $3[0m  [["username", "marc04"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1.38ms)
+Completed 201 Created in 236ms (Views: 1.8ms | ActiveRecord: 6.8ms | Allocations: 6047)
+
+
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/api/v1/profile" for 127.0.0.1 at 2022-01-24 14:46:10 -0700
+Processing by Api::V1::UsersController#profile as */*
+  Parameters: {"username"=>"marc05", "password"=>"[FILTERED]", "email"=>"majcher@gmail.com", "user"=>{"username"=>"marc05", "email"=>"majcher@gmail.com"}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 199)
+
+
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started POST "/api/v1/users" for ::1 at 2022-01-24 14:46:23 -0700
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"marc05", "email"=>"majcher@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "marc05"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `create'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "marc05"], ["password_digest", "$2a$12$95r5szTOvZKlpe9/DzGwEOZNyURrQYyIVmfNXg2EERkl2rNb.ULPm"], ["email", "majcher@gmail.com"], ["created_at", "2022-01-24 21:46:23.330643"], ["updated_at", "2022-01-24 21:46:23.330643"]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (5.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) AND "users"."id" != $2 LIMIT $3[0m  [["username", "marc05"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 201 Created in 225ms (Views: 0.4ms | ActiveRecord: 6.2ms | Allocations: 3427)
+
+
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/api/v1/users" for ::1 at 2022-01-24 14:50:26 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/users"):
+  
+Started GET "/favicon.ico" for ::1 at 2022-01-24 14:50:27 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/api/v1/" for ::1 at 2022-01-24 14:50:33 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1"):
+  
+Started GET "/api/v1/" for ::1 at 2022-01-24 14:50:39 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1"):
+  
+Started GET "/api/" for ::1 at 2022-01-24 14:50:42 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api"):
+  
+Started GET "/" for ::1 at 2022-01-24 14:50:46 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/Ian/.rvm/gems/ruby-2.7.4/gems/railties-6.1.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/Ian/.rvm/gems/ruby-2.7.4/gems/railties-6.1.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 7.8ms | Allocations: 182)
+Completed 200 OK in 15ms (Views: 8.8ms | ActiveRecord: 0.0ms | Allocations: 1572)
+
+
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1087325618115650655)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20220121162353)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.0ms)[0m  [1m[35mDROP TABLE "users"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (2.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20220121162353"]]
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(1087325618115650655)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (27.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "react_rails_api_project_template_development"[0m
+  [1m[35m (29.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "react_rails_api_project_template_test"[0m
+  [1m[35m (141.0ms)[0m  [1m[35mCREATE DATABASE "react_rails_api_project_template_development" ENCODING = 'unicode'[0m
+  [1m[35m (58.1ms)[0m  [1m[35mCREATE DATABASE "react_rails_api_project_template_test" ENCODING = 'unicode'[0m
+  [1m[35m (5.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1087325618115650655)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20220121162353)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220121162353"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-01-24 21:53:30.602999"], ["updated_at", "2022-01-24 21:53:30.602999"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(1087325618115650655)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/api/v1/profile" for 127.0.0.1 at 2022-01-24 15:38:27 -0700
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UsersController#profile as */*
+  Parameters: {"username"=>"marc06", "password"=>"[FILTERED]", "email"=>"majcher@gmail.com", "user"=>{"username"=>"marc06", "email"=>"majcher@gmail.com"}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 1.3ms | ActiveRecord: 1.6ms | Allocations: 657)
+
+
+Started GET "/activities" for 127.0.0.1 at 2022-01-24 17:04:05 -0700
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/activities"):
+  
+Started POST "/api/v1/profile" for 127.0.0.1 at 2022-01-24 17:04:11 -0700
+Processing by Api::V1::UsersController#profile as */*
+  Parameters: {"username"=>"", "password"=>"[FILTERED]", "email"=>"", "user"=>{"username"=>"", "email"=>""}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 2.0ms | ActiveRecord: 2.0ms | Allocations: 652)
+
+
