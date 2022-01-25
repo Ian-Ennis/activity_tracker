@@ -13,14 +13,18 @@ export default function App() {
   return (
     <div className="App">
       <Header header={header} />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/login" element={<Login onLogin={setUser}/>} />
-          <Route path="/home" element={<Home activity={activity} setActivity={setActivity}/>} />
-        </Routes>
-      </BrowserRouter>
+      <Login onLogin={setUser} />
+      <Home setActivity={setActivity} />
     </div>
   );
 }
 
 // npm install react-router-dom
+
+/* <Header header={header} />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/login" element={<Login onLogin={setUser}/>} />
+          <Route path="/home" element={<Home activity={activity} setActivity={setActivity}/>} />
+        </Routes>
+      </BrowserRouter> */

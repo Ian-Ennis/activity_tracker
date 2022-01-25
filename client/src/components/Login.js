@@ -1,16 +1,16 @@
 import { useState } from 'react';
 import LoginForm from './LoginForm';
 import SignUpForm from './SignUpForm';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 
 export default function Login ({ onLogin }) {
   const [showLogin, setShowLogin] = useState(true)
 
-  const navigate = useNavigate()
+//   const navigate = useNavigate()
 
-if (setShowLogin === true) {
-  navigate('/home')
-}
+// if (setShowLogin === true) {
+//   navigate('/home')
+// }
 
   return (
     <div>

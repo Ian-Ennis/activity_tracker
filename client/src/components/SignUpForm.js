@@ -6,21 +6,24 @@ export default function SignUpForm ({ onLogin }) {
   const [email, setEmail] = useState('')
   const [errors, setErrors] = useState([])
   const [isLoading, setIsLoading] = useState(false)
+  // 
 
   function handleSubmit (e) {
     e.preventDefault()
     setErrors([])
     setIsLoading(true)
-    fetch('/api/v1/profile', {
+    fetch('https://localhost:3000/api/v1/users', {
       method: 'POST',
       headers: {
+        Accepts: 'application/json',
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({
+      body: JSON.stringify({user: {
         username,
         password,
         email
-      })
+      }
+      }),
     }).then(r => {
       setIsLoading(false)
       if (r.ok) {
