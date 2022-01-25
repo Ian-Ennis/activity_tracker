@@ -18,6 +18,7 @@ export default function Home({ header, activity, setActivity }) {
   function selectActivity(e) {
     console.log("inside update activity function");
     setActivity(e.value);
+    console.log(activity);
   }
 
   useEffect(() => {
@@ -70,7 +71,7 @@ export default function Home({ header, activity, setActivity }) {
       body: JSON.stringify({
         time: time,
         type: type,
-        date: date
+        date: date,
       }),
     });
   }
@@ -93,7 +94,7 @@ export default function Home({ header, activity, setActivity }) {
         type: type,
         distance: distance,
         time: time,
-        date: date
+        date: date,
       }),
     });
   }
@@ -114,12 +115,12 @@ export default function Home({ header, activity, setActivity }) {
         </p>
       </div>
       <Select
-        autofocus
         className="activity_dropdown"
+        autofocus
         isSearchable
         placeholder="Select activity"
-        onChange={selectActivity}
         options={activityOptions}
+        onChange={selectActivity}
       />
       {activity === "meditation" ? (
         <MeditationForm

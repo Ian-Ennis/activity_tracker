@@ -1,7 +1,3 @@
-# puts "Deleting..."
-# puts "Done"
-
-# User data
 
 # Meditation data
 
