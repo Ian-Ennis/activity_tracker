@@ -170,7 +170,6 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    sqlite3 (1.4.2)
     thor (1.1.0)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
@@ -199,11 +198,10 @@ DEPENDENCIES
   rspec-rails (~> 5.0.0)
   shoulda-matchers (~> 4.0)
   spring
-  sqlite3 (~> 1.4)
   tzinfo-data
 
 RUBY VERSION
    ruby 2.7.4p191
 
 BUNDLED WITH
-   2.2.28
+   2.3.5
