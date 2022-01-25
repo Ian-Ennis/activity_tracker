@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import { Switch, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Home from "./components/Home";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 export default function App() {
   const [user, setUser] = useState();
@@ -11,14 +11,17 @@ export default function App() {
 
   return (
     <div className="App">
-      <Header header={header}/>
-      <Router>
-        <Routes>
-          <Route
-            exact path="/home" element={
-              <Home activity={activity} setActivity={setActivity} /> }/>
-        </Routes>
-      </Router>
+      <Header header={header} />
+      <Switch>
+        <Route path="/login">
+          <Login />
+        </Route>
+        <Route path="/home">
+          <Home activity={activity} setActivity={setActivity} />
+        </Route>
+      </Switch>
     </div>
   );
 }
+
+// npm install react-router-dom

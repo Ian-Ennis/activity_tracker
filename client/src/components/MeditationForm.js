@@ -8,7 +8,7 @@ export default function MeditationForm({ handleMeditationSubmit, seeProgress }) 
         <input type="text" name="time" placeholder="Time (minutes)" />
         <input type="date" name="date" />
         <button type="submit">Submit</button>
-      <button onClick={seeProgress}>See my progress!</button>
+      <button onClick={() => seeProgress}>See my progress!</button>
       </form>
     </div>
   );

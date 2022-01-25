@@ -3,7 +3,6 @@ import Select from "react-select";
 import MeditationForm from "./MeditationForm";
 import YogaForm from "./YogaForm";
 import CardioForm from "./CardioForm";
-import {useNavigate} from 'react-router-dom';
 
 
 export default function Home({ header, activity, setActivity }) {
@@ -41,7 +40,7 @@ export default function Home({ header, activity, setActivity }) {
 
   function handleMeditationSubmit(e) {
     e.preventDefault();
-    setmeditationSessions(true)
+    // setmeditationSessions(true)
 
     const time = e.target.time.value;
     const date = e.target.date.value;
@@ -60,7 +59,7 @@ export default function Home({ header, activity, setActivity }) {
 
   function handleYogaSubmit(e) {
     e.preventDefault();
-    setyogaSessions(true)
+    // setyogaSessions(true)
 
     const time = e.target.time.value;
     const type = e.target.type.value;
@@ -81,7 +80,7 @@ export default function Home({ header, activity, setActivity }) {
 
   function handleCardioSubmit(e) {
     e.preventDefault();
-    setcardioSessions(true)
+    // setcardioSessions(true)
 
     const type = e.target.type.value;
     const distance = e.target.distance.value;
@@ -102,11 +101,8 @@ export default function Home({ header, activity, setActivity }) {
     });
   }
 
-  const history = useNavigate()
-
   function seeProgress() {
     console.log(activity)
-    history(`/${activity}`)
   }
 
   return (
