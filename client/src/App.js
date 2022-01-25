@@ -1,20 +1,24 @@
-import { useState } from 'react'
-import User from './components/User'
-import Home from './components/Home'
-// import Login from './components/Login'
+import React, { useState, useEffect } from "react";
+import Header from "./components/Header";
+import Home from "./components/Home";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-export default function App () {
+export default function App() {
   const [user, setUser] = useState();
-  const [activity, setActivity] = useState('');
+  const [activity, setActivity] = useState("");
 
-  const header = <h1>Leg Up</h1>
+  const header = <h1>Leg Up</h1>;
 
-  // if (!user) return <Login onLogin={setUser} />;
-  
   return (
-    <div className='App'>
-      <User header={header} />
-      <Home header={header} activity={activity} setActivity={setActivity}/>
+    <div className="App">
+      <Header header={header}/>
+      <Router>
+        <Routes>
+          <Route
+            exact path="/home" element={
+              <Home activity={activity} setActivity={setActivity} /> }/>
+        </Routes>
+      </Router>
     </div>
-  )
+  );
 }

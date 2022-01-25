@@ -1,36 +1,31 @@
-// import { useState } from 'react';
-// import LoginForm from './LoginForm';
-// import SignUpForm from './SignUpForm';
+import { useState } from 'react'
+import LoginForm from './LoginForm'
+import SignUpForm from './SignUpForm'
 
-// export default function Login( {onLogin} ) {
-//     const [showLogin, setShowLogin] = useState(true);
+export default function Login ({ onLogin }) {
+  const [showLogin, setShowLogin] = useState(true)
 
-//     return (
-//        <Wrapper>
-//            <Logo>Leg Up</Logo>
-//            {showLogin ? (
-//                <>
-//                <LoginForm onLogin={onLogin} />
-//                <Divider />
-//                <p>
-//                    Need an account? &nbsp;
-//                    <Button onClick={() => setShowLogin(false)}>
-//                        Create Account
-//                    </Button>
-//                </p>
-//                </>
-//            ) : (
-//                <>
-//                <SignUpForm onLogin={onLogin} />
-//                <Divider />
-//                <p>
-//                    Have an account already? &nbsp;
-//                    <Button onClick={() => setShowLogin(true)}>
-//                        Login In 
-//                    </Button>
-//                </p>
-//                </>
-//            )}
-//        </Wrapper> 
-//     );
-// };
+  return (
+    <div>
+      {showLogin ? (
+        <div>
+          <LoginForm onLogin={onLogin} />
+          <br />
+          <p>
+            Need an account? &nbsp;
+            <button onClick={() => setShowLogin(false)}>Create Account</button>
+          </p>
+        </div>
+      ) : (
+        <div>
+          <SignUpForm onLogin={onLogin} />
+          <br />
+          <p>
+            Have an account already? &nbsp;
+            <button onClick={() => setShowLogin(true)}>Login In</button>
+          </p>
+        </div>
+      )}
+    </div>
+  )
+}

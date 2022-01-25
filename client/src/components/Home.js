@@ -3,6 +3,8 @@ import Select from "react-select";
 import MeditationForm from "./MeditationForm";
 import YogaForm from "./YogaForm";
 import CardioForm from "./CardioForm";
+import {useNavigate} from 'react-router-dom';
+
 
 export default function Home({ header, activity, setActivity }) {
   const initialOptions = [
@@ -12,6 +14,10 @@ export default function Home({ header, activity, setActivity }) {
     { value: "create_new", label: "✏️ Add your own activity!" },
   ];
   const [activityOptions, setActivityOptions] = useState(initialOptions);
+  const [meditationSessions, setmeditationSessions] = useState(false)
+  const [yogaSessions, setyogaSessions] = useState(false)
+  const [cardioSessions, setcardioSessions] = useState(false)
+
 
   function selectActivity(e) {
     console.log("inside update activity function");
@@ -35,6 +41,8 @@ export default function Home({ header, activity, setActivity }) {
 
   function handleMeditationSubmit(e) {
     e.preventDefault();
+    setmeditationSessions(true)
+
     const time = e.target.time.value;
     const date = e.target.date.value;
 
@@ -52,6 +60,8 @@ export default function Home({ header, activity, setActivity }) {
 
   function handleYogaSubmit(e) {
     e.preventDefault();
+    setyogaSessions(true)
+
     const time = e.target.time.value;
     const type = e.target.type.value;
     const date = e.target.date.value;
@@ -71,6 +81,8 @@ export default function Home({ header, activity, setActivity }) {
 
   function handleCardioSubmit(e) {
     e.preventDefault();
+    setcardioSessions(true)
+
     const type = e.target.type.value;
     const distance = e.target.distance.value;
     const time = e.target.time.value;
@@ -88,6 +100,13 @@ export default function Home({ header, activity, setActivity }) {
         date: date
       }),
     });
+  }
+
+  const history = useNavigate()
+
+  function seeProgress() {
+    console.log(activity)
+    history(`/${activity}`)
   }
 
   return (
@@ -109,13 +128,13 @@ export default function Home({ header, activity, setActivity }) {
         options={activityOptions}
       />
       {activity === "meditation" ? (
-        <MeditationForm handleMeditationSubmit={handleMeditationSubmit} />
+        <MeditationForm handleMeditationSubmit={handleMeditationSubmit} activity={activity} seeProgress={seeProgress}/>
       ) : null}
       {activity === "yoga" ? (
-        <YogaForm handleYogaSubmit={handleYogaSubmit} />
+        <YogaForm handleYogaSubmit={handleYogaSubmit} activity={activity} seeProgress={seeProgress}/>
       ) : null}
       {activity === "cardio" ? (
-        <CardioForm handleCardioSubmit={handleCardioSubmit} />
+        <CardioForm handleCardioSubmit={handleCardioSubmit} activity={activity} seeProgress={seeProgress}/>
       ) : null}
     </div>
   );
