@@ -1,0 +1,17 @@
+Started GET "/activities" for 127.0.0.1 at 2022-01-25 11:56:54 -0700
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/activities"):
+  
+Started GET "/activities" for 127.0.0.1 at 2022-01-25 11:57:45 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/activities"):
+  
+Started POST "/api/v1/profile" for 127.0.0.1 at 2022-01-25 12:03:31 -0700
+  
+ActionController::RoutingError (No route matches [POST] "/api/v1/profile"):
+  
+Started GET "/activities" for 127.0.0.1 at 2022-01-25 12:05:02 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/activities"):
+  
