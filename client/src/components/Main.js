@@ -4,7 +4,7 @@ import MeditationForm from "./MeditationForm";
 import YogaForm from "./YogaForm";
 import CardioForm from "./CardioForm";
 
-export default function Home({ header, activity, setActivity }) {
+export default function Main({ header, activity, setActivity }) {
   const initialOptions = [
     { value: "meditation", label: "🧘 Meditation" },
     { value: "yoga", label: "🤸‍♂️ Yoga" },
