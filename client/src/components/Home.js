@@ -10,35 +10,35 @@ export default function Home({ header, activity, setActivity }) {
     { value: "yoga", label: "🤸‍♂️ Yoga" },
     { value: "cardio", label: "🏃🏽 Cardio" }
     ];
+
   const [activityOptions, setActivityOptions] = useState(initialOptions);
-  const [meditationSessions, setmeditationSessions] = useState(false);
-  const [yogaSessions, setyogaSessions] = useState(false);
-  const [cardioSessions, setcardioSessions] = useState(false);
+  // const [meditationSessions, setMeditationSessions] = useState(false);
+  // const [yogaSessions, setYogaSessions] = useState(false);
+  // const [cardioSessions, setCardioSessions] = useState(false);
 
   function selectActivity(e) {
-    console.log("inside update activity function");
     setActivity(e.value);
-    console.log(activity);
   }
 
-  useEffect(() => {
-    fetch(`/activities`)
-      .then((response) => {
-        if (response.ok) {
-          return response.json();
-        } else {
-          console.log("Reponse was bad");
-        }
-      })
-      .then(console.log("attempt to fetch activities"))
-      .catch((err) => {
-        console.log(`${err}; failed to fetch activities`);
-      });
-  }, []);
+  // if we discover we need to fetch the activities table itself, here is the code (roughly); if not, can be deleted.
+  // useEffect(() => {
+  //   fetch(`/activities`)
+  //     .then((response) => {
+  //       if (response.ok) {
+  //         return response.json();
+  //       } else {
+  //         console.log("Reponse was bad");
+  //       }
+  //     })
+  //     .then(console.log("attempt to fetch activities"))
+  //     .catch((err) => {
+  //       console.log(`${err}; failed to fetch activities`);
+  //     });
+  // }, []);
 
   function handleMeditationSubmit(e) {
     e.preventDefault();
-    setmeditationSessions(true)
+    // setMeditationSessions(true)
 
     const time = e.target.time.value;
     const date = e.target.date.value;
@@ -57,7 +57,7 @@ export default function Home({ header, activity, setActivity }) {
 
   function handleYogaSubmit(e) {
     e.preventDefault();
-    setyogaSessions(true)
+    // setYogaSessions(true)
 
     const time = e.target.time.value;
     const type = e.target.type.value;
@@ -78,7 +78,7 @@ export default function Home({ header, activity, setActivity }) {
 
   function handleCardioSubmit(e) {
     e.preventDefault();
-    setcardioSessions(true)
+    // setCardioSessions(true)
 
     const type = e.target.type.value;
     const distance = e.target.distance.value;
@@ -101,7 +101,8 @@ export default function Home({ header, activity, setActivity }) {
 
   function seeProgress() {
     console.log(activity);
-
+    // do the route to /${activity}
+    // incorporate commented-out State for meditationSessions(true) etc, if needed to do the render.
   }
 
   return (
@@ -122,21 +123,21 @@ export default function Home({ header, activity, setActivity }) {
         options={activityOptions}
         onChange={selectActivity}
       />
-      {activity === "meditation" ? (
+      {activity === 'meditation' ? (
         <MeditationForm
           handleMeditationSubmit={handleMeditationSubmit}
           activity={activity}
           seeProgress={seeProgress}
         />
       ) : null}
-      {activity === "yoga" ? (
+      {activity === 'yoga' ? (
         <YogaForm
           handleYogaSubmit={handleYogaSubmit}
           activity={activity}
           seeProgress={seeProgress}
         />
       ) : null}
-      {activity === "cardio" ? (
+      {activity === 'cardio' ? (
         <CardioForm
           handleCardioSubmit={handleCardioSubmit}
           activity={activity}
@@ -146,30 +147,3 @@ export default function Home({ header, activity, setActivity }) {
     </div>
   );
 }
-
-// Learn how to do a POST on a submit event
-// For monday: learn how to do a fetch on a click event
-// Create a form to be rendered for each activity selection..?
-// Learn how to update state upon setState if needed
-// I think setting state on submit button will re-render and re-fetch updated tables?
-
-// Back end
-// Add login database code by merging ian_practice with main
-// I think the routes we'll need for home are... /activities [:index] (GET)
-// And /activities/meditation [:create] ()
-// And /activities/yoga [:create]
-// And /activities/cardio [:create]
-
-// Goals:
-// Decide how to show and build the database entries for meditation, yoga and cardio in their own tables
-// Make a [:update] (PATCH) route, and [:destroy] (DELETE route) for these tables
-
-// code for later
-//   function customTheme(theme) {
-//       return {
-//           ...theme,
-//           colors: {
-//               ...theme.colors
-//           }
-//       }
-//   }
