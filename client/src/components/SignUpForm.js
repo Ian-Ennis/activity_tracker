@@ -1,37 +1,27 @@
 import React, { useState } from 'react'
+const API = 'http://localhost:3000/api/v1'
 
 export default function SignUpForm ({ onLogin }) {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
   const [email, setEmail] = useState('')
-  const [errors, setErrors] = useState([])
-  const [isLoading, setIsLoading] = useState(false)
-  // 
 
   function handleSubmit (e) {
     e.preventDefault()
-    setErrors([])
-    setIsLoading(true)
-    fetch('https://localhost:3000/api/v1/users', {
+
+    fetch(`${API}/users`, {
       method: 'POST',
       headers: {
         Accepts: 'application/json',
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({user: {
-        username,
-        password,
-        email
-      }
-      }),
-    }).then(r => {
-      setIsLoading(false)
-      if (r.ok) {
-        r.json().then(user => onLogin(user))
-      } else {
-        r.json().then(err => setErrors(err.errors))
-      }
+      body: JSON.stringify({ user: { username, email, password } })
     })
+      .then(res => res.json())
+      .then(json => console.log('Got Some', json))
+    setUsername('')
+    setEmail('')
+    setPassword('')
   }
 
   return (
@@ -57,7 +47,7 @@ export default function SignUpForm ({ onLogin }) {
         value={email}
         onChange={e => setEmail(e.target.value)}
       />
-      <button type='submit'>{isLoading ? 'Loading...' : 'Sign Up'}</button>
+      <button type='submit'>Register</button>
     </form>
   )
 }

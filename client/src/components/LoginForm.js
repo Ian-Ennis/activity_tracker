@@ -1,28 +1,30 @@
 import React, { useState } from 'react'
+const API = 'http://localhost:3000/api/v1';
 
 export default function LoginForm ({ onLogin }) {
-  const [username, setUsername] = useState('')
-  const [password, setPassword] = useState('')
-  const [errors, setErrors] = useState([])
-  const [isLoading, setIsLoading] = useState(false)
+  const [loginUser, setLoginUser] = useState('')
+  const [loginPassword, setLoginPassword] = useState('')
 
   function handleSubmit (e) {
     e.preventDefault()
-    setIsLoading(true)
-    fetch('/login', {
+
+    const loginData = {
+      user: { username: loginUser, password: loginPassword }
+    };
+
+    fetch(`${API}/login`, {
       method: 'POST',
       headers: {
+        Accepts: 'application/json',
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({ username, password })
-    }).then(r => {
-      setIsLoading(false)
-      if (r.ok) {
-        r.json().then(user => onLogin(user))
-      } else {
-        r.json().then(err => setErrors(err.errors))
-      }
+      body: JSON.stringify(loginData)
     })
+    .then((res) => res.json())
+    .then((json) => localStorage.setItem('jwt', json.jwt));
+
+    setLoginUser('');
+    setLoginPassword('')
   }
 
   return (
@@ -31,17 +33,17 @@ export default function LoginForm ({ onLogin }) {
       <input
         type='text'
         id='username'
-        value={username}
-        onChange={e => setUsername(e.target.value)}
+        value={loginUser}
+        onChange={e => setLoginUser(e.target.value)}
       />
       <label htmlFor='password'>Password</label>
       <input
         type='password'
         id='password'
-        value={password}
-        onChange={e => setPassword(e.target.value)}
+        value={loginPassword}
+        onChange={e => setLoginPassword(e.target.value)}
       />
-      <button type='submit'>{isLoading ? 'Loading...' : 'Login'}</button>
+      <button type='submit'>Login</button>
     </form>
   )
 }
