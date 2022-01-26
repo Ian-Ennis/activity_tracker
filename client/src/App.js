@@ -2,12 +2,11 @@ import { useState } from 'react'
 import { Route, Switch } from 'react-router-dom'
 import Header from './components/Header'
 import Login from './components/Login'
-import Main from './components/Main'
+import Main from './components/old_main'
 import NavBar from './components/NavBar'
 
 export default function App () {
   const [user, setUser] = useState()
-  const [activity, setActivity] = useState()
 
   const header = <h1>Leg Up</h1>
 
@@ -22,7 +21,7 @@ export default function App () {
           <Login onLogin={setUser} />
         </Route>
         <Route exact path='/main'>
-          <Main activity={activity} setActivity={setActivity} />
+          <Main />
         </Route>
       </Switch>
     </div>
