@@ -1,9 +1,7 @@
 import { useState } from 'react'
-import { Route, Switch } from 'react-router-dom'
 import Header from './components/Header'
 import Login from './components/Login'
-import Main from './components/Main'
-import NavBar from './components/NavBar'
+import Home from './components/Home'
 
 export default function App () {
   const [user, setUser] = useState()
@@ -13,18 +11,9 @@ export default function App () {
 
   return (
     <div className='App'>
-      <NavBar />
-      <Switch>
-        <Route exact path='/'>
           <Header header={header} />
-        </Route>
-        <Route exact path='/login'>
           <Login onLogin={setUser} />
-        </Route>
-        <Route exact path='/main'>
-          <Main activity={activity} setActivity={setActivity} />
-        </Route>
-      </Switch>
+          <Home activity={activity} setActivity={setActivity} />
     </div>
   )
 }
