@@ -5,7 +5,7 @@ import Home from "./components/Home";
 
 export default function App() {
   const [user, setUser] = useState();
-  const [activity, setActivity] = useState('');
+  const [activity, setActivity] = useState();
 
   const header = <h1>Leg Up</h1>;
 
@@ -13,7 +13,7 @@ export default function App() {
     <div className="App">
       <Header header={header} />
       <Login onLogin={setUser} />
-      <Home setActivity={setActivity} />
+      <Home activity={activity} setActivity={setActivity} />
     </div>
   );
 }

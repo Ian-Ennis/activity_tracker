@@ -17,10 +17,7 @@ export default function Home({ header, activity, setActivity }) {
   const [cardioSessions, setcardioSessions] = useState(false);
 
   function selectActivity(e) {
-    console.log("inside update activity function");
-    console.log(e.value);
     setActivity(e.value);
-    console.log(activity);
   }
 
   useEffect(() => {
