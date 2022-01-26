@@ -1,6 +1,11 @@
 import React from "react";
 
-export default function Main({ handleActivitySubmit }) {
+export default function Main({ header, handleActivitySubmit }) {
+
+  function handleActivitySubmit() {
+
+  }
+
   return (
     <div>
       <div className="header">{header}</div>
@@ -15,7 +20,6 @@ export default function Main({ handleActivitySubmit }) {
         <input type="text" name="name" placeholder="Name of activity" />
         <input type="number" name="length" placeholder="Time (minutes)" />
         <button type="submit">Submit</button>
-        <button onClick={() => seeProgress}>See my progress!</button>
       </form>
     </div>
   );

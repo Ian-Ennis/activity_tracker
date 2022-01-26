@@ -19,7 +19,7 @@ export default function App () {
         <Route path='/login' element={<Login onLogin={setUser} />} />
         <Route
           path='/home'
-          element={<Home activity={activity} setActivity={setActivity} />}
+          element={<Home header={header}/>}
         />
       </Routes>
     </div>
