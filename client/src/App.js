@@ -8,7 +8,6 @@ import TopNav from './components/TopNav'
 
 export default function App () {
   const [user, setUser] = useState()
-  const [activity, setActivity] = useState()
 
   const header = <h1>Leg Up</h1>
 

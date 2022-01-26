@@ -1,18 +1,39 @@
 class ActivitiesController < ApplicationController
-# rescue_from ActiveRecord::RecordInvalid, with: :render_bad_thing
-#     def create
-#         activity = Activity.create!(activities_params)
-#         render json: activity, status: :created
-#     end
+    rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
 
-#     private
+    def index
+        render json: Activity.all, status: :ok
+    end
 
-#     def activities_params
-#         params.permit(:yoga_id, :cardio_id, :meditations_id)
-#     end
+    def create
+        activity = Activity.create!(activity_params)
+        render json: activity, status: :created
+    end
 
-#     def render_bad_thing e
-#         render json: { errors: e.record.errors.full_messages }, status: :unprocessable_entity
-#     end
+    def update
+        activity = find_activity
+        activity.update(activity_params)
+        render json: activity
+    end
+
+    def destroy
+        activity = find_activity
+        activity.destroy
+        head :no_content
+    end
+
+    private
+
+    def find_activity
+        Activity.find(params[:id])
+    end
+
+    def activity_params
+        params.permit(:name, :length)
+    end
+
+    def render_not_found_response
+        render json: { error: "Activity not found" }, status: :not_found
+    end
 
 end
