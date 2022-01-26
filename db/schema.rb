@@ -10,51 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_24_202534) do
+ActiveRecord::Schema.define(version: 0) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "activities", force: :cascade do |t|
-    t.string "name"
-    t.bigint "yoga_id"
-    t.bigint "meditation_id"
-    t.bigint "cardio_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["cardio_id"], name: "index_activities_on_cardio_id"
-    t.index ["meditation_id"], name: "index_activities_on_meditation_id"
-    t.index ["yoga_id"], name: "index_activities_on_yoga_id"
-  end
-
-  create_table "cardios", force: :cascade do |t|
-    t.string "name"
-    t.float "distance"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "meditations", force: :cascade do |t|
-    t.string "name"
-    t.float "time"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string "username"
-    t.string "email"
-    t.string "password_digest"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "yogas", force: :cascade do |t|
-    t.string "name"
-    t.string "type"
-    t.float "time"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
 
 end
