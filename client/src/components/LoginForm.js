@@ -1,16 +1,24 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 const API = 'http://localhost:3000/api/v1';
 
 export default function LoginForm ({ onLogin }) {
   const [loginUser, setLoginUser] = useState('')
   const [loginPassword, setLoginPassword] = useState('')
+  const navigate = useNavigate()
 
   function handleSubmit (e) {
-    e.preventDefault()
+    e.preventDefault();
 
     const loginData = {
       user: { username: loginUser, password: loginPassword }
     };
+
+    function onLoggedIn() {
+      // console.log('LOGGED IN:', json.jwt);
+      // localStorage.setItem('jwt', json.jwt);
+      navigate('/home')
+    }
 
     fetch(`${API}/login`, {
       method: 'POST',
@@ -25,10 +33,23 @@ export default function LoginForm ({ onLogin }) {
 
     setLoginUser('');
     setLoginPassword('')
+    onLoggedIn()
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <div>
+      {localStorage.getItem('jwt') ? (
+        <button
+        onClick={() => {
+          localStorage.setItem('jwt', '');
+          navigate('/')
+        }}
+        >
+          Logout
+        </button>
+  ) : (
+    <>
+    <form onSubmit={handleSubmit} >
       <label htmlFor='username'>Username</label>
       <input
         type='text'
@@ -45,5 +66,8 @@ export default function LoginForm ({ onLogin }) {
       />
       <button type='submit'>Login</button>
     </form>
+    </>
+    )}
+    </div>
   )
 }

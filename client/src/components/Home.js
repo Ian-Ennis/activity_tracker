@@ -91,8 +91,8 @@ export default function Home({ header, activity, setActivity }) {
 
   return (
     <div>
-      <div class="header">{header}</div>
-      <div class="site_info">
+      <div className="header">{header}</div>
+      <div className="site_info">
         <p>
           Down to meditate? Into yoga? Always on the move? Log your self-care
           sessions using the menu below, and keep track of your kick-ass

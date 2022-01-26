@@ -25,7 +25,7 @@ export default function SignUpForm ({ onLogin }) {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} >
       <label htmlFor='username'>Username</label>
       <input
         type='text'
