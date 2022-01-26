@@ -10,6 +10,7 @@ export default function Home({ header, activity, setActivity }) {
     { value: "yoga", label: "🤸‍♂️ Yoga" },
     { value: "cardio", label: "🏃🏽 Cardio" }
     ];
+
   const [activityOptions, setActivityOptions] = useState(initialOptions);
   const [meditationSessions, setmeditationSessions] = useState(false);
   const [yogaSessions, setyogaSessions] = useState(false);
@@ -17,6 +18,7 @@ export default function Home({ header, activity, setActivity }) {
 
   function selectActivity(e) {
     console.log("inside update activity function");
+    console.log(e.value);
     setActivity(e.value);
     console.log(activity);
   }
@@ -101,7 +103,6 @@ export default function Home({ header, activity, setActivity }) {
 
   function seeProgress() {
     console.log(activity);
-
   }
 
   return (
@@ -122,21 +123,21 @@ export default function Home({ header, activity, setActivity }) {
         options={activityOptions}
         onChange={selectActivity}
       />
-      {activity === "meditation" ? (
+      {activity === 'meditation' ? (
         <MeditationForm
           handleMeditationSubmit={handleMeditationSubmit}
           activity={activity}
           seeProgress={seeProgress}
         />
       ) : null}
-      {activity === "yoga" ? (
+      {activity === 'yoga' ? (
         <YogaForm
           handleYogaSubmit={handleYogaSubmit}
           activity={activity}
           seeProgress={seeProgress}
         />
       ) : null}
-      {activity === "cardio" ? (
+      {activity === 'cardio' ? (
         <CardioForm
           handleCardioSubmit={handleCardioSubmit}
           activity={activity}
