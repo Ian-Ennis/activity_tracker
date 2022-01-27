@@ -19,7 +19,7 @@ export default function PrepTable({ activityHash }) {
     });
     return <RenderActivities table={table} />
   } else {
-      console.log('activity hash is empty')
+    //   console.log('activity hash is empty')
     return null;
   }
 }
