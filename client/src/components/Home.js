@@ -80,7 +80,7 @@ export default function Main({ header, handleActivitySubmit }) {
       }),
     })
       .then((res) => res.json())
-      .then((data) => console.log({data}, 'post'));
+      .then((data) => console.log(data));
 
     fetch(`${backend_API}`, {
       method: "GET",
@@ -94,7 +94,7 @@ export default function Main({ header, handleActivitySubmit }) {
       .then((data) => {
         console.log({data}, 'all activities')
         setActivityHash(data);
-      }, console.log({activityHash}));
+      });
   }
 
   return (
