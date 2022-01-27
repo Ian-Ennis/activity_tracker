@@ -1,8 +1,5 @@
 class User < ApplicationRecord
     has_many :activities
-    has_many :yogas, through: :activities
-    has_many :cardios, through: :activities
-    has_many :meditations, through: :activities
     
     has_secure_password
     validates :username, uniqueness: { case_sensitive: false}

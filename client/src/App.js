@@ -8,7 +8,6 @@ import TopNav from './components/TopNav'
 
 export default function App () {
   const [user, setUser] = useState()
-  const [activity, setActivity] = useState()
 
   const header = <h1>Leg Up</h1>
 
@@ -20,7 +19,7 @@ export default function App () {
         <Route path='/login' element={<Login onLogin={setUser} />} />
         <Route
           path='/home'
-          element={<Home activity={activity} setActivity={setActivity} />}
+          element={<Home header={header}/>}
         />
       </Routes>
     </div>
