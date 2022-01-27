@@ -1,30 +1,24 @@
-import { useState } from 'react'
-import { Route, Switch } from 'react-router-dom'
-import Header from './components/Header'
-import Login from './components/Login'
-import Main from './components/Main'
-import NavBar from './components/NavBar'
+import "./App.css";
+import { useState } from "react";
+import { Routes, Route } from "react-router-dom";
+import Header from "./components/Header";
+import Login from "./components/Login";
+import Home from "./components/Home";
+import TopNav from "./components/TopNav";
 
-export default function App () {
-  const [user, setUser] = useState()
-  const [activity, setActivity] = useState()
+export default function App() {
+  const [user, setUser] = useState();
 
-  const header = <h1>Leg Up</h1>
+  const header = <h1>Leg Up</h1>;
 
   return (
-    <div className='App'>
-      <NavBar />
-      <Switch>
-        <Route exact path='/'>
-          <Header header={header} />
-        </Route>
-        <Route exact path='/login'>
-          <Login onLogin={setUser} />
-        </Route>
-        <Route exact path='/main'>
-          <Main activity={activity} setActivity={setActivity} />
-        </Route>
-      </Switch>
+    <div className="App">
+      <TopNav />
+      <Routes>
+        <Route path="/" element={<Header header={header} />} />
+        <Route path="/login" element={<Login onLogin={setUser} />} />
+        <Route path="/home" element={<Home header={header} />} />
+      </Routes>
     </div>
-  )
+  );
 }

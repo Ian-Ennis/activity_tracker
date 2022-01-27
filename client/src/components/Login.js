@@ -1,16 +1,9 @@
 import { useState } from 'react';
 import LoginForm from './LoginForm';
 import SignUpForm from './SignUpForm';
-// import { useNavigate } from 'react-router-dom';
 
 export default function Login ({ onLogin }) {
   const [showLogin, setShowLogin] = useState(true)
-
-//   const navigate = useNavigate()
-
-// if (setShowLogin === true) {
-//   navigate('/home')
-// }
 
   return (
     <div>
@@ -29,7 +22,7 @@ export default function Login ({ onLogin }) {
           <br />
           <p>
             Have an account already? &nbsp;
-            <button onClick={() => setShowLogin(true)}>Login In</button>
+            <button onClick={() => setShowLogin(true)}>Login</button>
           </p>
         </div>
       )}
