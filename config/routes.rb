@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :activities, only: [:create, :read, :update, :destroy]
+  resources :activities, only: [:index, :create, :read, :update, :destroy]
 
   namespace :api do
     namespace :v1 do
