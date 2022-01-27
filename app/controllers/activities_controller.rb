@@ -29,7 +29,7 @@ class ActivitiesController < ApplicationController
     end
 
     def activity_params
-        params.permit(:name, :length)
+        params.permit(:name, :length, :minutes)
     end
 
     def render_not_found_response

@@ -1,9 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
+const backend_API = `http://localhost:3000/activities`;
 
 export default function Main({ header, handleActivitySubmit }) {
+  const { activityHash, setActivityHash } = useState([]);
 
-  function handleActivitySubmit() {
+  function handleActivitySubmit(e) {
+    e.preventDefault();
 
+    const name = e.target.name.value;
+    const minutes = e.target.minutes.value;
+
+    fetch(`${backend_API}`, {
+      method: "POST",
+      headers: {
+        Accepts: "application/json",
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${localStorage.getItem("jwt")}`,
+      },
+      body: JSON.stringify({
+        name,
+        minutes
+      }),
+    })
+      .then((res) => res.json())
+      .then((data) => console.log(data));
   }
 
   return (
@@ -16,9 +36,9 @@ export default function Main({ header, handleActivitySubmit }) {
           routines as you practice.
         </p>
       </div>
-      <form onSubmit={(e) => handleActivitySubmit(e)}>
+      <form onSubmit={handleActivitySubmit}>
         <input type="text" name="name" placeholder="Name of activity" />
-        <input type="number" name="length" placeholder="Time (minutes)" />
+        <input type="number" name="minutes" placeholder="Time (minutes)" />
         <button type="submit">Submit</button>
       </form>
     </div>
