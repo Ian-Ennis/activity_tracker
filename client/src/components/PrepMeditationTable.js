@@ -1,7 +1,7 @@
 import React from "react";
-import RenderActivities from "./RenderActivities";
+import RenderMedActivity from "./RenderMedActivity";
 
-export default function PrepTable({ activityHash }) {
+export default function PrepMeditationTable({ activityHash }) {
 //   console.log("hash:", activityHash)
 //   console.log(typeof activityHash)
   const table = []
@@ -17,7 +17,7 @@ export default function PrepTable({ activityHash }) {
         </tr>
       );
     });
-    return <RenderActivities table={table} />
+    return <RenderMedActivity table={table} />
   } else {
     //   console.log('activity hash is empty')
     return null;

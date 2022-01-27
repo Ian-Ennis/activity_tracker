@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import Select from "react-select";
-import PrepTable from "./PrepTable";
+import PrepMeditationTable from "./PrepMeditationTable";
+import PrepYogaTable from "./PrepYogaTable";
 const backend_API = `http://localhost:3000/activities`;
 
 export default function Main({ header, handleActivitySubmit }) {
-  const [activityHash, setActivityHash] = useState('');
+  const [activityHash, setActivityHash] = useState([]);
   const [activity, setActivity] = useState("");
-  // const [prepMedTablePresent, setPrepMedTablePresent] = useState(false);
-  // const [prepYogaTablePresent, setPrepYogaTablePresent] = useState(false);
+
 
   const activityOptions = [
     { value: "meditation", label: "🧘 Meditation" },
@@ -53,14 +53,15 @@ export default function Main({ header, handleActivitySubmit }) {
       .then((res) => res.json())
       .then((data) => {
         setActivityHash(data);
-        // setPrepMedTablePresent(true);
       });
   }
 
   function handleYogaSubmit(e) {
     e.preventDefault();
+    setActivityHash([]);
 
     const name = activity;
+    const yoga_type = e.target.yoga_type.value
     const minutes = e.target.minutes.value;
     const notes = e.target.notes.value;
 
@@ -73,12 +74,13 @@ export default function Main({ header, handleActivitySubmit }) {
       },
       body: JSON.stringify({
         name,
+        yoga_type,
         minutes,
-        notes,
+        notes
       }),
     })
       .then((res) => res.json())
-      .then((data) => console.log(data));
+      .then((data) => console.log({data}, 'post'));
 
     fetch(`${backend_API}`, {
       method: "GET",
@@ -90,9 +92,9 @@ export default function Main({ header, handleActivitySubmit }) {
     })
       .then((res) => res.json())
       .then((data) => {
+        console.log({data}, 'all activities')
         setActivityHash(data);
-        // setPrepTablePresent(true);
-      });
+      }, console.log({activityHash}));
   }
 
   return (
@@ -121,16 +123,19 @@ export default function Main({ header, handleActivitySubmit }) {
             <input type="text" name="notes" placeholder="Notes (what did you notice?)" />
             <button type="submit">Submit</button>
           </form>
-          <PrepTable activity={activity} activityHash={activityHash} />
+          <PrepMeditationTable activity={activity} activityHash={activityHash} />
         </div>
       ) : null}
       {activity === "yoga" ? (
         <div>
-          <form onSubmit={handleActivitySubmit}>
+          <form onSubmit={handleYogaSubmit}>
             <label for="name">Yoga Session:</label>
+            <input type="text" name="yoga_type" placeholder="Type (Hatha, etc)" />
             <input type="number" name="minutes" placeholder="Time (minutes)" />
+            <input type="text" name="notes" placeholder="Notes (tight, sore, etc.)" />
             <button type="submit">Submit</button>
           </form>
+          <PrepYogaTable activity={activity} activityHash={activityHash} />
         </div>
       ) : null}
       {activity === "cardio" ? (
