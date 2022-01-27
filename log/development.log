@@ -4225,3 +4225,2118 @@ Completed 201 Created in 23ms (Views: 1.5ms | ActiveRecord: 6.4ms | Allocations:
 
 
   [1m[36mActivity Load (0.4ms)[0m  [1m[34mSELECT "activities".* FROM "activities" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/activities" for ::1 at 2022-01-27 09:46:17 -0700
+Processing by ActivitiesController#create as */*
+  Parameters: {"name"=>"yoga", "minutes"=>"", "activity"=>{"name"=>"yoga", "minutes"=>""}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[31mUnpermitted parameter: :activity[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mActivity Create (0.9ms)[0m  [1m[32mINSERT INTO "activities" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "yoga"], ["created_at", "2022-01-27 16:46:17.217420"], ["updated_at", "2022-01-27 16:46:17.217420"]]
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActivitySerializer with ActiveModelSerializers::Adapter::Attributes (0.28ms)
+Completed 201 Created in 30ms (Views: 1.7ms | ActiveRecord: 17.2ms | Allocations: 5364)
+
+
+Started POST "/activities" for ::1 at 2022-01-27 09:46:44 -0700
+Processing by ActivitiesController#create as */*
+  Parameters: {"name"=>"yoga", "minutes"=>"", "activity"=>{"name"=>"yoga", "minutes"=>""}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[31mUnpermitted parameter: :activity[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mActivity Create (0.4ms)[0m  [1m[32mINSERT INTO "activities" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "yoga"], ["created_at", "2022-01-27 16:46:44.147594"], ["updated_at", "2022-01-27 16:46:44.147594"]]
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (5.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActivitySerializer with ActiveModelSerializers::Adapter::Attributes (0.35ms)
+Completed 201 Created in 13ms (Views: 1.9ms | ActiveRecord: 6.6ms | Allocations: 3207)
+
+
+Started POST "/activities" for ::1 at 2022-01-27 09:46:46 -0700
+Processing by ActivitiesController#create as */*
+  Parameters: {"name"=>"yoga", "minutes"=>"", "activity"=>{"name"=>"yoga", "minutes"=>""}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[31mUnpermitted parameter: :activity[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mActivity Create (0.4ms)[0m  [1m[32mINSERT INTO "activities" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "yoga"], ["created_at", "2022-01-27 16:46:46.410704"], ["updated_at", "2022-01-27 16:46:46.410704"]]
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActivitySerializer with ActiveModelSerializers::Adapter::Attributes (0.28ms)
+Completed 201 Created in 11ms (Views: 1.6ms | ActiveRecord: 2.0ms | Allocations: 3208)
+
+
+Started POST "/activities" for ::1 at 2022-01-27 09:47:50 -0700
+Processing by ActivitiesController#create as */*
+  Parameters: {"name"=>"meditation", "minutes"=>"", "activity"=>{"name"=>"meditation", "minutes"=>""}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[31mUnpermitted parameter: :activity[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mActivity Create (0.6ms)[0m  [1m[32mINSERT INTO "activities" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "meditation"], ["created_at", "2022-01-27 16:47:50.599837"], ["updated_at", "2022-01-27 16:47:50.599837"]]
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActivitySerializer with ActiveModelSerializers::Adapter::Attributes (0.35ms)
+Completed 201 Created in 12ms (Views: 1.9ms | ActiveRecord: 3.5ms | Allocations: 3211)
+
+
+Started POST "/activities" for ::1 at 2022-01-27 09:47:51 -0700
+Processing by ActivitiesController#create as */*
+  Parameters: {"name"=>"meditation", "minutes"=>"", "activity"=>{"name"=>"meditation", "minutes"=>""}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[31mUnpermitted parameter: :activity[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mActivity Create (0.3ms)[0m  [1m[32mINSERT INTO "activities" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "meditation"], ["created_at", "2022-01-27 16:47:51.456266"], ["updated_at", "2022-01-27 16:47:51.456266"]]
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (5.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActivitySerializer with ActiveModelSerializers::Adapter::Attributes (0.26ms)
+Completed 201 Created in 12ms (Views: 1.6ms | ActiveRecord: 6.4ms | Allocations: 3207)
+
+
+Started POST "/activities" for ::1 at 2022-01-27 09:47:54 -0700
+Processing by ActivitiesController#create as */*
+  Parameters: {"name"=>"meditation", "minutes"=>"", "activity"=>{"name"=>"meditation", "minutes"=>""}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[31mUnpermitted parameter: :activity[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mActivity Create (0.4ms)[0m  [1m[32mINSERT INTO "activities" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "meditation"], ["created_at", "2022-01-27 16:47:54.539459"], ["updated_at", "2022-01-27 16:47:54.539459"]]
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (5.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActivitySerializer with ActiveModelSerializers::Adapter::Attributes (0.34ms)
+Completed 201 Created in 14ms (Views: 1.8ms | ActiveRecord: 6.7ms | Allocations: 3207)
+
+
+Started POST "/activities" for ::1 at 2022-01-27 09:47:55 -0700
+Processing by ActivitiesController#create as */*
+  Parameters: {"name"=>"meditation", "minutes"=>"", "activity"=>{"name"=>"meditation", "minutes"=>""}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[31mUnpermitted parameter: :activity[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mActivity Create (0.3ms)[0m  [1m[32mINSERT INTO "activities" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "meditation"], ["created_at", "2022-01-27 16:47:55.488721"], ["updated_at", "2022-01-27 16:47:55.488721"]]
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActivitySerializer with ActiveModelSerializers::Adapter::Attributes (0.26ms)
+Completed 201 Created in 10ms (Views: 1.5ms | ActiveRecord: 1.6ms | Allocations: 3207)
+
+
+Started POST "/activities" for ::1 at 2022-01-27 10:08:01 -0700
+Processing by ActivitiesController#create as */*
+  Parameters: {"name"=>"meditation", "minutes"=>"", "activity"=>{"name"=>"meditation", "minutes"=>""}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[31mUnpermitted parameter: :activity[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mActivity Create (1.0ms)[0m  [1m[32mINSERT INTO "activities" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "meditation"], ["created_at", "2022-01-27 17:08:01.941941"], ["updated_at", "2022-01-27 17:08:01.941941"]]
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActivitySerializer with ActiveModelSerializers::Adapter::Attributes (0.29ms)
+Completed 201 Created in 25ms (Views: 1.4ms | ActiveRecord: 12.0ms | Allocations: 5287)
+
+
+Started POST "/activities" for ::1 at 2022-01-27 10:09:55 -0700
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ActivitiesController#create as */*
+  Parameters: {"name"=>"meditation", "minutes"=>"15", "activity"=>{"name"=>"meditation", "minutes"=>"15"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[31mUnpermitted parameter: :activity[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mActivity Create (0.7ms)[0m  [1m[32mINSERT INTO "activities" ("name", "minutes", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "meditation"], ["minutes", 15], ["created_at", "2022-01-27 17:09:55.475598"], ["updated_at", "2022-01-27 17:09:55.475598"]]
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActivitySerializer with ActiveModelSerializers::Adapter::Attributes (4.04ms)
+Completed 201 Created in 46ms (Views: 13.6ms | ActiveRecord: 10.4ms | Allocations: 15439)
+
+
+Started POST "/activities" for ::1 at 2022-01-27 10:13:55 -0700
+Processing by ActivitiesController#create as */*
+  Parameters: {"name"=>"meditation", "minutes"=>"15", "activity"=>{"name"=>"meditation", "minutes"=>"15"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[31mUnpermitted parameter: :activity[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mActivity Create (0.4ms)[0m  [1m[32mINSERT INTO "activities" ("name", "minutes", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "meditation"], ["minutes", 15], ["created_at", "2022-01-27 17:13:55.639857"], ["updated_at", "2022-01-27 17:13:55.639857"]]
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActivitySerializer with ActiveModelSerializers::Adapter::Attributes (1.29ms)
+Completed 201 Created in 17ms (Views: 3.6ms | ActiveRecord: 1.7ms | Allocations: 3243)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-01-27 10:14:56 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-01-27 10:15:21 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started POST "/activities" for ::1 at 2022-01-27 10:24:40 -0700
+Processing by ActivitiesController#create as */*
+  Parameters: {"name"=>"meditation", "minutes"=>"15", "activity"=>{"name"=>"meditation", "minutes"=>"15"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[31mUnpermitted parameter: :activity[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mActivity Create (1.0ms)[0m  [1m[32mINSERT INTO "activities" ("name", "minutes", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "meditation"], ["minutes", 15], ["created_at", "2022-01-27 17:24:40.619617"], ["updated_at", "2022-01-27 17:24:40.619617"]]
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActivitySerializer with ActiveModelSerializers::Adapter::Attributes (0.25ms)
+Completed 201 Created in 29ms (Views: 2.6ms | ActiveRecord: 10.7ms | Allocations: 5346)
+
+
+Started POST "/activities" for ::1 at 2022-01-27 10:31:20 -0700
+Processing by ActivitiesController#create as */*
+  Parameters: {"name"=>"meditation", "minutes"=>"", "activity"=>{"name"=>"meditation", "minutes"=>""}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[31mUnpermitted parameter: :activity[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mActivity Create (0.9ms)[0m  [1m[32mINSERT INTO "activities" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "meditation"], ["created_at", "2022-01-27 17:31:20.320714"], ["updated_at", "2022-01-27 17:31:20.320714"]]
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActivitySerializer with ActiveModelSerializers::Adapter::Attributes (0.39ms)
+Completed 201 Created in 38ms (Views: 2.4ms | ActiveRecord: 12.8ms | Allocations: 5339)
+
+
+Started POST "/activities" for ::1 at 2022-01-27 10:31:37 -0700
+Processing by ActivitiesController#create as */*
+  Parameters: {"name"=>"cardio", "minutes"=>"15", "activity"=>{"name"=>"cardio", "minutes"=>"15"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[31mUnpermitted parameter: :activity[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mActivity Create (0.4ms)[0m  [1m[32mINSERT INTO "activities" ("name", "minutes", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "cardio"], ["minutes", 15], ["created_at", "2022-01-27 17:31:37.296560"], ["updated_at", "2022-01-27 17:31:37.296560"]]
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActivitySerializer with ActiveModelSerializers::Adapter::Attributes (0.27ms)
+Completed 201 Created in 15ms (Views: 1.7ms | ActiveRecord: 2.2ms | Allocations: 3242)
+
+
+Started POST "/activities" for ::1 at 2022-01-27 10:31:38 -0700
+Processing by ActivitiesController#create as */*
+  Parameters: {"name"=>"cardio", "minutes"=>"15", "activity"=>{"name"=>"cardio", "minutes"=>"15"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[31mUnpermitted parameter: :activity[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mActivity Create (0.3ms)[0m  [1m[32mINSERT INTO "activities" ("name", "minutes", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "cardio"], ["minutes", 15], ["created_at", "2022-01-27 17:31:38.665119"], ["updated_at", "2022-01-27 17:31:38.665119"]]
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (5.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActivitySerializer with ActiveModelSerializers::Adapter::Attributes (0.34ms)
+Completed 201 Created in 13ms (Views: 2.1ms | ActiveRecord: 6.6ms | Allocations: 3242)
+
+
+Started POST "/activities" for ::1 at 2022-01-27 10:31:40 -0700
+Processing by ActivitiesController#create as */*
+  Parameters: {"name"=>"cardio", "minutes"=>"15", "activity"=>{"name"=>"cardio", "minutes"=>"15"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[31mUnpermitted parameter: :activity[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mActivity Create (0.4ms)[0m  [1m[32mINSERT INTO "activities" ("name", "minutes", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "cardio"], ["minutes", 15], ["created_at", "2022-01-27 17:31:40.318324"], ["updated_at", "2022-01-27 17:31:40.318324"]]
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActivitySerializer with ActiveModelSerializers::Adapter::Attributes (0.28ms)
+Completed 201 Created in 13ms (Views: 1.8ms | ActiveRecord: 1.8ms | Allocations: 3217)
+
+
+Started POST "/activities" for ::1 at 2022-01-27 10:33:42 -0700
+Processing by ActivitiesController#create as */*
+  Parameters: {"name"=>"meditation", "minutes"=>"15", "activity"=>{"name"=>"meditation", "minutes"=>"15"}}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[31mUnpermitted parameter: :activity[0m
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mActivity Create (1.8ms)[0m  [1m[32mINSERT INTO "activities" ("name", "minutes", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "meditation"], ["minutes", 15], ["created_at", "2022-01-27 17:33:42.543191"], ["updated_at", "2022-01-27 17:33:42.543191"]]
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActivitySerializer with ActiveModelSerializers::Adapter::Attributes (0.31ms)
+Completed 201 Created in 21ms (Views: 3.0ms | ActiveRecord: 6.5ms | Allocations: 3217)
+
+
+Started POST "/activities" for ::1 at 2022-01-27 10:53:46 -0700
+Processing by ActivitiesController#create as */*
+  Parameters: {"name"=>"meditation", "minutes"=>"15", "activity"=>{"name"=>"meditation", "minutes"=>"15"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[31mUnpermitted parameter: :activity[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mActivity Create (1.0ms)[0m  [1m[32mINSERT INTO "activities" ("name", "minutes", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "meditation"], ["minutes", 15], ["created_at", "2022-01-27 17:53:46.934088"], ["updated_at", "2022-01-27 17:53:46.934088"]]
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActivitySerializer with ActiveModelSerializers::Adapter::Attributes (0.28ms)
+Completed 201 Created in 34ms (Views: 1.6ms | ActiveRecord: 11.4ms | Allocations: 5295)
+
+
+Started POST "/activities" for ::1 at 2022-01-27 10:55:15 -0700
+Processing by ActivitiesController#create as */*
+  Parameters: {"name"=>"meditation", "minutes"=>"1", "activity"=>{"name"=>"meditation", "minutes"=>"1"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[31mUnpermitted parameter: :activity[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mActivity Create (0.5ms)[0m  [1m[32mINSERT INTO "activities" ("name", "minutes", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "meditation"], ["minutes", 1], ["created_at", "2022-01-27 17:55:15.863227"], ["updated_at", "2022-01-27 17:55:15.863227"]]
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActivitySerializer with ActiveModelSerializers::Adapter::Attributes (0.3ms)
+Completed 201 Created in 12ms (Views: 1.8ms | ActiveRecord: 1.9ms | Allocations: 3217)
+
+
+Started POST "/activities" for ::1 at 2022-01-27 10:59:25 -0700
+Processing by ActivitiesController#create as */*
+  Parameters: {"name"=>"meditation", "minutes"=>"15", "activity"=>{"name"=>"meditation", "minutes"=>"15"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[31mUnpermitted parameter: :activity[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mActivity Create (1.0ms)[0m  [1m[32mINSERT INTO "activities" ("name", "minutes", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "meditation"], ["minutes", 15], ["created_at", "2022-01-27 17:59:25.809187"], ["updated_at", "2022-01-27 17:59:25.809187"]]
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActivitySerializer with ActiveModelSerializers::Adapter::Attributes (0.41ms)
+Completed 201 Created in 20ms (Views: 2.7ms | ActiveRecord: 6.3ms | Allocations: 3217)
+
+
+  [1m[36mActivity Load (0.4ms)[0m  [1m[34mSELECT "activities".* FROM "activities" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/activities" for ::1 at 2022-01-27 11:01:16 -0700
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ActivitiesController#create as */*
+  Parameters: {"name"=>"meditation", "minutes"=>"15", "activity"=>{"name"=>"meditation", "minutes"=>"15"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[31mUnpermitted parameter: :activity[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mActivity Create (0.6ms)[0m  [1m[32mINSERT INTO "activities" ("name", "minutes", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "meditation"], ["minutes", 15], ["created_at", "2022-01-27 18:01:16.859585"], ["updated_at", "2022-01-27 18:01:16.859585"]]
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActivitySerializer with ActiveModelSerializers::Adapter::Attributes (3.03ms)
+Completed 201 Created in 43ms (Views: 11.7ms | ActiveRecord: 10.7ms | Allocations: 15439)
+
+
+Started POST "/activities" for ::1 at 2022-01-27 11:03:09 -0700
+Processing by ActivitiesController#create as */*
+  Parameters: {"name"=>"meditation", "minutes"=>"15", "activity"=>{"name"=>"meditation", "minutes"=>"15"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[31mUnpermitted parameter: :activity[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mActivity Create (0.4ms)[0m  [1m[32mINSERT INTO "activities" ("name", "minutes", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "meditation"], ["minutes", 15], ["created_at", "2022-01-27 18:03:09.536397"], ["updated_at", "2022-01-27 18:03:09.536397"]]
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (5.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActivitySerializer with ActiveModelSerializers::Adapter::Attributes (0.46ms)
+Completed 201 Created in 20ms (Views: 3.6ms | ActiveRecord: 6.6ms | Allocations: 3243)
+
+
+Started POST "/api/v1/users" for ::1 at 2022-01-27 11:03:51 -0700
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"asdf", "email"=>"asdf", "password"=>"[FILTERED]"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "asdf"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "asdf"], ["email", "asdf"], ["password_digest", "$2a$12$rppQfIvBk1nK.PUYqaR2ee9X1b1xMyMvhkU7oawRdgF/UEvhB.IHu"], ["created_at", "2022-01-27 18:03:51.624239"], ["updated_at", "2022-01-27 18:03:51.624239"]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) AND "users"."id" != $2 LIMIT $3[0m  [["username", "asdf"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `create'
+[active_model_serializers]   [1m[36mActivity Load (0.3ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1[0m  [["user_id", 4]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:8:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (11.88ms)
+Completed 201 Created in 237ms (Views: 13.8ms | ActiveRecord: 9.9ms | Allocations: 6565)
+
+
+Started POST "/api/v1/login" for ::1 at 2022-01-27 11:04:11 -0700
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"user"=>{"username"=>"asdf", "password"=>"[FILTERED]"}, "auth"=>{"user"=>{"username"=>"asdf", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "asdf"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:5:in `create'
+[active_model_serializers]   [1m[36mActivity Load (0.4ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1[0m  [["user_id", 4]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auth_controller.rb:8:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (3.81ms)
+Completed 202 Accepted in 227ms (Views: 3.9ms | ActiveRecord: 1.1ms | Allocations: 1892)
+
+
+Started POST "/activities" for ::1 at 2022-01-27 11:04:23 -0700
+Processing by ActivitiesController#create as */*
+  Parameters: {"name"=>"meditation", "minutes"=>"15", "activity"=>{"name"=>"meditation", "minutes"=>"15"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[31mUnpermitted parameter: :activity[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mActivity Create (0.3ms)[0m  [1m[32mINSERT INTO "activities" ("name", "minutes", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "meditation"], ["minutes", 15], ["created_at", "2022-01-27 18:04:23.203158"], ["updated_at", "2022-01-27 18:04:23.203158"]]
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (5.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActivitySerializer with ActiveModelSerializers::Adapter::Attributes (0.26ms)
+Completed 201 Created in 13ms (Views: 1.7ms | ActiveRecord: 6.4ms | Allocations: 3242)
+
+
+Started POST "/activities" for ::1 at 2022-01-27 11:04:41 -0700
+Processing by ActivitiesController#create as */*
+  Parameters: {"name"=>"meditation", "minutes"=>"12", "activity"=>{"name"=>"meditation", "minutes"=>"12"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[31mUnpermitted parameter: :activity[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mActivity Create (0.4ms)[0m  [1m[32mINSERT INTO "activities" ("name", "minutes", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "meditation"], ["minutes", 12], ["created_at", "2022-01-27 18:04:41.244838"], ["updated_at", "2022-01-27 18:04:41.244838"]]
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActivitySerializer with ActiveModelSerializers::Adapter::Attributes (0.27ms)
+Completed 201 Created in 20ms (Views: 10.3ms | ActiveRecord: 1.3ms | Allocations: 3218)
+
+
+Started POST "/activities" for ::1 at 2022-01-27 11:05:37 -0700
+Processing by ActivitiesController#create as */*
+  Parameters: {"name"=>"meditation", "minutes"=>"15", "activity"=>{"name"=>"meditation", "minutes"=>"15"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[31mUnpermitted parameter: :activity[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mActivity Create (0.4ms)[0m  [1m[32mINSERT INTO "activities" ("name", "minutes", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "meditation"], ["minutes", 15], ["created_at", "2022-01-27 18:05:37.377580"], ["updated_at", "2022-01-27 18:05:37.377580"]]
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActivitySerializer with ActiveModelSerializers::Adapter::Attributes (0.25ms)
+Completed 201 Created in 9ms (Views: 1.5ms | ActiveRecord: 2.0ms | Allocations: 3220)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-01-27 11:16:10 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started POST "/activities" for ::1 at 2022-01-27 11:17:00 -0700
+Processing by ActivitiesController#create as */*
+  Parameters: {"name"=>"meditation", "minutes"=>"15", "activity"=>{"name"=>"meditation", "minutes"=>"15"}}
+Started GET "/activities" for ::1 at 2022-01-27 11:17:00 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/activities"):
+  
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[31mUnpermitted parameter: :activity[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mActivity Create (0.8ms)[0m  [1m[32mINSERT INTO "activities" ("name", "minutes", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "meditation"], ["minutes", 15], ["created_at", "2022-01-27 18:17:00.269073"], ["updated_at", "2022-01-27 18:17:00.269073"]]
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActivitySerializer with ActiveModelSerializers::Adapter::Attributes (0.25ms)
+Completed 201 Created in 29ms (Views: 1.5ms | ActiveRecord: 16.4ms | Allocations: 8640)
+
+
+Started POST "/activities" for ::1 at 2022-01-27 11:17:42 -0700
+Started GET "/activities" for ::1 at 2022-01-27 11:17:42 -0700
+Processing by ActivitiesController#create as */*
+  Parameters: {"name"=>"meditation", "minutes"=>"15", "activity"=>{"name"=>"meditation", "minutes"=>"15"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[31mUnpermitted parameter: :activity[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mActivity Create (0.3ms)[0m  [1m[32mINSERT INTO "activities" ("name", "minutes", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "meditation"], ["minutes", 15], ["created_at", "2022-01-27 18:17:42.518110"], ["updated_at", "2022-01-27 18:17:42.518110"]]
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActivitySerializer with ActiveModelSerializers::Adapter::Attributes (0.54ms)
+Completed 201 Created in 24ms (Views: 2.4ms | ActiveRecord: 13.6ms | Allocations: 9243)
+
+
+Processing by ActivitiesController#index as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 309)
+
+
+Started POST "/api/v1/login" for ::1 at 2022-01-27 11:18:04 -0700
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"user"=>{"username"=>"asdf", "password"=>"[FILTERED]"}, "auth"=>{"user"=>{"username"=>"asdf", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "asdf"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:5:in `create'
+[active_model_serializers]   [1m[36mActivity Load (0.3ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1[0m  [["user_id", 4]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auth_controller.rb:8:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (5.23ms)
+Completed 202 Accepted in 241ms (Views: 3.9ms | ActiveRecord: 9.8ms | Allocations: 6501)
+
+
+Started POST "/activities" for ::1 at 2022-01-27 11:18:21 -0700
+Started GET "/activities" for ::1 at 2022-01-27 11:18:21 -0700
+Processing by ActivitiesController#create as */*
+  Parameters: {"name"=>"meditation", "minutes"=>"15", "activity"=>{"name"=>"meditation", "minutes"=>"15"}}
+Processing by ActivitiesController#index as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 612)
+
+
+[31mUnpermitted parameter: :activity[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mActivity Create (0.4ms)[0m  [1m[32mINSERT INTO "activities" ("name", "minutes", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "meditation"], ["minutes", 15], ["created_at", "2022-01-27 18:18:21.277214"], ["updated_at", "2022-01-27 18:18:21.277214"]]
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActivitySerializer with ActiveModelSerializers::Adapter::Attributes (0.62ms)
+Completed 201 Created in 26ms (Views: 9.9ms | ActiveRecord: 6.3ms | Allocations: 8039)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-01-27 11:24:04 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-01-27 11:24:37 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-01-27 11:24:39 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-01-27 11:33:10 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started POST "/activities" for ::1 at 2022-01-27 11:38:06 -0700
+Processing by ActivitiesController#create as */*
+  Parameters: {"name"=>"meditation", "minutes"=>"1", "activity"=>{"name"=>"meditation", "minutes"=>"1"}}
+Started GET "/activities" for ::1 at 2022-01-27 11:38:06 -0700
+Processing by ActivitiesController#index as */*
+  Parameters: {"activity"=>{}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[31mUnpermitted parameter: :activity[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mActivity Create (1.0ms)[0m  [1m[32mINSERT INTO "activities" ("name", "minutes", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "meditation"], ["minutes", 1], ["created_at", "2022-01-27 18:38:06.604845"], ["updated_at", "2022-01-27 18:38:06.604845"]]
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mActivity Load (0.7ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/controllers/activities_controller.rb:5:in `index'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.38ms)
+Completed 200 OK in 31ms (Views: 8.5ms | ActiveRecord: 9.3ms | Allocations: 12735)
+
+
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActivitySerializer with ActiveModelSerializers::Adapter::Attributes (0.33ms)
+Completed 201 Created in 34ms (Views: 1.5ms | ActiveRecord: 10.7ms | Allocations: 14511)
+
+
+Started POST "/activities" for ::1 at 2022-01-27 11:39:50 -0700
+Processing by ActivitiesController#create as */*
+  Parameters: {"name"=>"meditation", "minutes"=>"1", "activity"=>{"name"=>"meditation", "minutes"=>"1"}}
+Started GET "/activities" for ::1 at 2022-01-27 11:39:50 -0700
+Processing by ActivitiesController#index as */*
+  Parameters: {"activity"=>{}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[31mUnpermitted parameter: :activity[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mActivity Create (1.7ms)[0m  [1m[32mINSERT INTO "activities" ("name", "minutes", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "meditation"], ["minutes", 1], ["created_at", "2022-01-27 18:39:50.480769"], ["updated_at", "2022-01-27 18:39:50.480769"]]
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mActivity Load (0.7ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/controllers/activities_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.23ms)
+Completed 200 OK in 12ms (Views: 7.8ms | ActiveRecord: 1.5ms | Allocations: 8116)
+
+
+  [1m[36mTRANSACTION (6.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActivitySerializer with ActiveModelSerializers::Adapter::Attributes (0.25ms)
+Completed 201 Created in 17ms (Views: 2.1ms | ActiveRecord: 9.4ms | Allocations: 10452)
+
+
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (48.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "react_rails_api_project_template_development"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "react_rails_api_project_template_development"[0m
+  [1m[35m (140.5ms)[0m  [1m[35mCREATE DATABASE "react_rails_api_project_template_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE DATABASE "react_rails_api_project_template_development" ENCODING = 'unicode'[0m
+  [1m[35m (6.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1087325618115650655)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20220121162353)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220121162353"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateActivities (20220124202534)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "activities" ("id" bigserial primary key, "name" character varying, "minutes" integer, "user_id" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE INDEX "index_activities_on_user_id" ON "activities" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220124202534"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-01-27 19:03:58.591726"], ["updated_at", "2022-01-27 19:03:58.591726"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(1087325618115650655)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mActivity Load (0.6ms)[0m  [1m[34mSELECT "activities".* FROM "activities" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/api/v1/users" for ::1 at 2022-01-27 12:06:03 -0700
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"qwerty", "email"=>"qwerty", "password"=>"[FILTERED]"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "qwerty"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `create'
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "qwerty"], ["email", "qwerty"], ["password_digest", "$2a$12$sT79uQBsdiFLCloz8axCjuYEoaSEA1MB1WG1hIFpTgCpv4JOgPNnC"], ["created_at", "2022-01-27 19:06:03.323308"], ["updated_at", "2022-01-27 19:06:03.323308"]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (5.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) AND "users"."id" != $2 LIMIT $3[0m  [["username", "qwerty"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `create'
+[active_model_serializers]   [1m[36mActivity Load (0.4ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:8:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (11.61ms)
+Completed 201 Created in 242ms (Views: 11.1ms | ActiveRecord: 16.1ms | Allocations: 15516)
+
+
+Started POST "/api/v1/login" for ::1 at 2022-01-27 12:06:17 -0700
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"user"=>{"username"=>"qwerty", "password"=>"[FILTERED]"}, "auth"=>{"user"=>{"username"=>"qwerty", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "qwerty"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:5:in `create'
+[active_model_serializers]   [1m[36mActivity Load (0.3ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auth_controller.rb:8:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (3.22ms)
+Completed 202 Accepted in 234ms (Views: 3.4ms | ActiveRecord: 0.7ms | Allocations: 1912)
+
+
+Started POST "/activities" for ::1 at 2022-01-27 12:06:23 -0700
+Started GET "/activities" for ::1 at 2022-01-27 12:06:23 -0700
+Processing by ActivitiesController#create as */*
+  Parameters: {"name"=>"meditation", "minutes"=>"5", "activity"=>{"name"=>"meditation", "minutes"=>"5"}}
+Processing by ActivitiesController#index as */*
+  Parameters: {"activity"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[31mUnpermitted parameter: :activity[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mActivity Create (1.7ms)[0m  [1m[32mINSERT INTO "activities" ("name", "minutes", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "meditation"], ["minutes", 5], ["created_at", "2022-01-27 19:06:24.008484"], ["updated_at", "2022-01-27 19:06:24.008484"]]
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (6.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActivitySerializer with ActiveModelSerializers::Adapter::Attributes (2.08ms)
+Completed 201 Created in 34ms (Views: 4.9ms | ActiveRecord: 13.3ms | Allocations: 8782)
+
+
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mActivity Load (0.7ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/controllers/activities_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.52ms)
+Completed 200 OK in 41ms (Views: 3.7ms | ActiveRecord: 19.2ms | Allocations: 10639)
+
+
+Started POST "/activities" for ::1 at 2022-01-27 12:06:28 -0700
+Processing by ActivitiesController#create as */*
+  Parameters: {"name"=>"meditation", "minutes"=>"10", "activity"=>{"name"=>"meditation", "minutes"=>"10"}}
+Started GET "/activities" for ::1 at 2022-01-27 12:06:28 -0700
+Processing by ActivitiesController#index as */*
+  Parameters: {"activity"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[31mUnpermitted parameter: :activity[0m
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mActivity Load (0.8ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/controllers/activities_controller.rb:5:in `index'
+  [1m[36mActivity Create (1.3ms)[0m  [1m[32mINSERT INTO "activities" ("name", "minutes", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "meditation"], ["minutes", 10], ["created_at", "2022-01-27 19:06:28.486337"], ["updated_at", "2022-01-27 19:06:28.486337"]]
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.3ms)
+Completed 200 OK in 12ms (Views: 6.1ms | ActiveRecord: 2.7ms | Allocations: 3833)
+
+
+  [1m[36mTRANSACTION (5.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActivitySerializer with ActiveModelSerializers::Adapter::Attributes (0.31ms)
+Completed 201 Created in 33ms (Views: 12.5ms | ActiveRecord: 10.7ms | Allocations: 6067)
+
+
+Started POST "/activities" for ::1 at 2022-01-27 12:06:33 -0700
+Processing by ActivitiesController#create as */*
+  Parameters: {"name"=>"meditation", "minutes"=>"15", "activity"=>{"name"=>"meditation", "minutes"=>"15"}}
+Started GET "/activities" for ::1 at 2022-01-27 12:06:33 -0700
+Processing by ActivitiesController#index as */*
+  Parameters: {"activity"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[31mUnpermitted parameter: :activity[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mActivity Create (0.5ms)[0m  [1m[32mINSERT INTO "activities" ("name", "minutes", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "meditation"], ["minutes", 15], ["created_at", "2022-01-27 19:06:33.705842"], ["updated_at", "2022-01-27 19:06:33.705842"]]
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mActivity Load (0.8ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/controllers/activities_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.47ms)
+Completed 200 OK in 7ms (Views: 2.7ms | ActiveRecord: 1.7ms | Allocations: 3966)
+
+
+  [1m[36mTRANSACTION (5.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActivitySerializer with ActiveModelSerializers::Adapter::Attributes (0.27ms)
+Completed 201 Created in 15ms (Views: 1.7ms | ActiveRecord: 6.8ms | Allocations: 6012)
+
+
+Started POST "/activities" for ::1 at 2022-01-27 12:06:43 -0700
+Processing by ActivitiesController#create as */*
+  Parameters: {"name"=>"meditation", "minutes"=>"20", "activity"=>{"name"=>"meditation", "minutes"=>"20"}}
+Started GET "/activities" for ::1 at 2022-01-27 12:06:43 -0700
+Processing by ActivitiesController#index as */*
+  Parameters: {"activity"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[31mUnpermitted parameter: :activity[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mActivity Create (1.0ms)[0m  [1m[32mINSERT INTO "activities" ("name", "minutes", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "meditation"], ["minutes", 20], ["created_at", "2022-01-27 19:06:43.116158"], ["updated_at", "2022-01-27 19:06:43.116158"]]
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mActivity Load (1.0ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/controllers/activities_controller.rb:5:in `index'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.63ms)
+Completed 200 OK in 12ms (Views: 4.5ms | ActiveRecord: 1.7ms | Allocations: 4751)
+
+
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActivitySerializer with ActiveModelSerializers::Adapter::Attributes (0.3ms)
+Completed 201 Created in 16ms (Views: 2.0ms | ActiveRecord: 3.1ms | Allocations: 6315)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-01-27 12:08:16 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started POST "/activities" for ::1 at 2022-01-27 12:08:42 -0700
+Processing by ActivitiesController#create as */*
+  Parameters: {"name"=>"meditation", "minutes"=>"", "activity"=>{"name"=>"meditation", "minutes"=>""}}
+Started GET "/activities" for ::1 at 2022-01-27 12:08:42 -0700
+Processing by ActivitiesController#index as */*
+  Parameters: {"activity"=>{}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[31mUnpermitted parameter: :activity[0m
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mActivity Load (1.1ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/controllers/activities_controller.rb:5:in `index'
+  [1m[36mActivity Create (1.0ms)[0m  [1m[32mINSERT INTO "activities" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "meditation"], ["created_at", "2022-01-27 19:08:42.218768"], ["updated_at", "2022-01-27 19:08:42.218768"]]
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.29ms)
+Completed 200 OK in 12ms (Views: 6.2ms | ActiveRecord: 1.4ms | Allocations: 4197)
+
+
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActivitySerializer with ActiveModelSerializers::Adapter::Attributes (0.54ms)
+Completed 201 Created in 20ms (Views: 2.4ms | ActiveRecord: 4.7ms | Allocations: 6461)
+
+
+Started POST "/activities" for ::1 at 2022-01-27 12:09:29 -0700
+Started GET "/activities" for ::1 at 2022-01-27 12:09:29 -0700
+Processing by ActivitiesController#create as */*
+  Parameters: {"name"=>"meditation", "minutes"=>"", "activity"=>{"name"=>"meditation", "minutes"=>""}}
+Processing by ActivitiesController#index as */*
+  Parameters: {"activity"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[31mUnpermitted parameter: :activity[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mActivity Load (0.4ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  [1m[36mActivity Create (1.1ms)[0m  [1m[32mINSERT INTO "activities" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "meditation"], ["created_at", "2022-01-27 19:09:29.097088"], ["updated_at", "2022-01-27 19:09:29.097088"]]
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  ↳ app/controllers/activities_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.6ms)
+Completed 200 OK in 13ms (Views: 8.5ms | ActiveRecord: 1.5ms | Allocations: 4365)
+
+
+  [1m[36mTRANSACTION (5.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActivitySerializer with ActiveModelSerializers::Adapter::Attributes (0.33ms)
+Completed 201 Created in 20ms (Views: 1.9ms | ActiveRecord: 8.0ms | Allocations: 6384)
+
+
+Started POST "/activities" for ::1 at 2022-01-27 12:11:00 -0700
+Processing by ActivitiesController#create as */*
+Started GET "/activities" for ::1 at 2022-01-27 12:11:00 -0700
+  Parameters: {"name"=>"meditation", "minutes"=>"", "activity"=>{"name"=>"meditation", "minutes"=>""}}
+Processing by ActivitiesController#index as */*
+  Parameters: {"activity"=>{}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[31mUnpermitted parameter: :activity[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mActivity Load (0.3ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/controllers/activities_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.05ms)
+  [1m[36mActivity Create (2.4ms)[0m  [1m[32mINSERT INTO "activities" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "meditation"], ["created_at", "2022-01-27 19:11:00.245494"], ["updated_at", "2022-01-27 19:11:00.245494"]]
+Completed 200 OK in 10ms (Views: 4.6ms | ActiveRecord: 0.9ms | Allocations: 4039)
+
+
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActivitySerializer with ActiveModelSerializers::Adapter::Attributes (0.32ms)
+Completed 201 Created in 18ms (Views: 2.0ms | ActiveRecord: 6.3ms | Allocations: 6532)
+
+
+Started POST "/activities" for ::1 at 2022-01-27 12:18:19 -0700
+Started GET "/activities" for ::1 at 2022-01-27 12:18:19 -0700
+Processing by ActivitiesController#create as */*
+  Parameters: {"name"=>"meditation", "minutes"=>"20", "notes"=>"distracted", "activity"=>{"name"=>"meditation", "minutes"=>"20"}}
+Processing by ActivitiesController#index as */*
+  Parameters: {"activity"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[31mUnpermitted parameters: :notes, :activity[0m
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mActivity Load (0.8ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/controllers/activities_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.97ms)
+Completed 200 OK in 21ms (Views: 3.3ms | ActiveRecord: 9.1ms | Allocations: 8158)
+
+
+  [1m[36mActivity Create (2.2ms)[0m  [1m[32mINSERT INTO "activities" ("name", "minutes", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "meditation"], ["minutes", 20], ["created_at", "2022-01-27 19:18:19.485032"], ["updated_at", "2022-01-27 19:18:19.485032"]]
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActivitySerializer with ActiveModelSerializers::Adapter::Attributes (0.34ms)
+Completed 201 Created in 26ms (Views: 1.6ms | ActiveRecord: 12.9ms | Allocations: 10669)
+
+
+Started POST "/activities" for ::1 at 2022-01-27 12:18:23 -0700
+Started GET "/activities" for ::1 at 2022-01-27 12:18:23 -0700
+Processing by ActivitiesController#create as */*
+  Parameters: {"name"=>"meditation", "minutes"=>"20", "notes"=>"distracted", "activity"=>{"name"=>"meditation", "minutes"=>"20"}}
+Processing by ActivitiesController#index as */*
+  Parameters: {"activity"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[31mUnpermitted parameters: :notes, :activity[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mActivity Load (0.7ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/controllers/activities_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.12ms)
+Completed 200 OK in 9ms (Views: 5.5ms | ActiveRecord: 1.4ms | Allocations: 4360)
+
+
+  [1m[36mActivity Create (2.4ms)[0m  [1m[32mINSERT INTO "activities" ("name", "minutes", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "meditation"], ["minutes", 20], ["created_at", "2022-01-27 19:18:23.922590"], ["updated_at", "2022-01-27 19:18:23.922590"]]
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActivitySerializer with ActiveModelSerializers::Adapter::Attributes (0.23ms)
+Completed 201 Created in 13ms (Views: 1.4ms | ActiveRecord: 4.8ms | Allocations: 6606)
+
+
+Started POST "/activities" for ::1 at 2022-01-27 12:18:26 -0700
+Processing by ActivitiesController#create as */*
+  Parameters: {"name"=>"meditation", "minutes"=>"20", "notes"=>"distracted", "activity"=>{"name"=>"meditation", "minutes"=>"20"}}
+Started GET "/activities" for ::1 at 2022-01-27 12:18:26 -0700
+Processing by ActivitiesController#index as */*
+  Parameters: {"activity"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[31mUnpermitted parameters: :notes, :activity[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mActivity Create (0.8ms)[0m  [1m[32mINSERT INTO "activities" ("name", "minutes", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "meditation"], ["minutes", 20], ["created_at", "2022-01-27 19:18:26.373326"], ["updated_at", "2022-01-27 19:18:26.373326"]]
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mActivity Load (0.8ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/controllers/activities_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.44ms)
+Completed 200 OK in 8ms (Views: 4.6ms | ActiveRecord: 1.8ms | Allocations: 4929)
+
+
+  [1m[36mTRANSACTION (5.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActivitySerializer with ActiveModelSerializers::Adapter::Attributes (0.5ms)
+Completed 201 Created in 16ms (Views: 2.0ms | ActiveRecord: 7.4ms | Allocations: 6966)
+
+
+Started POST "/activities" for ::1 at 2022-01-27 12:18:58 -0700
+Processing by ActivitiesController#create as */*
+  Parameters: {"name"=>"meditation", "minutes"=>"", "notes"=>"", "activity"=>{"name"=>"meditation", "minutes"=>""}}
+Started GET "/activities" for ::1 at 2022-01-27 12:18:58 -0700
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by ActivitiesController#index as */*
+  Parameters: {"activity"=>{}}
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[31mUnpermitted parameters: :notes, :activity[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mActivity Load (0.6ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/controllers/activities_controller.rb:5:in `index'
+  [1m[36mActivity Create (0.7ms)[0m  [1m[32mINSERT INTO "activities" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "meditation"], ["created_at", "2022-01-27 19:18:58.557896"], ["updated_at", "2022-01-27 19:18:58.557896"]]
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.7ms)
+Completed 200 OK in 10ms (Views: 6.0ms | ActiveRecord: 0.9ms | Allocations: 4722)
+
+
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActivitySerializer with ActiveModelSerializers::Adapter::Attributes (0.49ms)
+Completed 201 Created in 19ms (Views: 2.7ms | ActiveRecord: 4.7ms | Allocations: 7305)
+
+
+Started POST "/activities" for ::1 at 2022-01-27 12:19:18 -0700
+Processing by ActivitiesController#create as */*
+  Parameters: {"name"=>"meditation", "minutes"=>"", "notes"=>"", "activity"=>{"name"=>"meditation", "minutes"=>""}}
+Started GET "/activities" for ::1 at 2022-01-27 12:19:18 -0700
+Processing by ActivitiesController#index as */*
+  Parameters: {"activity"=>{}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[31mUnpermitted parameters: :notes, :activity[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mActivity Create (1.1ms)[0m  [1m[32mINSERT INTO "activities" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "meditation"], ["created_at", "2022-01-27 19:19:18.560812"], ["updated_at", "2022-01-27 19:19:18.560812"]]
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mActivity Load (0.6ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/controllers/activities_controller.rb:5:in `index'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.02ms)
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+Completed 200 OK in 13ms (Views: 6.3ms | ActiveRecord: 1.0ms | Allocations: 5511)
+
+
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActivitySerializer with ActiveModelSerializers::Adapter::Attributes (0.52ms)
+Completed 201 Created in 19ms (Views: 2.6ms | ActiveRecord: 4.1ms | Allocations: 7441)
+
+
+Started POST "/activities" for ::1 at 2022-01-27 12:19:31 -0700
+Processing by ActivitiesController#create as */*
+  Parameters: {"name"=>"meditation", "minutes"=>"", "notes"=>"", "activity"=>{"name"=>"meditation", "minutes"=>""}}
+Started GET "/activities" for ::1 at 2022-01-27 12:19:31 -0700
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[31mUnpermitted parameters: :notes, :activity[0m
+Processing by ActivitiesController#index as */*
+  Parameters: {"activity"=>{}}
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mActivity Create (0.4ms)[0m  [1m[32mINSERT INTO "activities" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "meditation"], ["created_at", "2022-01-27 19:19:31.107246"], ["updated_at", "2022-01-27 19:19:31.107246"]]
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mActivity Load (1.3ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/controllers/activities_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.15ms)
+  [1m[36mUser Load (5.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+Completed 200 OK in 11ms (Views: 6.4ms | ActiveRecord: 2.3ms | Allocations: 5484)
+
+
+[active_model_serializers] Rendered ActivitySerializer with ActiveModelSerializers::Adapter::Attributes (0.29ms)
+Completed 201 Created in 18ms (Views: 2.7ms | ActiveRecord: 8.8ms | Allocations: 7625)
+
+
+Started POST "/activities" for ::1 at 2022-01-27 12:19:47 -0700
+Processing by ActivitiesController#create as */*
+  Parameters: {"name"=>"meditation", "minutes"=>"100", "notes"=>"distracted", "activity"=>{"name"=>"meditation", "minutes"=>"100"}}
+Started GET "/activities" for ::1 at 2022-01-27 12:19:47 -0700
+Processing by ActivitiesController#index as */*
+  Parameters: {"activity"=>{}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[31mUnpermitted parameters: :notes, :activity[0m
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mActivity Create (0.8ms)[0m  [1m[32mINSERT INTO "activities" ("name", "minutes", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "meditation"], ["minutes", 100], ["created_at", "2022-01-27 19:19:47.111166"], ["updated_at", "2022-01-27 19:19:47.111166"]]
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mActivity Load (0.3ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/controllers/activities_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.88ms)
+Completed 200 OK in 10ms (Views: 6.5ms | ActiveRecord: 1.4ms | Allocations: 5482)
+
+
+  [1m[36mTRANSACTION (5.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActivitySerializer with ActiveModelSerializers::Adapter::Attributes (0.26ms)
+Completed 201 Created in 17ms (Views: 1.5ms | ActiveRecord: 7.8ms | Allocations: 7527)
+
+
+Started POST "/activities" for ::1 at 2022-01-27 12:19:49 -0700
+Processing by ActivitiesController#create as */*
+  Parameters: {"name"=>"meditation", "minutes"=>"100", "notes"=>"distracted", "activity"=>{"name"=>"meditation", "minutes"=>"100"}}
+Started GET "/activities" for ::1 at 2022-01-27 12:19:49 -0700
+Processing by ActivitiesController#index as */*
+  Parameters: {"activity"=>{}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[31mUnpermitted parameters: :notes, :activity[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mActivity Create (0.5ms)[0m  [1m[32mINSERT INTO "activities" ("name", "minutes", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "meditation"], ["minutes", 100], ["created_at", "2022-01-27 19:19:49.132111"], ["updated_at", "2022-01-27 19:19:49.132111"]]
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mActivity Load (1.0ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/controllers/activities_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.17ms)
+Completed 200 OK in 10ms (Views: 5.7ms | ActiveRecord: 1.7ms | Allocations: 5590)
+
+
+  [1m[36mTRANSACTION (5.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActivitySerializer with ActiveModelSerializers::Adapter::Attributes (0.28ms)
+Completed 201 Created in 17ms (Views: 1.7ms | ActiveRecord: 7.5ms | Allocations: 7845)
+
+
+Started POST "/activities" for ::1 at 2022-01-27 12:19:50 -0700
+Processing by ActivitiesController#create as */*
+  Parameters: {"name"=>"meditation", "minutes"=>"100", "notes"=>"distracted", "activity"=>{"name"=>"meditation", "minutes"=>"100"}}
+Started GET "/activities" for ::1 at 2022-01-27 12:19:50 -0700
+Processing by ActivitiesController#index as */*
+  Parameters: {"activity"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[31mUnpermitted parameters: :notes, :activity[0m
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mActivity Load (0.8ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/controllers/activities_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.26ms)
+Completed 200 OK in 9ms (Views: 5.2ms | ActiveRecord: 1.1ms | Allocations: 5256)
+
+
+  [1m[36mActivity Create (4.2ms)[0m  [1m[32mINSERT INTO "activities" ("name", "minutes", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "meditation"], ["minutes", 100], ["created_at", "2022-01-27 19:19:50.740490"], ["updated_at", "2022-01-27 19:19:50.740490"]]
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (5.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActivitySerializer with ActiveModelSerializers::Adapter::Attributes (0.35ms)
+Completed 201 Created in 20ms (Views: 2.0ms | ActiveRecord: 11.4ms | Allocations: 7795)
+
+
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (36.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "react_rails_api_project_template_development"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "react_rails_api_project_template_development"[0m
+  [1m[35m (57.8ms)[0m  [1m[35mCREATE DATABASE "react_rails_api_project_template_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE DATABASE "react_rails_api_project_template_development" ENCODING = 'unicode'[0m
+  [1m[35m (5.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1087325618115650655)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20220121162353)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220121162353"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateActivities (20220124202534)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.8ms)[0m  [1m[35mCREATE TABLE "activities" ("id" bigserial primary key, "name" character varying, "minutes" integer, "user_id" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE INDEX "index_activities_on_user_id" ON "activities" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220124202534"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-01-27 19:20:55.292503"], ["updated_at", "2022-01-27 19:20:55.292503"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(1087325618115650655)[0m
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/activities" for ::1 at 2022-01-27 12:21:52 -0700
+Started GET "/activities" for ::1 at 2022-01-27 12:21:52 -0700
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ActivitiesController#index as */*
+  Parameters: {"activity"=>{}}
+Processing by ActivitiesController#create as */*
+  Parameters: {"name"=>"meditation", "minutes"=>"15", "notes"=>"Able to focus", "activity"=>{"name"=>"meditation", "minutes"=>"15"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 30ms (Views: 4.7ms | ActiveRecord: 12.2ms | Allocations: 7928)
+
+
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 27ms (Views: 3.9ms | ActiveRecord: 5.4ms | Allocations: 6092)
+
+
+Started POST "/activities" for ::1 at 2022-01-27 12:22:31 -0700
+Processing by ActivitiesController#create as */*
+  Parameters: {"name"=>"meditation", "minutes"=>"5", "notes"=>"notes", "activity"=>{"name"=>"meditation", "minutes"=>"5"}}
+Started GET "/activities" for ::1 at 2022-01-27 12:22:31 -0700
+Processing by ActivitiesController#index as */*
+  Parameters: {"activity"=>{}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Filter chain halted as :authorized rendered or redirected
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+Completed 401 Unauthorized in 8ms (Views: 2.9ms | ActiveRecord: 0.7ms | Allocations: 1977)
+
+
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 10ms (Views: 3.4ms | ActiveRecord: 1.0ms | Allocations: 2808)
+
+
+Started POST "/api/v1/users" for ::1 at 2022-01-27 12:22:48 -0700
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"asd", "email"=>"asd", "password"=>"[FILTERED]"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "asd"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `create'
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "asd"], ["email", "asd"], ["password_digest", "$2a$12$YvK01DGkPZTrF86/oYz2K.OFN1ANXahnjbPlbAWz8O9EBTLvgsBiC"], ["created_at", "2022-01-27 19:22:48.708797"], ["updated_at", "2022-01-27 19:22:48.708797"]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (5.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) AND "users"."id" != $2 LIMIT $3[0m  [["username", "asd"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `create'
+[active_model_serializers]   [1m[36mActivity Load (0.4ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:8:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (10.47ms)
+Completed 201 Created in 261ms (Views: 11.4ms | ActiveRecord: 12.9ms | Allocations: 12693)
+
+
+Started POST "/api/v1/login" for ::1 at 2022-01-27 12:22:52 -0700
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"user"=>{"username"=>"asd", "password"=>"[FILTERED]"}, "auth"=>{"user"=>{"username"=>"asd", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "asd"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:5:in `create'
+[active_model_serializers]   [1m[36mActivity Load (0.3ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auth_controller.rb:8:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1.96ms)
+Completed 202 Accepted in 226ms (Views: 2.0ms | ActiveRecord: 0.7ms | Allocations: 1902)
+
+
+Started POST "/activities" for ::1 at 2022-01-27 12:23:01 -0700
+Processing by ActivitiesController#create as */*
+  Parameters: {"name"=>"meditation", "minutes"=>"5", "notes"=>"good session", "activity"=>{"name"=>"meditation", "minutes"=>"5"}}
+Started GET "/activities" for ::1 at 2022-01-27 12:23:01 -0700
+Processing by ActivitiesController#index as */*
+  Parameters: {"activity"=>{}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[31mUnpermitted parameters: :notes, :activity[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mActivity Load (0.8ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/controllers/activities_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.05ms)
+Completed 200 OK in 18ms (Views: 14.2ms | ActiveRecord: 1.1ms | Allocations: 5454)
+
+
+  [1m[36mActivity Create (1.2ms)[0m  [1m[32mINSERT INTO "activities" ("name", "minutes", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "meditation"], ["minutes", 5], ["created_at", "2022-01-27 19:23:01.387877"], ["updated_at", "2022-01-27 19:23:01.387877"]]
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActivitySerializer with ActiveModelSerializers::Adapter::Attributes (1.31ms)
+Completed 201 Created in 29ms (Views: 3.6ms | ActiveRecord: 7.0ms | Allocations: 9109)
+
+
+Started POST "/activities" for ::1 at 2022-01-27 12:23:04 -0700
+Processing by ActivitiesController#create as */*
+  Parameters: {"name"=>"meditation", "minutes"=>"5", "notes"=>"good session", "activity"=>{"name"=>"meditation", "minutes"=>"5"}}
+Started GET "/activities" for ::1 at 2022-01-27 12:23:04 -0700
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[31mUnpermitted parameters: :notes, :activity[0m
+Processing by ActivitiesController#index as */*
+  Parameters: {"activity"=>{}}
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mActivity Create (0.3ms)[0m  [1m[32mINSERT INTO "activities" ("name", "minutes", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "meditation"], ["minutes", 5], ["created_at", "2022-01-27 19:23:04.138427"], ["updated_at", "2022-01-27 19:23:04.138427"]]
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mActivity Load (0.2ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/controllers/activities_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.27ms)
+Completed 200 OK in 5ms (Views: 1.9ms | ActiveRecord: 0.6ms | Allocations: 3156)
+
+
+  [1m[36mTRANSACTION (5.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActivitySerializer with ActiveModelSerializers::Adapter::Attributes (0.26ms)
+Completed 201 Created in 14ms (Views: 1.6ms | ActiveRecord: 7.0ms | Allocations: 6114)
+
+
+Started POST "/activities" for ::1 at 2022-01-27 12:24:28 -0700
+Started GET "/activities" for ::1 at 2022-01-27 12:24:28 -0700
+Processing by ActivitiesController#create as */*
+  Parameters: {"name"=>"meditation", "minutes"=>"12", "notes"=>"good session", "activity"=>{"name"=>"meditation", "minutes"=>"12"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[31mUnpermitted parameter: :activity[0m
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 10.6ms | Allocations: 6381)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'notes' for Activity.):
+  
+app/controllers/activities_controller.rb:9:in `create'
+Processing by ActivitiesController#index as */*
+  Parameters: {"activity"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mActivity Load (0.4ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/controllers/activities_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (6.59ms)
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 21.4ms | Allocations: 11160)
+
+
+  
+NoMethodError (undefined method `notes' for #<Activity:0x00007fb011e95890>):
+  
+app/controllers/activities_controller.rb:5:in `index'
+Started POST "/activities" for ::1 at 2022-01-27 12:24:40 -0700
+Started GET "/activities" for ::1 at 2022-01-27 12:24:40 -0700
+Processing by ActivitiesController#create as */*
+  Parameters: {"name"=>"meditation", "minutes"=>"5", "notes"=>"good session", "activity"=>{"name"=>"meditation", "minutes"=>"5"}}
+Processing by ActivitiesController#index as */*
+  Parameters: {"activity"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[31mUnpermitted parameter: :activity[0m
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.2ms | Allocations: 1938)
+
+
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'notes' for Activity.):
+  
+app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mActivity Load (16.4ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/controllers/activities_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.28ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 16.9ms | Allocations: 20120)
+
+
+  
+NoMethodError (undefined method `notes' for #<Activity:0x00007fb014b55498>):
+  
+app/controllers/activities_controller.rb:5:in `index'
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1087325618115650655)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateActivities (20220124202534)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.0ms)[0m  [1m[35mDROP TABLE "activities"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.4ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20220124202534"]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1087325618115650655)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1087325618115650655)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateActivities (20220124202534)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.7ms)[0m  [1m[35mCREATE TABLE "activities" ("id" bigserial primary key, "name" character varying, "minutes" integer, "notes" character varying, "user_id" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE INDEX "index_activities_on_user_id" ON "activities" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220124202534"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(1087325618115650655)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/activities" for ::1 at 2022-01-27 12:25:55 -0700
+Started GET "/activities" for ::1 at 2022-01-27 12:25:55 -0700
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ActivitiesController#create as */*
+  Parameters: {"name"=>"meditation", "minutes"=>"12", "notes"=>"good session", "activity"=>{"name"=>"meditation", "minutes"=>"12", "notes"=>"good session"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[31mUnpermitted parameter: :activity[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mActivity Create (0.7ms)[0m  [1m[32mINSERT INTO "activities" ("name", "minutes", "notes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "meditation"], ["minutes", 12], ["notes", "good session"], ["created_at", "2022-01-27 19:25:55.859855"], ["updated_at", "2022-01-27 19:25:55.859855"]]
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActivitySerializer with ActiveModelSerializers::Adapter::Attributes (0.75ms)
+Completed 201 Created in 29ms (Views: 2.8ms | ActiveRecord: 12.8ms | Allocations: 9678)
+
+
+Processing by ActivitiesController#index as */*
+  Parameters: {"activity"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mActivity Load (0.3ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/controllers/activities_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.63ms)
+Completed 200 OK in 19ms (Views: 6.3ms | ActiveRecord: 8.2ms | Allocations: 8506)
+
+
+Started POST "/activities" for ::1 at 2022-01-27 12:26:11 -0700
+Processing by ActivitiesController#create as */*
+  Parameters: {"name"=>"meditation", "minutes"=>"15", "notes"=>"lots of distractions", "activity"=>{"name"=>"meditation", "minutes"=>"15", "notes"=>"lots of distractions"}}
+Started GET "/activities" for ::1 at 2022-01-27 12:26:11 -0700
+Processing by ActivitiesController#index as */*
+  Parameters: {"activity"=>{}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[31mUnpermitted parameter: :activity[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mActivity Create (0.3ms)[0m  [1m[32mINSERT INTO "activities" ("name", "minutes", "notes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "meditation"], ["minutes", 15], ["notes", "lots of distractions"], ["created_at", "2022-01-27 19:26:11.706768"], ["updated_at", "2022-01-27 19:26:11.706768"]]
+  [1m[36mActivity Load (0.7ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  ↳ app/controllers/activities_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.32ms)
+Completed 200 OK in 8ms (Views: 4.4ms | ActiveRecord: 1.5ms | Allocations: 3884)
+
+
+  [1m[36mTRANSACTION (5.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActivitySerializer with ActiveModelSerializers::Adapter::Attributes (0.43ms)
+Completed 201 Created in 17ms (Views: 1.7ms | ActiveRecord: 8.2ms | Allocations: 6100)
+
+
+Started POST "/activities" for ::1 at 2022-01-27 12:26:12 -0700
+Processing by ActivitiesController#create as */*
+  Parameters: {"name"=>"meditation", "minutes"=>"15", "notes"=>"lots of distractions", "activity"=>{"name"=>"meditation", "minutes"=>"15", "notes"=>"lots of distractions"}}
+Started GET "/activities" for ::1 at 2022-01-27 12:26:12 -0700
+Processing by ActivitiesController#index as */*
+  Parameters: {"activity"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[31mUnpermitted parameter: :activity[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mActivity Load (0.7ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/controllers/activities_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.45ms)
+  [1m[36mActivity Create (1.4ms)[0m  [1m[32mINSERT INTO "activities" ("name", "minutes", "notes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "meditation"], ["minutes", 15], ["notes", "lots of distractions"], ["created_at", "2022-01-27 19:26:12.779524"], ["updated_at", "2022-01-27 19:26:12.779524"]]
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+Completed 200 OK in 6ms (Views: 2.5ms | ActiveRecord: 1.2ms | Allocations: 3547)
+
+
+  [1m[36mTRANSACTION (5.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActivitySerializer with ActiveModelSerializers::Adapter::Attributes (0.41ms)
+Completed 201 Created in 17ms (Views: 2.2ms | ActiveRecord: 8.3ms | Allocations: 6069)
+
+
+Started POST "/activities" for ::1 at 2022-01-27 12:28:40 -0700
+Started GET "/activities" for ::1 at 2022-01-27 12:28:40 -0700
+Processing by ActivitiesController#create as */*
+  Parameters: {"name"=>"meditation", "minutes"=>"5", "notes"=>"good session", "activity"=>{"name"=>"meditation", "minutes"=>"5", "notes"=>"good session"}}
+Processing by ActivitiesController#index as */*
+  Parameters: {"activity"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[31mUnpermitted parameter: :activity[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mActivity Load (0.8ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/controllers/activities_controller.rb:5:in `index'
+  [1m[36mActivity Create (0.7ms)[0m  [1m[32mINSERT INTO "activities" ("name", "minutes", "notes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "meditation"], ["minutes", 5], ["notes", "good session"], ["created_at", "2022-01-27 19:28:40.086413"], ["updated_at", "2022-01-27 19:28:40.086413"]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.55ms)
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+Completed 200 OK in 6ms (Views: 3.6ms | ActiveRecord: 1.1ms | Allocations: 4147)
+
+
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActivitySerializer with ActiveModelSerializers::Adapter::Attributes (0.25ms)
+Completed 201 Created in 10ms (Views: 1.8ms | ActiveRecord: 2.2ms | Allocations: 5977)
+
+
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (49.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "react_rails_api_project_template_development"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "react_rails_api_project_template_development"[0m
+  [1m[35m (62.5ms)[0m  [1m[35mCREATE DATABASE "react_rails_api_project_template_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE DATABASE "react_rails_api_project_template_development" ENCODING = 'unicode'[0m
+  [1m[35m (5.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1087325618115650655)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20220121162353)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220121162353"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateActivities (20220124202534)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (12.1ms)[0m  [1m[35mCREATE TABLE "activities" ("id" bigserial primary key, "name" character varying, "minutes" integer, "notes" character varying, "user_id" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE INDEX "index_activities_on_user_id" ON "activities" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220124202534"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-01-27 19:45:52.347743"], ["updated_at", "2022-01-27 19:45:52.347743"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(1087325618115650655)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mActivity Load (0.6ms)[0m  [1m[34mSELECT "activities".* FROM "activities" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/api/v1/users" for ::1 at 2022-01-27 12:46:50 -0700
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"asd", "email"=>"asd", "password"=>"[FILTERED]"}}
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "asd"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `create'
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "asd"], ["email", "asd"], ["password_digest", "$2a$12$y4nrsXDzHL1En3Was8Uo4ejqexGbfTLF/SnU1WW7BkS4Nvz8L6oqu"], ["created_at", "2022-01-27 19:46:51.106546"], ["updated_at", "2022-01-27 19:46:51.106546"]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (5.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) AND "users"."id" != $2 LIMIT $3[0m  [["username", "asd"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `create'
+[active_model_serializers]   [1m[36mActivity Load (0.4ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:8:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (9.83ms)
+Completed 201 Created in 236ms (Views: 9.8ms | ActiveRecord: 15.8ms | Allocations: 15575)
+
+
+Started POST "/api/v1/login" for ::1 at 2022-01-27 12:46:55 -0700
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"user"=>{"username"=>"asd", "password"=>"[FILTERED]"}, "auth"=>{"user"=>{"username"=>"asd", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "asd"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:5:in `create'
+[active_model_serializers]   [1m[36mActivity Load (0.3ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auth_controller.rb:8:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (3.36ms)
+Completed 202 Accepted in 226ms (Views: 4.5ms | ActiveRecord: 0.9ms | Allocations: 1913)
+
+
+Started POST "/activities" for ::1 at 2022-01-27 12:47:13 -0700
+Started GET "/activities" for ::1 at 2022-01-27 12:47:13 -0700
+Processing by ActivitiesController#create as */*
+  Parameters: {"name"=>"meditation", "minutes"=>"10", "notes"=>"good session", "activity"=>{"name"=>"meditation", "minutes"=>"10", "notes"=>"good session"}}
+Processing by ActivitiesController#index as */*
+  Parameters: {"activity"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[31mUnpermitted parameter: :activity[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mActivity Create (0.7ms)[0m  [1m[32mINSERT INTO "activities" ("name", "minutes", "notes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "meditation"], ["minutes", 10], ["notes", "good session"], ["created_at", "2022-01-27 19:47:13.710580"], ["updated_at", "2022-01-27 19:47:13.710580"]]
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActivitySerializer with ActiveModelSerializers::Adapter::Attributes (2.08ms)
+Completed 201 Created in 32ms (Views: 5.4ms | ActiveRecord: 6.9ms | Allocations: 9229)
+
+
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mActivity Load (0.7ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/controllers/activities_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.63ms)
+Completed 200 OK in 37ms (Views: 3.5ms | ActiveRecord: 18.2ms | Allocations: 11090)
+
+
+Started POST "/activities" for ::1 at 2022-01-27 12:47:49 -0700
+Processing by ActivitiesController#create as */*
+Started GET "/activities" for ::1 at 2022-01-27 12:47:49 -0700
+  Parameters: {"name"=>"meditation", "minutes"=>"10", "notes"=>"good session", "activity"=>{"name"=>"meditation", "minutes"=>"10", "notes"=>"good session"}}
+Processing by ActivitiesController#index as */*
+  Parameters: {"activity"=>{}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[31mUnpermitted parameter: :activity[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mActivity Create (2.0ms)[0m  [1m[32mINSERT INTO "activities" ("name", "minutes", "notes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "meditation"], ["minutes", 10], ["notes", "good session"], ["created_at", "2022-01-27 19:47:49.401471"], ["updated_at", "2022-01-27 19:47:49.401471"]]
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mActivity Load (0.8ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/controllers/activities_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.97ms)
+Completed 200 OK in 23ms (Views: 15.2ms | ActiveRecord: 1.7ms | Allocations: 3834)
+
+
+  [1m[36mTRANSACTION (12.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActivitySerializer with ActiveModelSerializers::Adapter::Attributes (0.38ms)
+Completed 201 Created in 30ms (Views: 2.0ms | ActiveRecord: 16.6ms | Allocations: 5907)
+
+
+Started POST "/activities" for ::1 at 2022-01-27 12:49:08 -0700
+Started GET "/activities" for ::1 at 2022-01-27 12:49:08 -0700
+Processing by ActivitiesController#create as */*
+  Parameters: {"name"=>"meditation", "minutes"=>"10", "notes"=>"good session", "activity"=>{"name"=>"meditation", "minutes"=>"10", "notes"=>"good session"}}
+Processing by ActivitiesController#index as */*
+  Parameters: {"activity"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[31mUnpermitted parameter: :activity[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mActivity Load (1.2ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/controllers/activities_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.5ms)
+  [1m[36mActivity Create (1.7ms)[0m  [1m[32mINSERT INTO "activities" ("name", "minutes", "notes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "meditation"], ["minutes", 10], ["notes", "good session"], ["created_at", "2022-01-27 19:49:08.325801"], ["updated_at", "2022-01-27 19:49:08.325801"]]
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+Completed 200 OK in 8ms (Views: 3.9ms | ActiveRecord: 1.7ms | Allocations: 3598)
+
+
+  [1m[36mTRANSACTION (5.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActivitySerializer with ActiveModelSerializers::Adapter::Attributes (0.29ms)
+Completed 201 Created in 18ms (Views: 1.7ms | ActiveRecord: 9.0ms | Allocations: 6067)
+
+
+Started POST "/activities" for ::1 at 2022-01-27 12:49:35 -0700
+Processing by ActivitiesController#create as */*
+  Parameters: {"name"=>"meditation", "minutes"=>"10", "notes"=>"good session", "activity"=>{"name"=>"meditation", "minutes"=>"10", "notes"=>"good session"}}
+Started GET "/activities" for ::1 at 2022-01-27 12:49:35 -0700
+Processing by ActivitiesController#index as */*
+  Parameters: {"activity"=>{}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[31mUnpermitted parameter: :activity[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mActivity Create (0.6ms)[0m  [1m[32mINSERT INTO "activities" ("name", "minutes", "notes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "meditation"], ["minutes", 10], ["notes", "good session"], ["created_at", "2022-01-27 19:49:35.065094"], ["updated_at", "2022-01-27 19:49:35.065094"]]
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mActivity Load (0.3ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/controllers/activities_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.64ms)
+Completed 200 OK in 7ms (Views: 3.5ms | ActiveRecord: 1.2ms | Allocations: 4037)
+
+
+  [1m[36mTRANSACTION (5.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActivitySerializer with ActiveModelSerializers::Adapter::Attributes (0.34ms)
+Completed 201 Created in 15ms (Views: 1.6ms | ActiveRecord: 7.5ms | Allocations: 6399)
+
+
+Started POST "/activities" for ::1 at 2022-01-27 12:50:15 -0700
+Processing by ActivitiesController#create as */*
+  Parameters: {"name"=>"meditation", "minutes"=>"10", "notes"=>"good session", "activity"=>{"name"=>"meditation", "minutes"=>"10", "notes"=>"good session"}}
+Started GET "/activities" for ::1 at 2022-01-27 12:50:15 -0700
+Processing by ActivitiesController#index as */*
+  Parameters: {"activity"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[31mUnpermitted parameter: :activity[0m
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mActivity Load (0.3ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/controllers/activities_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.79ms)
+Completed 200 OK in 7ms (Views: 3.6ms | ActiveRecord: 1.6ms | Allocations: 3848)
+
+
+  [1m[36mActivity Create (0.8ms)[0m  [1m[32mINSERT INTO "activities" ("name", "minutes", "notes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "meditation"], ["minutes", 10], ["notes", "good session"], ["created_at", "2022-01-27 19:50:15.333233"], ["updated_at", "2022-01-27 19:50:15.333233"]]
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (5.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActivitySerializer with ActiveModelSerializers::Adapter::Attributes (0.3ms)
+Completed 201 Created in 18ms (Views: 1.5ms | ActiveRecord: 7.7ms | Allocations: 6358)
+
+
+Started POST "/activities" for ::1 at 2022-01-27 12:50:16 -0700
+Processing by ActivitiesController#create as */*
+  Parameters: {"name"=>"meditation", "minutes"=>"10", "notes"=>"good session", "activity"=>{"name"=>"meditation", "minutes"=>"10", "notes"=>"good session"}}
+Started GET "/activities" for ::1 at 2022-01-27 12:50:16 -0700
+Processing by ActivitiesController#index as */*
+  Parameters: {"activity"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[31mUnpermitted parameter: :activity[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mActivity Load (0.3ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/controllers/activities_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.94ms)
+Completed 200 OK in 7ms (Views: 3.6ms | ActiveRecord: 1.0ms | Allocations: 3969)
+
+
+  [1m[36mActivity Create (2.1ms)[0m  [1m[32mINSERT INTO "activities" ("name", "minutes", "notes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "meditation"], ["minutes", 10], ["notes", "good session"], ["created_at", "2022-01-27 19:50:16.558731"], ["updated_at", "2022-01-27 19:50:16.558731"]]
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (5.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActivitySerializer with ActiveModelSerializers::Adapter::Attributes (0.26ms)
+Completed 201 Created in 18ms (Views: 1.7ms | ActiveRecord: 9.0ms | Allocations: 6706)
+
+
+Started POST "/activities" for ::1 at 2022-01-27 12:51:50 -0700
+Processing by ActivitiesController#create as */*
+  Parameters: {"name"=>"meditation", "minutes"=>"10", "notes"=>"good session", "activity"=>{"name"=>"meditation", "minutes"=>"10", "notes"=>"good session"}}
+Started GET "/activities" for ::1 at 2022-01-27 12:51:50 -0700
+Processing by ActivitiesController#index as */*
+  Parameters: {"activity"=>{}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[31mUnpermitted parameter: :activity[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mActivity Create (0.4ms)[0m  [1m[32mINSERT INTO "activities" ("name", "minutes", "notes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "meditation"], ["minutes", 10], ["notes", "good session"], ["created_at", "2022-01-27 19:51:50.923802"], ["updated_at", "2022-01-27 19:51:50.923802"]]
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mActivity Load (0.8ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/controllers/activities_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.04ms)
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+Completed 200 OK in 10ms (Views: 4.1ms | ActiveRecord: 1.4ms | Allocations: 4624)
+
+
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActivitySerializer with ActiveModelSerializers::Adapter::Attributes (0.3ms)
+Completed 201 Created in 15ms (Views: 1.8ms | ActiveRecord: 3.3ms | Allocations: 6855)
+
+
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (37.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "react_rails_api_project_template_development"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "react_rails_api_project_template_development"[0m
+  [1m[35m (70.6ms)[0m  [1m[35mCREATE DATABASE "react_rails_api_project_template_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE DATABASE "react_rails_api_project_template_development" ENCODING = 'unicode'[0m
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1087325618115650655)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20220121162353)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (8.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220121162353"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateActivities (20220124202534)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.9ms)[0m  [1m[35mCREATE TABLE "activities" ("id" bigserial primary key, "name" character varying, "minutes" integer, "notes" character varying, "user_id" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE INDEX "index_activities_on_user_id" ON "activities" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220124202534"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-01-27 19:52:38.333355"], ["updated_at", "2022-01-27 19:52:38.333355"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(1087325618115650655)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/api/v1/users" for ::1 at 2022-01-27 12:53:41 -0700
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"asd", "email"=>"asd", "password"=>"[FILTERED]"}}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "asd"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `create'
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "asd"], ["email", "asd"], ["password_digest", "$2a$12$JPwzmJOW3HgQzKu1jbMj7.8e7b1ObZLUWa14Su/VqrTjgx5KhKZpq"], ["created_at", "2022-01-27 19:53:42.077102"], ["updated_at", "2022-01-27 19:53:42.077102"]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (5.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) AND "users"."id" != $2 LIMIT $3[0m  [["username", "asd"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `create'
+[active_model_serializers]   [1m[36mActivity Load (0.5ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:8:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (11.61ms)
+Completed 201 Created in 239ms (Views: 10.5ms | ActiveRecord: 15.3ms | Allocations: 15579)
+
+
+Started POST "/api/v1/login" for ::1 at 2022-01-27 12:53:47 -0700
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"user"=>{"username"=>"asd", "password"=>"[FILTERED]"}, "auth"=>{"user"=>{"username"=>"asd", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "asd"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:5:in `create'
+[active_model_serializers]   [1m[36mActivity Load (0.3ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/auth_controller.rb:8:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (2.96ms)
+Completed 202 Accepted in 226ms (Views: 3.0ms | ActiveRecord: 0.9ms | Allocations: 1913)
+
+
+Started POST "/activities" for ::1 at 2022-01-27 12:56:18 -0700
+Processing by ActivitiesController#create as */*
+  Parameters: {"name"=>"meditation", "minutes"=>"15", "notes"=>"good session", "activity"=>{"name"=>"meditation", "minutes"=>"15", "notes"=>"good session"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[31mUnpermitted parameter: :activity[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mActivity Create (0.9ms)[0m  [1m[32mINSERT INTO "activities" ("name", "minutes", "notes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "meditation"], ["minutes", 15], ["notes", "good session"], ["created_at", "2022-01-27 19:56:18.714190"], ["updated_at", "2022-01-27 19:56:18.714190"]]
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (5.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+Started GET "/activities" for ::1 at 2022-01-27 12:56:18 -0700
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActivitySerializer with ActiveModelSerializers::Adapter::Attributes (2.9ms)
+Completed 201 Created in 37ms (Views: 5.8ms | ActiveRecord: 11.8ms | Allocations: 10346)
+
+
+Processing by ActivitiesController#index as */*
+  Parameters: {"activity"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mActivity Load (0.4ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/controllers/activities_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.9ms)
+Completed 200 OK in 7ms (Views: 3.8ms | ActiveRecord: 0.8ms | Allocations: 2155)
+
+
+Started POST "/activities" for ::1 at 2022-01-27 12:57:10 -0700
+Started GET "/activities" for ::1 at 2022-01-27 12:57:10 -0700
+Processing by ActivitiesController#create as */*
+  Parameters: {"name"=>"meditation", "minutes"=>"5", "notes"=>"good session", "activity"=>{"name"=>"meditation", "minutes"=>"5", "notes"=>"good session"}}
+Processing by ActivitiesController#index as */*
+  Parameters: {"activity"=>{}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[31mUnpermitted parameter: :activity[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mActivity Create (0.4ms)[0m  [1m[32mINSERT INTO "activities" ("name", "minutes", "notes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "meditation"], ["minutes", 5], ["notes", "good session"], ["created_at", "2022-01-27 19:57:10.485387"], ["updated_at", "2022-01-27 19:57:10.485387"]]
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActivitySerializer with ActiveModelSerializers::Adapter::Attributes (1.54ms)
+Completed 201 Created in 22ms (Views: 11.2ms | ActiveRecord: 2.4ms | Allocations: 4586)
+
+
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mActivity Load (0.8ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/controllers/activities_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.68ms)
+Completed 200 OK in 33ms (Views: 3.3ms | ActiveRecord: 13.8ms | Allocations: 7727)
+
+
+Started POST "/activities" for ::1 at 2022-01-27 12:59:02 -0700
+Processing by ActivitiesController#create as */*
+  Parameters: {"name"=>"meditation", "minutes"=>"2", "notes"=>"good session", "activity"=>{"name"=>"meditation", "minutes"=>"2", "notes"=>"good session"}}
+Started GET "/activities" for ::1 at 2022-01-27 12:59:02 -0700
+Processing by ActivitiesController#index as */*
+  Parameters: {"activity"=>{}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[31mUnpermitted parameter: :activity[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mActivity Load (0.5ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/controllers/activities_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.66ms)
+Completed 200 OK in 7ms (Views: 4.1ms | ActiveRecord: 1.2ms | Allocations: 3546)
+
+
+  [1m[36mActivity Create (2.3ms)[0m  [1m[32mINSERT INTO "activities" ("name", "minutes", "notes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "meditation"], ["minutes", 2], ["notes", "good session"], ["created_at", "2022-01-27 19:59:02.574273"], ["updated_at", "2022-01-27 19:59:02.574273"]]
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActivitySerializer with ActiveModelSerializers::Adapter::Attributes (0.25ms)
+Completed 201 Created in 14ms (Views: 1.4ms | ActiveRecord: 5.4ms | Allocations: 6293)
+
+
+Started POST "/activities" for ::1 at 2022-01-27 12:59:05 -0700
+Processing by ActivitiesController#create as */*
+  Parameters: {"name"=>"meditation", "minutes"=>"2", "notes"=>"good session", "activity"=>{"name"=>"meditation", "minutes"=>"2", "notes"=>"good session"}}
+Started GET "/activities" for ::1 at 2022-01-27 12:59:05 -0700
+Processing by ActivitiesController#index as */*
+  Parameters: {"activity"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[31mUnpermitted parameter: :activity[0m
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mActivity Load (0.3ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/controllers/activities_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.65ms)
+Completed 200 OK in 8ms (Views: 3.3ms | ActiveRecord: 1.7ms | Allocations: 3701)
+
+
+  [1m[36mActivity Create (1.0ms)[0m  [1m[32mINSERT INTO "activities" ("name", "minutes", "notes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "meditation"], ["minutes", 2], ["notes", "good session"], ["created_at", "2022-01-27 19:59:05.059503"], ["updated_at", "2022-01-27 19:59:05.059503"]]
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (5.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActivitySerializer with ActiveModelSerializers::Adapter::Attributes (0.31ms)
+Completed 201 Created in 19ms (Views: 1.5ms | ActiveRecord: 7.8ms | Allocations: 6212)
+
+
+Started POST "/activities" for ::1 at 2022-01-27 13:01:33 -0700
+Started GET "/activities" for ::1 at 2022-01-27 13:01:33 -0700
+Processing by ActivitiesController#create as */*
+  Parameters: {"name"=>"meditation", "minutes"=>"10", "notes"=>"good session", "activity"=>{"name"=>"meditation", "minutes"=>"10", "notes"=>"good session"}}
+Processing by ActivitiesController#index as */*
+  Parameters: {"activity"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[31mUnpermitted parameter: :activity[0m
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mActivity Create (0.4ms)[0m  [1m[32mINSERT INTO "activities" ("name", "minutes", "notes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "meditation"], ["minutes", 10], ["notes", "good session"], ["created_at", "2022-01-27 20:01:33.712108"], ["updated_at", "2022-01-27 20:01:33.712108"]]
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mActivity Load (0.3ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/controllers/activities_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.71ms)
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 9ms (Views: 6.0ms | ActiveRecord: 1.8ms | Allocations: 4327)
+
+
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActivitySerializer with ActiveModelSerializers::Adapter::Attributes (0.26ms)
+Completed 201 Created in 14ms (Views: 1.8ms | ActiveRecord: 3.5ms | Allocations: 6344)
+
+
+Started POST "/activities" for ::1 at 2022-01-27 13:01:50 -0700
+Processing by ActivitiesController#create as */*
+  Parameters: {"name"=>"meditation", "minutes"=>"20", "notes"=>"distracted", "activity"=>{"name"=>"meditation", "minutes"=>"20", "notes"=>"distracted"}}
+Started GET "/activities" for ::1 at 2022-01-27 13:01:50 -0700
+Processing by ActivitiesController#index as */*
+  Parameters: {"activity"=>{}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[31mUnpermitted parameter: :activity[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mActivity Create (0.6ms)[0m  [1m[32mINSERT INTO "activities" ("name", "minutes", "notes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "meditation"], ["minutes", 20], ["notes", "distracted"], ["created_at", "2022-01-27 20:01:50.450288"], ["updated_at", "2022-01-27 20:01:50.450288"]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/activities_controller.rb:9:in `create'
+  [1m[36mActivity Load (1.2ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/controllers/activities_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.99ms)
+Completed 200 OK in 10ms (Views: 5.3ms | ActiveRecord: 2.1ms | Allocations: 5288)
+
+
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+[active_model_serializers] Rendered ActivitySerializer with ActiveModelSerializers::Adapter::Attributes (0.47ms)
+Completed 201 Created in 14ms (Views: 3.9ms | ActiveRecord: 3.0ms | Allocations: 6837)
+
+
