@@ -2,13 +2,20 @@ import React from "react";
 import RenderMedActivity from "./RenderMedActivity";
 
 export default function PrepMeditationTable({ activityHash }) {
-//   console.log("hash:", activityHash)
-//   console.log(typeof activityHash)
+
   const table = []
+
+  const meditationSessions = [];
+
+  activityHash?.forEach((activity) => {
+    if (activity.name === "meditation") {
+        meditationSessions.push(activity)
+    };
+  });
 
   if (activityHash !== '') {
     //   console.log('activity hash has data')
-    const table = activityHash.map((a) => {
+    const table = meditationSessions.map((a) => {
       return (
         <tr key={a.id}>
           <td></td>

@@ -2,10 +2,8 @@ import React from "react";
 import RenderYogaActivity from "./RenderYogaActivity";
 
 export default function PrepYogaTable({ activityHash }) {
-//   console.log("hash:", activityHash)
-//   console.log(typeof activityHash)
+
   const table = [];
-//   console.log({activityHash}, 'yoga table');
   const yogaSessions = [];
 
   activityHash?.forEach((activity) => {
@@ -13,7 +11,6 @@ export default function PrepYogaTable({ activityHash }) {
         yogaSessions.push(activity)
     };
   });
-  console.log(yogaSessions)
 
   if (activityHash !== '') {
     //   console.log('activity hash has data')

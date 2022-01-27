@@ -1,13 +1,13 @@
 import React from "react"
 
-export default function RenderYogaActivity({ table }) {
+export default function RenderCardioActivity({ table }) {
     return (
         <table className="records">
         <tbody>
-            <td><em>Yoga Session</em></td>
-            <td>Type of Yoga</td>
+            <td><em>Cardio workout</em></td>
+            <td>Type of workout</td>
+            <td>Distance (miles)</td>
             <td>Time (minutes)</td>
-            <td>Personal notes</td>
           {table}
         </tbody>
       </table>
