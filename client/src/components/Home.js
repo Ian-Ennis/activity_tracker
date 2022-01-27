@@ -137,6 +137,24 @@ export default function Main({ header, handleActivitySubmit }) {
       });
   }
 
+  function askToDelete(e, a) {
+    e.preventDefault()
+    window.confirm(`Delete ${activity} from database?`)
+      if (window.confirm) {
+        fetch(`${backend_API}/${a.id}`, {
+        method: "DELETE",
+        headers: {
+          Accepts: "application/json",
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${localStorage.getItem("jwt")}`,
+        },
+      })
+        .then((r) => r.json()) 
+        .then((data) => console.log(data));
+      }
+    }
+  
+
   return (
     <div>
       <div className="header">{header}</div>
@@ -144,7 +162,7 @@ export default function Main({ header, handleActivitySubmit }) {
         <p>
           Down to meditate? Into yoga? Always on the move? Get a Leg-Up on life
           by logging your self-care sessions using the menu below, so you can
-          keep track of your kick-ass routines as you practice.
+          keep track of your kick-ass routines as you do them.
         </p>
       </div>
       <Select
@@ -160,16 +178,14 @@ export default function Main({ header, handleActivitySubmit }) {
           <form onSubmit={handleMeditationSubmit}>
             <label for="name">Meditation Session:</label>
             <input type="number" name="minutes" placeholder="Time (minutes)" />
-            <input
-              type="text"
-              name="notes"
-              placeholder="Notes (what did you notice?)"
+            <input type="text"name="notes" placeholder="Notes (what did you notice?)"
             />
             <button type="submit">Submit</button>
           </form>
           <PrepMeditationTable
             activity={activity}
             activityHash={activityHash}
+            askToDelete={askToDelete}
           />
         </div>
       ) : null}
@@ -177,20 +193,14 @@ export default function Main({ header, handleActivitySubmit }) {
         <div>
           <form onSubmit={handleYogaSubmit}>
             <label for="name">Yoga Session:</label>
-            <input
-              type="text"
-              name="yoga_type"
-              placeholder="Type (Hatha, etc)"
+            <input type="text" name="yoga_type" placeholder="Type (Hatha, etc)"
             />
             <input type="number" name="minutes" placeholder="Time (minutes)" />
-            <input
-              type="text"
-              name="notes"
-              placeholder="Notes (tight, sore, etc.)"
+            <input type="text" name="notes" placeholder="Notes (tight, sore, etc.)"
             />
             <button type="submit">Submit</button>
           </form>
-          <PrepYogaTable activity={activity} activityHash={activityHash} />
+          <PrepYogaTable activity={activity} activityHash={activityHash} askToDelete={askToDelete} />
         </div>
       ) : null}
       {activity === "cardio" ? (
@@ -202,7 +212,7 @@ export default function Main({ header, handleActivitySubmit }) {
             <input type="number" name="minutes" placeholder="Time (minutes)" />
             <button type="submit">Submit</button>
           </form>
-          <PrepCardioTable activity={activity} activityHash={activityHash} />
+          <PrepCardioTable activity={activity} activityHash={activityHash} askToDelete={askToDelete} />
         </div>
       ) : null}
     </div>

@@ -1,7 +1,7 @@
 import React from "react";
 import RenderYogaActivity from "./RenderYogaActivity";
 
-export default function PrepYogaTable({ activityHash }) {
+export default function PrepYogaTable({ activityHash, askToDelete }) {
 
   const table = [];
   const yogaSessions = [];
@@ -21,6 +21,7 @@ export default function PrepYogaTable({ activityHash }) {
           <td>{a.yoga_type}</td>
           <td>{a.minutes} minutes</td>
           <td>{a.notes}</td>
+          <td><button onClick={(e) => askToDelete(e, a)}>Delete activity</button></td>
         </tr>
       );
     });

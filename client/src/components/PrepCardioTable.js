@@ -1,7 +1,7 @@
 import React from "react";
 import RenderCardioActivity from "./RenderCardioActivity";
 
-export default function PrepCardioTable({ activityHash }) {
+export default function PrepCardioTable({ activityHash, askToDelete }) {
 
   const table = [];
   const cardioWorkouts = [];
@@ -21,6 +21,7 @@ export default function PrepCardioTable({ activityHash }) {
           <td>{a.workout}</td>
           <td>{a.distance} minutes</td>
           <td>{a.minutes}</td>
+          <td><button onClick={(e) => askToDelete(e, a)}>Delete activity</button></td>
         </tr>
       );
     });

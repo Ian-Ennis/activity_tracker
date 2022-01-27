@@ -1,7 +1,7 @@
 import React from "react";
 import RenderMedActivity from "./RenderMedActivity";
 
-export default function PrepMeditationTable({ activityHash }) {
+export default function PrepMeditationTable({ activityHash, askToDelete }) {
 
   const table = []
 
@@ -21,6 +21,7 @@ export default function PrepMeditationTable({ activityHash }) {
           <td></td>
           <td>{a.minutes} minutes</td>
           <td>{a.notes}</td>
+          <td><button onClick={(e) => askToDelete(e, a)}>Delete activity</button></td>
         </tr>
       );
     });
