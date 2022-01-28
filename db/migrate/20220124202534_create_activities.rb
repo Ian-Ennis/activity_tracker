@@ -4,6 +4,8 @@ class CreateActivities < ActiveRecord::Migration[6.1]
       t.string :name
       t.integer :minutes
       t.string :notes
+      t.string :workout
+      t.integer :distance
       t.references(:user, type: :integer)
       t.timestamps
     end
