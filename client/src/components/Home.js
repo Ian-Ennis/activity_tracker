@@ -112,7 +112,7 @@ export default function Main({ header, handleActivitySubmit }) {
         name,
         workout,
         distance,
-        minutes
+        minutes,
       }),
     }).then(() => {
       fetch(`${backend_API}`, {
@@ -141,9 +141,20 @@ export default function Main({ header, handleActivitySubmit }) {
           "Content-Type": "application/json",
           Authorization: `Bearer ${localStorage.getItem("jwt")}`,
         },
-      })
-        .then((r) => r.json())
-        .then((data) => console.log(data));
+      }).then(() => {
+        fetch(`${backend_API}`, {
+          method: "GET",
+          headers: {
+            Accepts: "application/json",
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${localStorage.getItem("jwt")}`,
+          },
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            setActivityHash(data);
+          });
+      });
     }
   }
 
