@@ -39,7 +39,7 @@ export default function LoginForm({ onLogin }) {
   return (
     <div>
       {localStorage.getItem("jwt") ? (
-        <button
+        <button id="logout"
           onClick={() => {
             localStorage.setItem("jwt", "");
             navigate("/");

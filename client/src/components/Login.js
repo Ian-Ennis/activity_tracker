@@ -6,18 +6,18 @@ export default function Login ({ onLogin }) {
   const [showLogin, setShowLogin] = useState(true)
 
   return (
-    <div>
+    <div className="sign_login">
       {showLogin ? (
-        <div>
+        <div className="login">
           <LoginForm onLogin={onLogin} />
           <br />
-          <p>
+          <p id="create_account">
             Need an account? &nbsp;
             <button onClick={() => setShowLogin(false)}>Create Account</button>
           </p>
         </div>
       ) : (
-        <div>
+        <div className="signin">
           <SignUpForm onLogin={onLogin} />
           <br />
           <p>

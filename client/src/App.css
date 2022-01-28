@@ -1,7 +1,7 @@
 nav {
   font-size: 1.5em;
   border-bottom: 2px solid rgb(128, 128, 128);
-  margin-bottom: 2em;
+  margin-bottom: 7%;
 }
 
 .App {
@@ -11,7 +11,32 @@ nav {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
 
+.sign_login {
+  margin: 0px auto;
+  margin-bottom: 100%;
+  width: 87%;
+  background-color: #EFF8FA;
+  opacity: 0.95;
+}
+
+.signin {
+  text-align: center;
+}
+
+.login {
+  text-align: center;
+  margin-left: 37.25%;
+  margin-right: -20%;
+}
+
+#create_account {
+  margin-left: -66%;
+}
+
+#logout {
+  margin-left: -72%;
 }
 
 .site_info {
