@@ -153,7 +153,6 @@ export default function Main({ header, handleActivitySubmit }) {
         .then((data) => console.log(data));
       }
     }
-  
 
   return (
     <div>

@@ -8275,3 +8275,19 @@ Processing by ActivitiesController#destroy as */*
 Completed 204 No Content in 16ms (ActiveRecord: 8.4ms | Allocations: 2391)
 
 
+Started DELETE "/activities/13" for ::1 at 2022-01-27 16:53:15 -0700
+Processing by ActivitiesController#destroy as */*
+  Parameters: {"id"=>"13", "activity"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:29:in `current_user'
+  [1m[36mActivity Load (0.6ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/activities_controller.rb:28:in `find_activity'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/activities_controller.rb:21:in `destroy'
+  [1m[36mActivity Destroy (0.4ms)[0m  [1m[31mDELETE FROM "activities" WHERE "activities"."id" = $1[0m  [["id", 13]]
+  ↳ app/controllers/activities_controller.rb:21:in `destroy'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/activities_controller.rb:21:in `destroy'
+Completed 204 No Content in 30ms (ActiveRecord: 14.5ms | Allocations: 4489)
+
+
