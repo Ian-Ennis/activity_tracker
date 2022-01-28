@@ -181,81 +181,97 @@ export default function Main({ header, handleActivitySubmit }) {
           keep track of your kick-ass routines as you do them.
         </p>
       </div>
-      <Select
-        className="activity_dropdown"
-        autofocus
-        isSearchable
-        placeholder="Select activity"
-        options={activityOptions}
-        onChange={selectActivity}
-      />
-      {activity === "meditation" ? (
-        <div>
-          <form onSubmit={handleMeditationSubmit}>
-            <label for="name">Meditation Session:</label>
-            <input type="number" name="minutes" placeholder="Time (minutes)" />
-            <input
-              type="text"
-              name="notes"
-              placeholder="Notes (what did you notice?)"
-            />
-            <button type="submit">Submit</button>
-          </form>
-          <PrepMeditationTable
-            activity={activity}
-            activityHash={activityHash}
-            askToDelete={askToDelete}
-          />
+      <div className="activity_div">
+        <Select
+          className="activity_dropdown"
+          autofocus
+          isSearchable
+          placeholder="Select activity"
+          options={activityOptions}
+          onChange={selectActivity}
+        />
+        <div className="forms">
+          {activity === "meditation" ? (
+            <div>
+              <form onSubmit={handleMeditationSubmit}>
+                <label for="name">Meditation Session:</label>
+                <input
+                  type="number"
+                  name="minutes"
+                  placeholder="Time (minutes)"
+                />
+                <input
+                  type="text"
+                  name="notes"
+                  placeholder="Notes (what you noticed)"
+                />
+                <button type="submit">Submit</button>
+              </form>
+              <PrepMeditationTable
+                activity={activity}
+                activityHash={activityHash}
+                askToDelete={askToDelete}
+              />
+            </div>
+          ) : null}
+          {activity === "yoga" ? (
+            <div>
+              <form onSubmit={handleYogaSubmit}>
+                <label for="name">Yoga Session:</label>
+                <input
+                  type="text"
+                  name="yoga_type"
+                  placeholder="Type (Hatha, etc)"
+                />
+                <input
+                  type="number"
+                  name="minutes"
+                  placeholder="Time (minutes)"
+                />
+                <input
+                  type="text"
+                  name="notes"
+                  placeholder="Notes (tight, sore, etc.)"
+                />
+                <button type="submit">Submit</button>
+              </form>
+              <PrepYogaTable
+                activity={activity}
+                activityHash={activityHash}
+                askToDelete={askToDelete}
+              />
+            </div>
+          ) : null}
+          {activity === "cardio" ? (
+            <div>
+              <form onSubmit={handleCardioSubmit}>
+                <label for="name">Cardio workout:</label>
+                <input
+                  type="text"
+                  name="workout"
+                  placeholder="Type (walk/run/hike)"
+                />
+                <input
+                  type="number"
+                  name="distance"
+                  placeholder="Distance (miles)"
+                />
+                <input
+                  type="number"
+                  name="minutes"
+                  placeholder="Time (minutes)"
+                />
+                <button type="submit">Submit</button>
+              </form>
+              <PrepCardioTable
+                activity={activity}
+                activityHash={activityHash}
+                askToDelete={askToDelete}
+              />
+            </div>
+          ) : null}
         </div>
-      ) : null}
-      {activity === "yoga" ? (
-        <div>
-          <form onSubmit={handleYogaSubmit}>
-            <label for="name">Yoga Session:</label>
-            <input
-              type="text"
-              name="yoga_type"
-              placeholder="Type (Hatha, etc)"
-            />
-            <input type="number" name="minutes" placeholder="Time (minutes)" />
-            <input
-              type="text"
-              name="notes"
-              placeholder="Notes (tight, sore, etc.)"
-            />
-            <button type="submit">Submit</button>
-          </form>
-          <PrepYogaTable
-            activity={activity}
-            activityHash={activityHash}
-            askToDelete={askToDelete}
-          />
-        </div>
-      ) : null}
-      {activity === "cardio" ? (
-        <div>
-          <form onSubmit={handleCardioSubmit}>
-            <label for="name">Cardio workout:</label>
-            <input
-              type="text"
-              name="workout"
-              placeholder="Type (walk/run/hike)"
-            />
-            <input
-              type="number"
-              name="distance"
-              placeholder="Distance (miles)"
-            />
-            <input type="number" name="minutes" placeholder="Time (minutes)" />
-            <button type="submit">Submit</button>
-          </form>
-          <PrepCardioTable
-            activity={activity}
-            activityHash={activityHash}
-            askToDelete={askToDelete}
-          />
-        </div>
-      ) : null}
+      </div>
     </div>
   );
 }

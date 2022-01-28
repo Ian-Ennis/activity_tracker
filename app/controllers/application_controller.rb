@@ -3,7 +3,7 @@ class ApplicationController < ActionController::API
 
   # make key something long and indecipherable and store it in an environment cariable somewhere that isnt checked-in. That way its not attached. 
   def encode_token(payload)
-    JWT.encode(payload, 'my_secret')
+    JWT.encode(payload, 'sa89243hcx82349$@$!@+ASDWD{:AC(*ASD#')
   end
 
   def auth_header
@@ -16,7 +16,7 @@ class ApplicationController < ActionController::API
     if auth_header
       token = auth_header.split(' ')[1]
       begin
-        JWT.decode(token, 'my_secret', true, algorithm: 'HS256')
+        JWT.decode(token, 'sa89243hcx82349$@$!@+ASDWD{:AC(*ASD#', true, algorithm: 'HS256')
       rescue
         nil
       end

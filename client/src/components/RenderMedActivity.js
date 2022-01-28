@@ -4,7 +4,7 @@ export default function RenderMedActivity({ table }) {
     return (
         <table className="records">
         <tbody>
-            <td><em>Meditation Session</em></td>
+            <td><b><em>Meditation Session</em></b></td>
             <td>Length of activity</td>
             <td>Personal notes</td>
           {table}

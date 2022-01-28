@@ -4,7 +4,7 @@ export default function RenderCardioActivity({ table }) {
     return (
         <table className="records">
         <tbody>
-            <td><em>Cardio workout</em></td>
+            <td><b><em>Cardio workout</em></b></td>
             <td>Type of workout</td>
             <td>Distance (miles)</td>
             <td>Time (minutes)</td>

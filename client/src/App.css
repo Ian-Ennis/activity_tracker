@@ -1,6 +1,43 @@
-
 nav {
   font-size: 1.5em;
   border-bottom: 2px solid rgb(128, 128, 128);
   margin-bottom: 2em;
+}
+
+.App {
+  padding: 25px;
+  background-image: url('./yoga.jpeg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.site_info {
+  text-align: center;
+  margin-left: 1%;
+  margin-right: 1%;
+  margin: 30px;
+  padding: 18px;    
+  border: 2px solid #000000;
+  background-color: #EFF8FA;
+  opacity: 0.95;
+}
+
+.activity_div {
+  margin: 0 auto;
+  width: 90%;
+  background-color: #EFF8FA;
+  opacity: 0.95;
+}
+
+.activity_dropdown {
+  margin-bottom: 12px;
+}
+
+.forms {
+  margin: 0 auto;
+  width: 80%;
+  background-color: #EFF8FA;
 }
