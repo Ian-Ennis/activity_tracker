@@ -16,7 +16,7 @@ export default function PrepCardioTable({ activityHash, askToDelete }) {
         <tr key={a.id}>
           <td></td>
           <td>{a.workout}</td>
-          <td>{a.distance} minutes</td>
+          <td>{a.distance}</td>
           <td>{a.minutes}</td>
           <td>
             <button onClick={(e) => askToDelete(e, a)}>Delete activity</button>
