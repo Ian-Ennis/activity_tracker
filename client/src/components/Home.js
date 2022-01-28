@@ -158,19 +158,6 @@ export default function Main({ header, handleActivitySubmit }) {
     }
   }
 
-  // function updateActivity() {
-  //   fetch(`${backend_API}/${a.id}`, {
-  //     method: "PATCH",
-  //     headers: {
-  //       Accepts: "application/json",
-  //       "Content-Type": "application/json",
-  //       Authorization: `Bearer ${localStorage.getItem("jwt")}`,
-  //     },
-  //   })
-  //     .then((r) => r.json())
-  //     .then((data) => console.log(data));
-  //   }
-
   return (
     <div>
       <div className="header">{header}</div>
