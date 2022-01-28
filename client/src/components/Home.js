@@ -175,11 +175,11 @@ export default function Main({ header, handleActivitySubmit }) {
     <div>
       <div className="header">{header}</div>
       <div className="site_info">
-        <p>
+        <h5>
           Down to meditate? Into yoga? Always on the move? Get a Leg-Up on life
           by logging your self-care sessions using the menu below, so you can
           keep track of your kick-ass routines as you do them.
-        </p>
+        </h5>
       </div>
       <div className="activity_div">
         <Select

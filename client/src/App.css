@@ -6,6 +6,7 @@ nav {
 
 .header {
   text-align: center;
+  margin-top: -1%;
 }
 
 .App {
@@ -67,6 +68,7 @@ nav {
 }
 
 .forms {
+  text-align: center;
   margin: 0 auto;
   width: 80%;
   background-color: #EFF8FA;
