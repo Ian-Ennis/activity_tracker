@@ -4,6 +4,10 @@ nav {
   margin-bottom: 7%;
 }
 
+.header {
+  text-align: center;
+}
+
 .App {
   padding: 25px;
   background-image: url('./yoga.jpeg');
