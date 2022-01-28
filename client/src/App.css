@@ -27,6 +27,7 @@ nav {
 
 .activity_div {
   margin: 0 auto;
+  margin-bottom: 100%;
   width: 90%;
   background-color: #EFF8FA;
   opacity: 0.95;
