@@ -38,22 +38,20 @@ export default function Main({ header, handleActivitySubmit }) {
         minutes,
         notes,
       }),
-    })
-      .then((res) => res.json())
-      .then((data) => console.log(data));
-
-    fetch(`${backend_API}`, {
-      method: "GET",
-      headers: {
-        Accepts: "application/json",
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${localStorage.getItem("jwt")}`,
-      },
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        setActivityHash(data);
-      });
+    }).then(() => {
+      fetch(`${backend_API}`, {
+        method: "GET",
+        headers: {
+          Accepts: "application/json",
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${localStorage.getItem("jwt")}`,
+        },
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          setActivityHash(data);
+        });
+    });
   }
 
   function handleYogaSubmit(e) {
@@ -78,22 +76,20 @@ export default function Main({ header, handleActivitySubmit }) {
         minutes,
         notes,
       }),
-    })
-      .then((res) => res.json())
-      .then((data) => console.log(data));
-
-    fetch(`${backend_API}`, {
-      method: "GET",
-      headers: {
-        Accepts: "application/json",
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${localStorage.getItem("jwt")}`,
-      },
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        setActivityHash(data);
-      });
+    }).then(() => {
+      fetch(`${backend_API}`, {
+        method: "GET",
+        headers: {
+          Accepts: "application/json",
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${localStorage.getItem("jwt")}`,
+        },
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          setActivityHash(data);
+        });
+    });
   }
 
   function handleCardioSubmit(e) {
@@ -118,30 +114,27 @@ export default function Main({ header, handleActivitySubmit }) {
         distance,
         minutes
       }),
-    })
-      .then((res) => res.json())
-      .then((data) => console.log(data));
-
-    fetch(`${backend_API}`, {
-      method: "GET",
-      headers: {
-        Accepts: "application/json",
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${localStorage.getItem("jwt")}`,
-      },
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log({ data }, "all activities");
-        setActivityHash(data);
-      });
+    }).then(() => {
+      fetch(`${backend_API}`, {
+        method: "GET",
+        headers: {
+          Accepts: "application/json",
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${localStorage.getItem("jwt")}`,
+        },
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          setActivityHash(data);
+        });
+    });
   }
 
   function askToDelete(e, a) {
-    e.preventDefault()
-    window.confirm(`Delete ${activity} from database?`)
-      if (window.confirm) {
-        fetch(`${backend_API}/${a.id}`, {
+    e.preventDefault();
+    window.confirm(`Delete ${activity} from database?`);
+    if (window.confirm) {
+      fetch(`${backend_API}/${a.id}`, {
         method: "DELETE",
         headers: {
           Accepts: "application/json",
@@ -149,23 +142,23 @@ export default function Main({ header, handleActivitySubmit }) {
           Authorization: `Bearer ${localStorage.getItem("jwt")}`,
         },
       })
-        .then((r) => r.json()) 
+        .then((r) => r.json())
         .then((data) => console.log(data));
-      }
     }
+  }
 
-    // function updateActivity() {
-    //   fetch(`${backend_API}/${a.id}`, {
-    //     method: "PATCH",
-    //     headers: {
-    //       Accepts: "application/json",
-    //       "Content-Type": "application/json",
-    //       Authorization: `Bearer ${localStorage.getItem("jwt")}`,
-    //     },
-    //   })
-    //     .then((r) => r.json()) 
-    //     .then((data) => console.log(data));
-    //   }
+  // function updateActivity() {
+  //   fetch(`${backend_API}/${a.id}`, {
+  //     method: "PATCH",
+  //     headers: {
+  //       Accepts: "application/json",
+  //       "Content-Type": "application/json",
+  //       Authorization: `Bearer ${localStorage.getItem("jwt")}`,
+  //     },
+  //   })
+  //     .then((r) => r.json())
+  //     .then((data) => console.log(data));
+  //   }
 
   return (
     <div>
@@ -190,7 +183,10 @@ export default function Main({ header, handleActivitySubmit }) {
           <form onSubmit={handleMeditationSubmit}>
             <label for="name">Meditation Session:</label>
             <input type="number" name="minutes" placeholder="Time (minutes)" />
-            <input type="text"name="notes" placeholder="Notes (what did you notice?)"
+            <input
+              type="text"
+              name="notes"
+              placeholder="Notes (what did you notice?)"
             />
             <button type="submit">Submit</button>
           </form>
@@ -205,26 +201,48 @@ export default function Main({ header, handleActivitySubmit }) {
         <div>
           <form onSubmit={handleYogaSubmit}>
             <label for="name">Yoga Session:</label>
-            <input type="text" name="yoga_type" placeholder="Type (Hatha, etc)"
+            <input
+              type="text"
+              name="yoga_type"
+              placeholder="Type (Hatha, etc)"
             />
             <input type="number" name="minutes" placeholder="Time (minutes)" />
-            <input type="text" name="notes" placeholder="Notes (tight, sore, etc.)"
+            <input
+              type="text"
+              name="notes"
+              placeholder="Notes (tight, sore, etc.)"
             />
             <button type="submit">Submit</button>
           </form>
-          <PrepYogaTable activity={activity} activityHash={activityHash} askToDelete={askToDelete} />
+          <PrepYogaTable
+            activity={activity}
+            activityHash={activityHash}
+            askToDelete={askToDelete}
+          />
         </div>
       ) : null}
       {activity === "cardio" ? (
         <div>
           <form onSubmit={handleCardioSubmit}>
             <label for="name">Cardio workout:</label>
-            <input type="text" name="workout" placeholder="Type (walk/run/hike)" />
-            <input type="number" name="distance" placeholder="Distance (miles)" />
+            <input
+              type="text"
+              name="workout"
+              placeholder="Type (walk/run/hike)"
+            />
+            <input
+              type="number"
+              name="distance"
+              placeholder="Distance (miles)"
+            />
             <input type="number" name="minutes" placeholder="Time (minutes)" />
             <button type="submit">Submit</button>
           </form>
-          <PrepCardioTable activity={activity} activityHash={activityHash} askToDelete={askToDelete} />
+          <PrepCardioTable
+            activity={activity}
+            activityHash={activityHash}
+            askToDelete={askToDelete}
+          />
         </div>
       ) : null}
     </div>

@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2022_01_24_202534) do
     t.string "name"
     t.integer "minutes"
     t.string "notes"
+    t.string "yoga_type"
     t.string "workout"
     t.integer "distance"
     t.integer "user_id"
