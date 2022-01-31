@@ -13,7 +13,7 @@ export default function PrepMeditationTable({ activityHash, askToDelete }) {
 
     const table = meditationSessions.map((a) => {
       return (
-        <tr key={a.id}>
+        <tr key={a.id}
           <td></td>
           <td>{a.minutes} minutes</td>
           <td>{a.notes}</td>
