@@ -1,7 +1,6 @@
 import React from "react";
-import RenderYogaActivity from "./RenderYogaActivity";
 
-export default function PrepYogaTable({ activityHash, askToDelete }) {
+function YogaTable({ activityHash, askToDelete }) {
   const yogaSessions = [];
 
   if (activityHash.length) {
@@ -24,8 +23,21 @@ export default function PrepYogaTable({ activityHash, askToDelete }) {
         </tr>
       );
     });
-    return <RenderYogaActivity table={table} />;
+
+    return (
+      <table className="records">
+      <tbody>
+          <td><b><em>Yoga Session</em></b></td>
+          <td>Type of Yoga</td>
+          <td>Time (minutes)</td>
+          <td>Personal notes</td>
+        {table}
+      </tbody>
+    </table>
+  )
   } else {
     return null;
   }
 }
+
+export default YogaTable

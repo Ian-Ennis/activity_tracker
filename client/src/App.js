@@ -3,21 +3,21 @@ import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Login from "./components/Login";
-import Home from "./components/Home";
-import TopNav from "./components/TopNav";
+import ActivityForms from "./components/ActivityForms";
+import NavigationBar from "./components/NavigationBar";
 
 export default function App() {
   const [user, setUser] = useState();
 
-  const header = <h1>Leg Up</h1>;
+  const header = <h1>IAN'S APP</h1>;
 
   return (
     <div className="App">
-      <TopNav />
+      <NavigationBar />
       <Routes>
         <Route path="/" element={<Header header={header} />} />
         <Route path="/login" element={<Login onLogin={setUser} />} />
-        <Route path="/home" element={<Home header={header} />} />
+        <Route path="/activity_forms" element={<ActivityForms header={header} />} />
       </Routes>
     </div>
   );

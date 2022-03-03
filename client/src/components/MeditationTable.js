@@ -1,7 +1,6 @@
 import React from "react";
-import RenderMedActivity from "./RenderMedActivity";
 
-export default function PrepMeditationTable({ activityHash, askToDelete }) {
+function MeditationTable({ activityHash, askToDelete }) {
   const meditationSessions = [];
 
   if (activityHash.length) {
@@ -13,7 +12,7 @@ export default function PrepMeditationTable({ activityHash, askToDelete }) {
 
     const table = meditationSessions.map((a) => {
       return (
-        <tr key={a.id}
+        <tr key={a.id}>
           <td></td>
           <td>{a.minutes} minutes</td>
           <td>{a.notes}</td>
@@ -23,8 +22,20 @@ export default function PrepMeditationTable({ activityHash, askToDelete }) {
         </tr>
       );
     });
-    return <RenderMedActivity table={table} />;
+    
+    return (
+      <table className="records">
+      <tbody>
+          <td><b><em>Meditation Session</em></b></td>
+          <td>Length of activity</td>
+          <td>Personal notes</td>
+        {table}
+      </tbody>
+    </table>
+  )
   } else {
     return null;
   }
 }
+
+export default MeditationTable

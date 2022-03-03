@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import Select from "react-select";
-import PrepMeditationTable from "./PrepMeditationTable";
-import PrepYogaTable from "./PrepYogaTable";
-import PrepCardioTable from "./PrepCardioTable";
+import PrepMeditationTable from "./MeditationTable";
+import PrepYogaTable from "./YogaTable";
+import PrepCardioTable from "./CardioTable";
 const backend_API = `http://localhost:3000/activities`;
 
-export default function Main({ header, handleActivitySubmit }) {
+function ActivityForms({ header }) {
   const [activityHash, setActivityHash] = useState([]);
   const [activity, setActivity] = useState("");
 
@@ -14,10 +14,6 @@ export default function Main({ header, handleActivitySubmit }) {
     { value: "yoga", label: "🤸‍♂️ Yoga" },
     { value: "cardio", label: "🏃🏽 Cardio" },
   ];
-
-  function selectActivity(e) {
-    setActivity(e.value);
-  }
 
   function handleMeditationSubmit(e) {
     e.preventDefault();
@@ -175,7 +171,7 @@ export default function Main({ header, handleActivitySubmit }) {
           isSearchable
           placeholder="Select activity"
           options={activityOptions}
-          onChange={selectActivity}
+          onChange={(e) => setActivity(e.value)}
         />
         <div className="forms">
           {activity === "meditation" ? (
@@ -262,3 +258,5 @@ export default function Main({ header, handleActivitySubmit }) {
     </div>
   );
 }
+
+export default ActivityForms

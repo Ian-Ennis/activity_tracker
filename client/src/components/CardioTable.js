@@ -1,7 +1,6 @@
 import React from "react";
-import RenderCardioActivity from "./RenderCardioActivity";
 
-export default function PrepCardioTable({ activityHash, askToDelete }) {
+function CardioTable({ activityHash, askToDelete }) {
   const cardioWorkouts = [];
 
   if (activityHash.length) {
@@ -24,8 +23,21 @@ export default function PrepCardioTable({ activityHash, askToDelete }) {
         </tr>
       );
     });
-    return <RenderCardioActivity table={table} />;
+    
+    return (
+      <table className="records">
+      <tbody>
+          <td><b><em>Cardio workout</em></b></td>
+          <td>Type of workout</td>
+          <td>Distance (miles)</td>
+          <td>Time (minutes)</td>
+        {table}
+      </tbody>
+    </table>
+    )
   } else {
     return null;
   }
 }
+
+export default CardioTable

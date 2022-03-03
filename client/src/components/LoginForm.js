@@ -17,7 +17,7 @@ export default function LoginForm({ onLogin }) {
     function onLoggedIn() {
       // console.log('LOGGED IN:', json.jwt);
       // localStorage.setItem('jwt', json.jwt);
-      navigate("/home");
+      navigate("/activity_forms");
     }
 
     fetch(`${API}/login`, {
