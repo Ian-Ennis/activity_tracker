@@ -1,12 +1,10 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom';
 
-export default function Header( {header} ) {
-    const navigate = useNavigate()
+export default function Header() {
 
     return(
         <header className="header">
-            {header}
+            <h1>Leg-Up Activity Tracker</h1>
         </header>
     )
 }

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Select from "react-select";
-import PrepMeditationTable from "./MeditationTable";
-import PrepYogaTable from "./YogaTable";
-import PrepCardioTable from "./CardioTable";
+import MeditationTable from "./Tables/MeditationTable";
+import YogaTable from "./Tables/YogaTable";
+import CardioTable from "./Tables/CardioTable";
 const backend_API = `http://localhost:3000/activities`;
 
 function ActivityForms({ header }) {
@@ -190,7 +190,7 @@ function ActivityForms({ header }) {
                 />
                 <button type="submit">Submit</button>
               </form>
-              <PrepMeditationTable
+              <MeditationTable
                 activity={activity}
                 activityHash={activityHash}
                 askToDelete={askToDelete}
@@ -218,7 +218,7 @@ function ActivityForms({ header }) {
                 />
                 <button type="submit">Submit</button>
               </form>
-              <PrepYogaTable
+              <YogaTable
                 activity={activity}
                 activityHash={activityHash}
                 askToDelete={askToDelete}
@@ -246,7 +246,7 @@ function ActivityForms({ header }) {
                 />
                 <button type="submit">Submit</button>
               </form>
-              <PrepCardioTable
+              <CardioTable
                 activity={activity}
                 activityHash={activityHash}
                 askToDelete={askToDelete}
