@@ -1,0 +1,75 @@
+nav {
+  font-size: 1.5em;
+  border-bottom: 2px solid rgb(128, 128, 128);
+  margin-bottom: 7%;
+}
+
+.header {
+  text-align: center;
+  margin-top: -1%;
+}
+
+.App {
+  padding: 25px;
+  background-image: url('./yoga.jpeg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.sign_login {
+  margin: 0px auto;
+  margin-bottom: 100%;
+  width: 87%;
+  background-color: #EFF8FA;
+  opacity: 0.95;
+}
+
+.signin {
+  text-align: center;
+}
+
+.login {
+  text-align: center;
+  margin-left: 37.25%;
+  margin-right: -20%;
+}
+
+#create_account {
+  margin-left: -66%;
+}
+
+#logout {
+  margin-left: -72%;
+}
+
+.site_info {
+  text-align: center;
+  margin-left: 1%;
+  margin-right: 1%;
+  margin: 30px;
+  padding: 18px;    
+  border: 2px solid #000000;
+  background-color: #EFF8FA;
+  opacity: 0.95;
+}
+
+.activity_div {
+  margin: 0 auto;
+  margin-bottom: 100%;
+  width: 90%;
+  background-color: #EFF8FA;
+  opacity: 0.95;
+}
+
+.activity_dropdown {
+  margin-bottom: 12px;
+}
+
+.forms {
+  text-align: center;
+  margin: 0 auto;
+  width: 80%;
+  background-color: #EFF8FA;
+}
