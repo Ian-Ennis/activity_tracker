@@ -18,26 +18,33 @@ function ActivityForms({ header }) {
     { value: "yoga", label: "🤸‍♂️ Yoga" },
     { value: "cardio", label: "🏃🏽 Cardio" },
   ];
+  
+  const meditationSessions = [];
+  const yogaSessions = [];
+  const cardioSessions = [];
 
   const meditationLabels = [];
   const yogaLabels = [];
   const cardioLabels = [];
 
-  const meditationSessions = [];
-  const yogaSessions = [];
-  const cardioSessions = [];
+  const meditationTime = [];
+  const yogaTime = [];
+  const cardioTime = [];
 
   if (activityHash.length) {
     for (let i = 0; i < activityHash.length; i++) {
       if (activityHash[i].name === "meditation") {
         meditationLabels.push(activityHash[i].date);
-        meditationSessions.push(activityHash[i].minutes);
+        meditationSessions.push(activityHash[i])
+        meditationTime.push(activityHash[i].minutes);
       } else if (activityHash[i].name === "yoga") {
         yogaLabels.push(activityHash[i].date);
-        yogaSessions.push(activityHash[i].minutes);
+        yogaSessions.push(activityHash[i])
+        yogaTime.push(activityHash[i].minutes);
       } else if (activityHash[i].name === "cardio") {
         cardioLabels.push(activityHash[i].date);
-        cardioSessions.push(activityHash[i].minutes);
+        cardioSessions.push(activityHash[i])
+        cardioTime.push(activityHash[i].minutes);
       }
     }
   }
@@ -241,8 +248,7 @@ function ActivityForms({ header }) {
                   </div>
                 </form>
                 <MeditationTable
-                  activity={activity}
-                  activityHash={activityHash}
+                  meditationSessions={meditationSessions}
                   askToDelete={askToDelete}
                 />
                 <div className="bar_chart">
@@ -252,10 +258,10 @@ function ActivityForms({ header }) {
                       datasets: [
                         {
                           label: "Time dedicated",
-                          backgroundColor: "rgba(75,192,192,1)",
+                          backgroundColor: "rgba(21, 232, 237, 1)",
                           borderColor: "rgba(0,0,0,1)",
                           borderWidth: 2,
-                          data: meditationSessions,
+                          data: meditationTime,
                         },
                       ],
                     }}
@@ -295,8 +301,7 @@ function ActivityForms({ header }) {
                   </div>
                 </form>
                 <YogaTable
-                  activity={activity}
-                  activityHash={activityHash}
+                  yogaSessions={yogaSessions}
                   askToDelete={askToDelete}
                 />
                 <div className="bar_chart">
@@ -306,10 +311,10 @@ function ActivityForms({ header }) {
                       datasets: [
                         {
                           label: "Time dedicated",
-                          backgroundColor: "rgba(75,192,192,1)",
+                          backgroundColor: "rgba(21, 232, 237, 1)",
                           borderColor: "rgba(0,0,0,1)",
                           borderWidth: 2,
-                          data: yogaSessions,
+                          data: yogaTime,
                         },
                       ],
                     }}
@@ -354,8 +359,7 @@ function ActivityForms({ header }) {
                   </div>
                 </form>
                 <CardioTable
-                  activity={activity}
-                  activityHash={activityHash}
+                  cardioSessions={cardioSessions}
                   askToDelete={askToDelete}
                 />
                 <div className="bar_chart">
@@ -365,10 +369,10 @@ function ActivityForms({ header }) {
                       datasets: [
                         {
                           label: "Time dedicated",
-                          backgroundColor: "rgba(75,192,192,1)",
+                          backgroundColor: "rgba(21, 232, 237, 1)",
                           borderColor: "rgba(0,0,0,1)",
                           borderWidth: 2,
-                          data: cardioSessions,
+                          data: cardioTime,
                         },
                       ],
                     }}

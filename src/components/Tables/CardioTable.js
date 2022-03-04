@@ -1,16 +1,10 @@
 import React from "react";
 
-function CardioTable({ activityHash, askToDelete }) {
-  const cardioWorkouts = [];
+function CardioTable({ cardioSessions, askToDelete }) {
 
-  if (activityHash.length) {
-    activityHash.forEach((activity) => {
-      if (activity.name === "cardio") {
-        cardioWorkouts.push(activity);
-      }
-    });
+  if (cardioSessions.length) {
 
-    const table = cardioWorkouts.map((a) => {
+    const table = cardioSessions.map((a) => {
       return (
         <tr key={a.id}>
           <td>{a.date}</td>

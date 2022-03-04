@@ -1,14 +1,8 @@
 import React from "react";
 
-function YogaTable({ activityHash, askToDelete }) {
-  const yogaSessions = [];
+function YogaTable({ yogaSessions, askToDelete }) {
 
-  if (activityHash.length) {
-    activityHash.forEach((activity) => {
-      if (activity.name === "yoga") {
-        yogaSessions.push(activity);
-      }
-    });
+  if (yogaSessions.length) {
 
     const table = yogaSessions.map((a) => {
       return (

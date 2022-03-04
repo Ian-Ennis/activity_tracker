@@ -1,14 +1,8 @@
 import React from "react";
 
-function MeditationTable({ activityHash, askToDelete }) {
-  const meditationSessions = [];
+function MeditationTable({ meditationSessions, askToDelete }) {
 
-  if (activityHash.length) {
-    activityHash.forEach((activity) => {
-      if (activity.name === "meditation") {
-        meditationSessions.push(activity);
-      }
-    });
+  if (meditationSessions.length) {
 
     const table = meditationSessions.map((a) => {
       return (
