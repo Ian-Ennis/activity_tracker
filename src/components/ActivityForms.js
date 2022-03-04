@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import Select from "react-select";
+import { Chart as ChartJS } from 'chart.js/auto'
+import { Chart }            from 'react-chartjs-2'
+import {Bar} from 'react-chartjs-2';
 import MeditationTable from "./Tables/MeditationTable";
 import YogaTable from "./Tables/YogaTable";
 import CardioTable from "./Tables/CardioTable";
@@ -8,12 +11,27 @@ const backend_API = `http://localhost:3000/activities`;
 function ActivityForms({ header }) {
   const [activityHash, setActivityHash] = useState([]);
   const [activity, setActivity] = useState("");
+  const [selected, setSelected] = useState(false)
 
   const activityOptions = [
     { value: "meditation", label: "🧘 Meditation" },
     { value: "yoga", label: "🤸‍♂️ Yoga" },
     { value: "cardio", label: "🏃🏽 Cardio" },
   ];
+
+  const state = {
+    labels: ['January', 'February', 'March',
+             'April', 'May'],
+    datasets: [
+      {
+        label: 'Time dedicated',
+        backgroundColor: 'rgba(75,192,192,1)',
+        borderColor: 'rgba(0,0,0,1)',
+        borderWidth: 2,
+        data: [65, 59, 80, 81, 56]
+      }
+    ]
+  }
 
   function handleMeditationSubmit(e) {
     e.preventDefault();
@@ -96,6 +114,7 @@ function ActivityForms({ header }) {
     const workout = e.target.workout.value;
     const distance = e.target.distance.value;
     const minutes = e.target.minutes.value;
+    const notes = e.target.notes.value;
 
     fetch(`${backend_API}`, {
       method: "POST",
@@ -109,6 +128,7 @@ function ActivityForms({ header }) {
         workout,
         distance,
         minutes,
+        notes
       }),
     }).then(() => {
       fetch(`${backend_API}`, {
@@ -155,7 +175,7 @@ function ActivityForms({ header }) {
   }
 
   return (
-    <div>
+    <>
       <div className="header">{header}</div>
       <div className="site_info">
         <h5>
@@ -171,9 +191,24 @@ function ActivityForms({ header }) {
           isSearchable
           placeholder="Select activity"
           options={activityOptions}
-          onChange={(e) => setActivity(e.value)}
+          onChange={(e) => {
+            fetch(`${backend_API}`, {
+              method: "GET",
+              headers: {
+                Accepts: "application/json",
+                "Content-Type": "application/json",
+                Authorization: `Bearer ${localStorage.getItem("jwt")}`,
+              },
+            })
+              .then((res) => res.json())
+              .then((data) => {
+                setActivityHash(data);
+                setSelected(true)
+                setActivity(e.value)
+              });}
+          }
         />
-        <div className="forms">
+        {selected ? <div className="forms">
           {activity === "meditation" ? (
             <>
               <form className="form" onSubmit={handleMeditationSubmit}>
@@ -187,7 +222,7 @@ function ActivityForms({ header }) {
                   <input
                     type="text"
                     name="notes"
-                    placeholder="Notes"
+                    placeholder="Notes?"
                   />
                   <button type="submit">Submit</button>
                 </div>
@@ -197,6 +232,22 @@ function ActivityForms({ header }) {
                 activityHash={activityHash}
                 askToDelete={askToDelete}
               />
+              <div>
+        <Bar
+          data={state}
+          options={{
+            title:{
+              display:true,
+              text:'Average Rainfall per month',
+              fontSize:20
+            },
+            legend:{
+              display:true,
+              position:'right'
+            }
+          }}
+        />
+      </div>
             </>
           ) : null}
           {activity === "yoga" ? (
@@ -217,7 +268,7 @@ function ActivityForms({ header }) {
                   <input
                     type="text"
                     name="notes"
-                    placeholder="Notes"
+                    placeholder="Notes?"
                   />
                   <button type="submit">Submit</button>
                 </div>
@@ -227,6 +278,22 @@ function ActivityForms({ header }) {
                 activityHash={activityHash}
                 askToDelete={askToDelete}
               />
+              <div>
+        <Bar
+          data={state}
+          options={{
+            title:{
+              display:true,
+              text:'Average Rainfall per month',
+              fontSize:20
+            },
+            legend:{
+              display:true,
+              position:'right'
+            }
+          }}
+        />
+      </div>
             </>
           ) : null}
           {activity === "cardio" ? (
@@ -252,7 +319,7 @@ function ActivityForms({ header }) {
                   <input
                     type="text"
                     name="notes"
-                    placeholder="Notes"
+                    placeholder="Notes?"
                   />
                   <button type="submit">Submit</button>
                 </div>
@@ -262,11 +329,27 @@ function ActivityForms({ header }) {
                 activityHash={activityHash}
                 askToDelete={askToDelete}
               />
+              <div>
+        <Bar
+          data={state}
+          options={{
+            title:{
+              display:true,
+              text:'Average Rainfall per month',
+              fontSize:20
+            },
+            legend:{
+              display:true,
+              position:'right'
+            }
+          }}
+        />
+      </div>
             </>
           ) : null}
-        </div>
+        </div> : null}
       </div>
-    </div>
+    </>
   );
 }
 

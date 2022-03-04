@@ -56,20 +56,32 @@ nav {
 }
 
 .activity_div {
-  margin: 0 auto;
+  margin: 0px auto;
   margin-bottom: 100%;
   width: 90%;
-  background-color: #EFF8FA;
   opacity: 0.95;
 }
 
 .activity_dropdown {
-  margin-bottom: 12px;
+  margin: 0px 550px 10px 550px;
 }
 
 .forms {
   text-align: center;
-  margin: 0 auto;
+  margin: 0px auto;
+  padding: 20px;
   width: 80%;
   background-color: #EFF8FA;
+  border: 2px solid #000000;
+}
+
+.inputs {
+  display: flex;
+  justify-content: center;
+  grid-gap: 0px 20px;
+  gap: 0px 20px;
+}
+
+.records {
+  margin: 0 auto;
 }

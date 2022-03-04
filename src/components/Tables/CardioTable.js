@@ -17,6 +17,7 @@ function CardioTable({ activityHash, askToDelete }) {
           <td>{a.workout}</td>
           <td>{a.distance}</td>
           <td>{a.minutes}</td>
+          <td>{a.notes}</td>
           <td>
             <button onClick={(e) => askToDelete(e, a)}>Delete activity</button>
           </td>
@@ -31,6 +32,7 @@ function CardioTable({ activityHash, askToDelete }) {
           <td>Type of workout</td>
           <td>Distance (miles)</td>
           <td>Time (minutes)</td>
+          <td>Notes</td>
         {table}
       </tbody>
     </table>
