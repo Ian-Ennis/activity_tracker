@@ -84,4 +84,10 @@ nav {
 
 .records {
   margin: 0 auto;
+  border: 2px solid #000000;
+  padding: 20px;
+}
+
+.bar_chart {
+  margin: 100px auto;
 }

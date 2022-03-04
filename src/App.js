@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import NavigationBar from "./components/NavigationBar";
 import Header from "./components/Header";
-import Login from "./components/Login";
+import Login from "./components/Login/Login";
 import ActivityForms from "./components/ActivityForms";
 import Resources from "./components/Resources"
 
