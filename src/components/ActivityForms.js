@@ -30,42 +30,22 @@ function ActivityForms({ header }) {
   if (activityHash.length) {
     for (let i = 0; i < activityHash.length; i++) {
       if (activityHash[i].name === "meditation") {
-        meditationLabels.push(activityHash[i].id)
-        meditationSessions.push(activityHash[i])
+        meditationLabels.push(activityHash[i].date);
+        meditationSessions.push(activityHash[i].minutes);
       } else if (activityHash[i].name === "yoga") {
-        yogaLabels.push(activityHash[i].id)
-        yogaSessions.push(activityHash[i])
+        yogaLabels.push(activityHash[i].date);
+        yogaSessions.push(activityHash[i].minutes);
       } else if (activityHash[i].name === "cardio") {
-        cardioLabels.push(activityHash[i].id)
-        cardioSessions.push(activityHash[i])
+        cardioLabels.push(activityHash[i].date);
+        cardioSessions.push(activityHash[i].minutes);
       }
+    }
   }
-}
-
-  console.log(meditationLabels)
-  console.log(yogaLabels)
-  console.log(cardioLabels)
-
-  console.log(meditationSessions)
-  console.log(yogaSessions)
-  console.log(cardioSessions)
-
-  const state = {
-    labels: ["January", "February", "March", "April", "May"],
-    datasets: [
-      {
-        label: "Time dedicated",
-        backgroundColor: "rgba(75,192,192,1)",
-        borderColor: "rgba(0,0,0,1)",
-        borderWidth: 2,
-        data: [65, 59, 80, 81, 56],
-      },
-    ],
-  };
 
   function handleMeditationSubmit(e) {
     e.preventDefault();
 
+    const date = e.target.date.value;
     const name = activity;
     const minutes = e.target.minutes.value;
     const notes = e.target.notes.value;
@@ -78,6 +58,7 @@ function ActivityForms({ header }) {
         Authorization: `Bearer ${localStorage.getItem("jwt")}`,
       },
       body: JSON.stringify({
+        date,
         name,
         minutes,
         notes,
@@ -94,7 +75,6 @@ function ActivityForms({ header }) {
         .then((res) => res.json())
         .then((data) => {
           setActivityHash(data);
-
         });
     });
   }
@@ -103,6 +83,7 @@ function ActivityForms({ header }) {
     e.preventDefault();
     setActivityHash([]);
 
+    const date = e.target.date.value;
     const name = activity;
     const yoga_type = e.target.yoga_type.value;
     const minutes = e.target.minutes.value;
@@ -116,6 +97,7 @@ function ActivityForms({ header }) {
         Authorization: `Bearer ${localStorage.getItem("jwt")}`,
       },
       body: JSON.stringify({
+        date,
         name,
         yoga_type,
         minutes,
@@ -141,6 +123,7 @@ function ActivityForms({ header }) {
     e.preventDefault();
     setActivityHash([]);
 
+    const date = e.target.date.value;
     const name = activity;
     const workout = e.target.workout.value;
     const distance = e.target.distance.value;
@@ -155,6 +138,7 @@ function ActivityForms({ header }) {
         Authorization: `Bearer ${localStorage.getItem("jwt")}`,
       },
       body: JSON.stringify({
+        date,
         name,
         workout,
         distance,
@@ -246,6 +230,7 @@ function ActivityForms({ header }) {
                 <form className="form" onSubmit={handleMeditationSubmit}>
                   <label for="name">Meditation Session:</label>
                   <div className="inputs">
+                    <input type="text" name="date" placeholder="MM/DD/YYYY" />
                     <input
                       type="number"
                       name="minutes"
@@ -270,7 +255,7 @@ function ActivityForms({ header }) {
                           backgroundColor: "rgba(75,192,192,1)",
                           borderColor: "rgba(0,0,0,1)",
                           borderWidth: 2,
-                          data: [meditationSessions[0].minutes, meditationSessions[1].minutes, meditationSessions[2].minutes],
+                          data: meditationSessions,
                         },
                       ],
                     }}
@@ -294,6 +279,7 @@ function ActivityForms({ header }) {
                 <form className="form" onSubmit={handleYogaSubmit}>
                   <label for="name">Yoga Session:</label>
                   <div className="inputs">
+                    <input type="text" name="date" placeholder="MM/DD/YYYY" />
                     <input
                       type="text"
                       name="yoga_type"
@@ -323,7 +309,7 @@ function ActivityForms({ header }) {
                           backgroundColor: "rgba(75,192,192,1)",
                           borderColor: "rgba(0,0,0,1)",
                           borderWidth: 2,
-                          data: [yogaSessions[0].minutes, yogaSessions[1].minutes, yogaSessions[2].minutes],
+                          data: yogaSessions,
                         },
                       ],
                     }}
@@ -347,6 +333,7 @@ function ActivityForms({ header }) {
                 <form className="form" onSubmit={handleCardioSubmit}>
                   <label for="name">Cardio workout:</label>
                   <div className="inputs">
+                    <input type="text" name="date" placeholder="MM/DD/YYYY" />
                     <input
                       type="text"
                       name="workout"
@@ -381,7 +368,7 @@ function ActivityForms({ header }) {
                           backgroundColor: "rgba(75,192,192,1)",
                           borderColor: "rgba(0,0,0,1)",
                           borderWidth: 2,
-                          data: [cardioSessions[0].minutes, cardioSessions[1].minutes, cardioSessions[2].minutes],
+                          data: cardioSessions,
                         },
                       ],
                     }}
@@ -407,4 +394,4 @@ function ActivityForms({ header }) {
   );
 }
 
-export default ActivityForms
+export default ActivityForms;

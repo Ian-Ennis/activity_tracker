@@ -13,7 +13,7 @@ function YogaTable({ activityHash, askToDelete }) {
     const table = yogaSessions.map((a) => {
       return (
         <tr key={a.id}>
-          <td></td>
+          <td>{a.date}</td>
           <td>{a.yoga_type}</td>
           <td>{a.minutes} minutes</td>
           <td>{a.notes}</td>

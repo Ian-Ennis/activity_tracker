@@ -13,7 +13,7 @@ function MeditationTable({ activityHash, askToDelete }) {
     const table = meditationSessions.map((a) => {
       return (
         <tr key={a.id}>
-          <td></td>
+          <td>{a.date}</td>
           <td>{a.minutes} minutes</td>
           <td>{a.notes}</td>
           <td>

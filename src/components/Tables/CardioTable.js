@@ -13,7 +13,7 @@ function CardioTable({ activityHash, askToDelete }) {
     const table = cardioWorkouts.map((a) => {
       return (
         <tr key={a.id}>
-          <td></td>
+          <td>{a.date}</td>
           <td>{a.workout}</td>
           <td>{a.distance}</td>
           <td>{a.minutes}</td>
