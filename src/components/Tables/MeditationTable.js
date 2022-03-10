@@ -1,9 +1,8 @@
 import React from "react";
 
-function MeditationTable({ meditationSessions, askToDelete }) {
+function MeditationTable({ askToDelete, meditationSessions }) {
 
   if (meditationSessions.length) {
-
     const table = meditationSessions.map((a) => {
       return (
         <tr key={a.id}>
@@ -16,20 +15,26 @@ function MeditationTable({ meditationSessions, askToDelete }) {
         </tr>
       );
     });
-    
+
     return (
-      <table className="records">
-      <tbody>
-          <td><b><em>Meditation Session</em></b></td>
-          <td>Length of activity</td>
-          <td>Personal notes</td>
-        {table}
-      </tbody>
-    </table>
-  )
+      <>
+        <table className="records">
+          <tbody>
+            <td>
+              <b>
+                <em>Meditation Session</em>
+              </b>
+            </td>
+            <td>Length of activity</td>
+            <td>Personal notes</td>
+            {table}
+          </tbody>
+        </table>
+      </>
+    );
   } else {
     return null;
   }
 }
 
-export default MeditationTable
+export default MeditationTable;

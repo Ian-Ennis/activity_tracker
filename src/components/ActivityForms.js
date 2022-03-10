@@ -4,6 +4,7 @@ import { Chart as ChartJS } from "chart.js/auto";
 import { Chart } from "react-chartjs-2";
 import { Bar } from "react-chartjs-2";
 import MeditationTable from "./Tables/MeditationTable";
+import MeditationChart from "./Charts/MeditationChart";
 import YogaTable from "./Tables/YogaTable";
 import CardioTable from "./Tables/CardioTable";
 const backend_API = `http://localhost:3000/activities`;
@@ -251,33 +252,7 @@ function ActivityForms({ header }) {
                   meditationSessions={meditationSessions}
                   askToDelete={askToDelete}
                 />
-                <div className="bar_chart">
-                  <Bar
-                    data={{
-                      labels: meditationLabels,
-                      datasets: [
-                        {
-                          label: "Time dedicated",
-                          backgroundColor: "rgba(21, 232, 237, 1)",
-                          borderColor: "rgba(0,0,0,1)",
-                          borderWidth: 2,
-                          data: meditationTime,
-                        },
-                      ],
-                    }}
-                    options={{
-                      title: {
-                        display: true,
-                        text: "Average Rainfall per month",
-                        fontSize: 20,
-                      },
-                      legend: {
-                        display: true,
-                        position: "right",
-                      },
-                    }}
-                  />
-                </div>
+                <MeditationChart meditationLabels={meditationLabels} meditationTime={meditationTime}/>
               </>
             ) : null}
             {activity === "yoga" ? (
@@ -304,33 +279,6 @@ function ActivityForms({ header }) {
                   yogaSessions={yogaSessions}
                   askToDelete={askToDelete}
                 />
-                <div className="bar_chart">
-                  <Bar
-                    data={{
-                      labels: yogaLabels,
-                      datasets: [
-                        {
-                          label: "Time dedicated",
-                          backgroundColor: "rgba(21, 232, 237, 1)",
-                          borderColor: "rgba(0,0,0,1)",
-                          borderWidth: 2,
-                          data: yogaTime,
-                        },
-                      ],
-                    }}
-                    options={{
-                      title: {
-                        display: true,
-                        text: "Average Rainfall per month",
-                        fontSize: 20,
-                      },
-                      legend: {
-                        display: true,
-                        position: "right",
-                      },
-                    }}
-                  />
-                </div>
               </>
             ) : null}
             {activity === "cardio" ? (
