@@ -4,9 +4,11 @@ import { Chart as ChartJS } from "chart.js/auto";
 import { Chart } from "react-chartjs-2";
 import { Bar } from "react-chartjs-2";
 import MeditationTable from "./Tables/MeditationTable";
-import MeditationChart from "./Charts/MeditationChart";
 import YogaTable from "./Tables/YogaTable";
 import CardioTable from "./Tables/CardioTable";
+import MeditationChart from "./Charts/MeditationChart";
+import YogaChart from "./Charts/YogaChart"
+import CardioChart from "./Charts/CardioChart"
 const backend_API = `http://localhost:3000/activities`;
 
 function ActivityForms({ header }) {
@@ -225,6 +227,7 @@ function ActivityForms({ header }) {
             })
               .then((res) => res.json())
               .then((data) => {
+                console.log("data converted to JSON")
                 setActivityHash(data);
                 setSelected(true);
                 setActivity(e.value);
@@ -252,7 +255,7 @@ function ActivityForms({ header }) {
                   meditationSessions={meditationSessions}
                   askToDelete={askToDelete}
                 />
-                <MeditationChart meditationLabels={meditationLabels} meditationTime={meditationTime}/>
+                {meditationSessions.length ? <MeditationChart meditationLabels={meditationLabels} meditationTime={meditationTime}/> : null}
               </>
             ) : null}
             {activity === "yoga" ? (
@@ -279,6 +282,7 @@ function ActivityForms({ header }) {
                   yogaSessions={yogaSessions}
                   askToDelete={askToDelete}
                 />
+                {yogaSessions.length ? <YogaChart yogaLabels={yogaLabels} yogaTime={yogaTime}/> : null}
               </>
             ) : null}
             {activity === "cardio" ? (
@@ -310,33 +314,7 @@ function ActivityForms({ header }) {
                   cardioSessions={cardioSessions}
                   askToDelete={askToDelete}
                 />
-                <div className="bar_chart">
-                  <Bar
-                    data={{
-                      labels: cardioLabels,
-                      datasets: [
-                        {
-                          label: "Time dedicated",
-                          backgroundColor: "rgba(21, 232, 237, 1)",
-                          borderColor: "rgba(0,0,0,1)",
-                          borderWidth: 2,
-                          data: cardioTime,
-                        },
-                      ],
-                    }}
-                    options={{
-                      title: {
-                        display: true,
-                        text: "Average Rainfall per month",
-                        fontSize: 20,
-                      },
-                      legend: {
-                        display: true,
-                        position: "right",
-                      },
-                    }}
-                  />
-                </div>
+                {cardioSessions.length ? <CardioChart cardioLabels={cardioLabels} cardioTime={cardioTime}/> : null}
               </>
             ) : null}
           </div>

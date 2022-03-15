@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import NavigationBar from "./components/NavigationBar";
 import Header from "./components/Header";
 import Login from "./components/Login/Login";
+import Signup from "./components/Login/Signup";
 import ActivityForms from "./components/ActivityForms";
 import Resources from "./components/Resources"
 
@@ -15,8 +16,8 @@ export default function App() {
       <NavigationBar />
       <Header />
       <Routes>
-        <Route path="/" element={<Header />} />
-        <Route path="/login" element={<Login onLogin={setUser} />} />
+        <Route path="/" element={<Signup />} />
+        <Route path="/login" element={<Login onLogin={setUser}/> } />
         <Route path="/activity_forms" element={<ActivityForms />} />
         <Route path="/resources" element={<Resources />} />
       </Routes>
