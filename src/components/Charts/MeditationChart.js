@@ -1,6 +1,4 @@
 import React from "react";
-import { Chart as ChartJS } from "chart.js/auto";
-import { Chart } from "react-chartjs-2";
 import { Bar } from "react-chartjs-2";
 
 function MeditationChart({ meditationLabels, meditationTime}) {
@@ -20,15 +18,18 @@ function MeditationChart({ meditationLabels, meditationTime}) {
           ],
         }}
         options={{
-          title: {
-            display: true,
-            text: "Average Rainfall per month",
-            fontSize: 20,
-          },
-          legend: {
-            display: true,
-            position: "right",
-          },
+          plugins: {
+            title: {
+              display: true,
+              text: "Meditation Sessions",
+              font: {
+                size: 20
+              }
+            },
+            legend: {
+              display: false,
+           }
+          }
         }}
       />
     </div>

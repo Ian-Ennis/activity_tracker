@@ -201,8 +201,7 @@ function ActivityForms({ header }) {
 
   return (
     <>
-      <div className="header">{header}</div>
-      <div className="site_info">
+      <div className="welcome_blurb">
         <h5>
           Down to meditate? Into yoga? Always on the move? Get a Leg-Up on life
           by logging your self-care sessions using the menu below, so you can
@@ -251,11 +250,11 @@ function ActivityForms({ header }) {
                     <button type="submit">Submit</button>
                   </div>
                 </form>
+                {meditationSessions.length ? <MeditationChart meditationLabels={meditationLabels} meditationTime={meditationTime}/> : null}
                 <MeditationTable
                   meditationSessions={meditationSessions}
                   askToDelete={askToDelete}
                 />
-                {meditationSessions.length ? <MeditationChart meditationLabels={meditationLabels} meditationTime={meditationTime}/> : null}
               </>
             ) : null}
             {activity === "yoga" ? (
@@ -278,11 +277,11 @@ function ActivityForms({ header }) {
                     <button type="submit">Submit</button>
                   </div>
                 </form>
+                {yogaSessions.length ? <YogaChart yogaLabels={yogaLabels} yogaTime={yogaTime}/> : null}
                 <YogaTable
                   yogaSessions={yogaSessions}
                   askToDelete={askToDelete}
                 />
-                {yogaSessions.length ? <YogaChart yogaLabels={yogaLabels} yogaTime={yogaTime}/> : null}
               </>
             ) : null}
             {activity === "cardio" ? (
@@ -310,11 +309,11 @@ function ActivityForms({ header }) {
                     <button type="submit">Submit</button>
                   </div>
                 </form>
+                {cardioSessions.length ? <CardioChart cardioLabels={cardioLabels} cardioTime={cardioTime}/> : null}
                 <CardioTable
                   cardioSessions={cardioSessions}
                   askToDelete={askToDelete}
                 />
-                {cardioSessions.length ? <CardioChart cardioLabels={cardioLabels} cardioTime={cardioTime}/> : null}
               </>
             ) : null}
           </div>

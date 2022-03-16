@@ -1,6 +1,4 @@
 import React from "react";
-import { Chart as ChartJS } from "chart.js/auto";
-import { Chart } from "react-chartjs-2";
 import { Bar } from "react-chartjs-2";
 
 function YogaChart({ yogaLabels, yogaTime}) {
@@ -20,15 +18,18 @@ function YogaChart({ yogaLabels, yogaTime}) {
           ],
         }}
         options={{
-          title: {
-            display: true,
-            text: "Average Rainfall per month",
-            fontSize: 20,
-          },
-          legend: {
-            display: true,
-            position: "right",
-          },
+          plugins: {
+            title: {
+              display: true,
+              text: "Yoga Sessions",
+              font: {
+                size: 20
+              }
+            },
+            legend: {
+              display: false,
+           }
+          }
         }}
       />
     </div>

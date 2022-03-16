@@ -25,7 +25,7 @@ function CardioTable({ cardioSessions, askToDelete }) {
           <td><b><em>Cardio workout</em></b></td>
           <td>Type of workout</td>
           <td>Distance (miles)</td>
-          <td>Time (minutes)</td>
+          <td>Time dedicated</td>
           <td>Notes</td>
         {table}
       </tbody>

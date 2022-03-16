@@ -25,7 +25,7 @@ function MeditationTable({ askToDelete, meditationSessions }) {
                 <em>Meditation Session</em>
               </b>
             </td>
-            <td>Length of activity</td>
+            <td>Time dedicated</td>
             <td>Personal notes</td>
             {table}
           </tbody>

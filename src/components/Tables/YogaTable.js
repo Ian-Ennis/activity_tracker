@@ -23,7 +23,7 @@ function YogaTable({ yogaSessions, askToDelete }) {
       <tbody>
           <td><b><em>Yoga Session</em></b></td>
           <td>Type of Yoga</td>
-          <td>Time (minutes)</td>
+          <td>Time dedicated</td>
           <td>Personal notes</td>
         {table}
       </tbody>

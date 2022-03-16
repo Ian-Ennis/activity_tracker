@@ -1,6 +1,4 @@
 import React from "react";
-import { Chart as ChartJS } from "chart.js/auto";
-import { Chart } from "react-chartjs-2";
 import { Bar } from "react-chartjs-2";
 
 function CardioChart({ cardioLabels, cardioTime}) {
@@ -20,15 +18,18 @@ function CardioChart({ cardioLabels, cardioTime}) {
           ],
         }}
         options={{
-          title: {
-            display: true,
-            text: "Average Rainfall per month",
-            fontSize: 20,
-          },
-          legend: {
-            display: true,
-            position: "right",
-          },
+          plugins: {
+            title: {
+              display: true,
+              text: "Cardio Sessions",
+              font: {
+                size: 20
+              }
+            },
+            legend: {
+              display: false,
+           }
+          }
         }}
       />
     </div>

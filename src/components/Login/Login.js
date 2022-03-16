@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 const API = "http://localhost:3000/api/v1";
 
@@ -6,6 +6,11 @@ function Login({ onLogin }) {
   const [loginUser, setLoginUser] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
   const navigate = useNavigate();
+
+  useEffect(() => {
+    console.log(localStorage.getItem("jwt"))
+    if (localStorage.getItem("jwt")) {navigate("activity_forms")}
+  })
 
   function handleSubmit(e) {
     e.preventDefault();

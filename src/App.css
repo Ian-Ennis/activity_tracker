@@ -1,7 +1,7 @@
 nav {
   font-size: 1.5em;
   border-bottom: 2px solid rgb(128, 128, 128);
-  margin-bottom: 7%;
+  margin-bottom: 5%;
 }
 
 .header {
@@ -15,8 +15,8 @@ nav {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
-  width: 100vw;
+  height: 500vh;
+  width: 97vw;
 }
 
 
@@ -67,12 +67,10 @@ nav {
   margin-left: 0%
 }
 
-.site_info {
+.welcome_blurb {
   text-align: center;
-  margin-left: 1%;
-  margin-right: 1%;
   margin: 30px;
-  padding: 18px;    
+  padding: 16px;    
   border: 2px solid #000000;
   background-color: #EFF8FA;
   opacity: 0.95;
@@ -80,7 +78,6 @@ nav {
 
 .activity_div {
   margin: 0px auto;
-  margin-bottom: 100%;
   width: 90%;
   opacity: 0.95;
 }
@@ -112,5 +109,5 @@ nav {
 }
 
 .bar_chart {
-  margin: 80px 90px;
+  margin: 40px 90px;
 }
