@@ -1,27 +1,29 @@
 import React, { useState } from "react";
+import Chart from "chart.js/auto";
 import Select from "react-select";
-import { Chart as ChartJS } from "chart.js/auto";
-import { Chart } from "react-chartjs-2";
-import { Bar } from "react-chartjs-2";
 import MeditationTable from "./Tables/MeditationTable";
 import YogaTable from "./Tables/YogaTable";
 import CardioTable from "./Tables/CardioTable";
 import MeditationChart from "./Charts/MeditationChart";
-import YogaChart from "./Charts/YogaChart"
-import CardioChart from "./Charts/CardioChart"
+import YogaChart from "./Charts/YogaChart";
+import CardioChart from "./Charts/CardioChart";
+import { useNavigate } from "react-router-dom";
 const backend_API = `http://localhost:3000/activities`;
 
-function ActivityForms({ header }) {
+function Activities({ currentUser, setCurrentUser }) {
   const [activityHash, setActivityHash] = useState([]);
   const [activity, setActivity] = useState("");
   const [selected, setSelected] = useState(false);
+  const navigate = useNavigate();
+
+  console.log(currentUser);
 
   const activityOptions = [
     { value: "meditation", label: "🧘 Meditation" },
     { value: "yoga", label: "🤸‍♂️ Yoga" },
     { value: "cardio", label: "🏃🏽 Cardio" },
   ];
-  
+
   const meditationSessions = [];
   const yogaSessions = [];
   const cardioSessions = [];
@@ -38,15 +40,15 @@ function ActivityForms({ header }) {
     for (let i = 0; i < activityHash.length; i++) {
       if (activityHash[i].name === "meditation") {
         meditationLabels.push(activityHash[i].date);
-        meditationSessions.push(activityHash[i])
+        meditationSessions.push(activityHash[i]);
         meditationTime.push(activityHash[i].minutes);
       } else if (activityHash[i].name === "yoga") {
         yogaLabels.push(activityHash[i].date);
-        yogaSessions.push(activityHash[i])
+        yogaSessions.push(activityHash[i]);
         yogaTime.push(activityHash[i].minutes);
       } else if (activityHash[i].name === "cardio") {
         cardioLabels.push(activityHash[i].date);
-        cardioSessions.push(activityHash[i])
+        cardioSessions.push(activityHash[i]);
         cardioTime.push(activityHash[i].minutes);
       }
     }
@@ -65,7 +67,7 @@ function ActivityForms({ header }) {
       headers: {
         Accepts: "application/json",
         "Content-Type": "application/json",
-        Authorization: `Bearer ${localStorage.getItem("jwt")}`,
+        Authorization: `Bearer ${localStorage.getItem("token")}`,
       },
       body: JSON.stringify({
         date,
@@ -79,11 +81,12 @@ function ActivityForms({ header }) {
         headers: {
           Accepts: "application/json",
           "Content-Type": "application/json",
-          Authorization: `Bearer ${localStorage.getItem("jwt")}`,
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
       })
         .then((res) => res.json())
         .then((data) => {
+          console.log(data);
           setActivityHash(data);
         });
     });
@@ -104,7 +107,7 @@ function ActivityForms({ header }) {
       headers: {
         Accepts: "application/json",
         "Content-Type": "application/json",
-        Authorization: `Bearer ${localStorage.getItem("jwt")}`,
+        Authorization: `Bearer ${localStorage.getItem("token")}`,
       },
       body: JSON.stringify({
         date,
@@ -119,7 +122,7 @@ function ActivityForms({ header }) {
         headers: {
           Accepts: "application/json",
           "Content-Type": "application/json",
-          Authorization: `Bearer ${localStorage.getItem("jwt")}`,
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
       })
         .then((res) => res.json())
@@ -145,7 +148,7 @@ function ActivityForms({ header }) {
       headers: {
         Accepts: "application/json",
         "Content-Type": "application/json",
-        Authorization: `Bearer ${localStorage.getItem("jwt")}`,
+        Authorization: `Bearer ${localStorage.getItem("token")}`,
       },
       body: JSON.stringify({
         date,
@@ -161,7 +164,7 @@ function ActivityForms({ header }) {
         headers: {
           Accepts: "application/json",
           "Content-Type": "application/json",
-          Authorization: `Bearer ${localStorage.getItem("jwt")}`,
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
       })
         .then((res) => res.json())
@@ -180,7 +183,7 @@ function ActivityForms({ header }) {
         headers: {
           Accepts: "application/json",
           "Content-Type": "application/json",
-          Authorization: `Bearer ${localStorage.getItem("jwt")}`,
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
       }).then(() => {
         fetch(`${backend_API}`, {
@@ -188,7 +191,7 @@ function ActivityForms({ header }) {
           headers: {
             Accepts: "application/json",
             "Content-Type": "application/json",
-            Authorization: `Bearer ${localStorage.getItem("jwt")}`,
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
         })
           .then((res) => res.json())
@@ -221,12 +224,12 @@ function ActivityForms({ header }) {
               headers: {
                 Accepts: "application/json",
                 "Content-Type": "application/json",
-                Authorization: `Bearer ${localStorage.getItem("jwt")}`,
+                Authorization: `Bearer ${localStorage.getItem("token")}`,
               },
             })
               .then((res) => res.json())
               .then((data) => {
-                console.log("data converted to JSON")
+                console.log(data);
                 setActivityHash(data);
                 setSelected(true);
                 setActivity(e.value);
@@ -250,7 +253,12 @@ function ActivityForms({ header }) {
                     <button type="submit">Submit</button>
                   </div>
                 </form>
-                {meditationSessions.length ? <MeditationChart meditationLabels={meditationLabels} meditationTime={meditationTime}/> : null}
+                {meditationSessions.length ? (
+                  <MeditationChart
+                    meditationLabels={meditationLabels}
+                    meditationTime={meditationTime}
+                  />
+                ) : null}
                 <MeditationTable
                   meditationSessions={meditationSessions}
                   askToDelete={askToDelete}
@@ -277,7 +285,9 @@ function ActivityForms({ header }) {
                     <button type="submit">Submit</button>
                   </div>
                 </form>
-                {yogaSessions.length ? <YogaChart yogaLabels={yogaLabels} yogaTime={yogaTime}/> : null}
+                {yogaSessions.length ? (
+                  <YogaChart yogaLabels={yogaLabels} yogaTime={yogaTime} />
+                ) : null}
                 <YogaTable
                   yogaSessions={yogaSessions}
                   askToDelete={askToDelete}
@@ -309,7 +319,12 @@ function ActivityForms({ header }) {
                     <button type="submit">Submit</button>
                   </div>
                 </form>
-                {cardioSessions.length ? <CardioChart cardioLabels={cardioLabels} cardioTime={cardioTime}/> : null}
+                {cardioSessions.length ? (
+                  <CardioChart
+                    cardioLabels={cardioLabels}
+                    cardioTime={cardioTime}
+                  />
+                ) : null}
                 <CardioTable
                   cardioSessions={cardioSessions}
                   askToDelete={askToDelete}
@@ -323,4 +338,4 @@ function ActivityForms({ header }) {
   );
 }
 
-export default ActivityForms;
+export default Activities;

@@ -1,35 +1,40 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-const API = "http://localhost:3000/api/v1";
 
-function SignUp({ onLogin }) {
+function SignUp({ setLoggedIn }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  useEffect(() => {
-    console.log(localStorage.getItem("jwt"))
-    if (localStorage.getItem("jwt")) {navigate("activity_forms")}
-  })
-
   function handleSubmit(e) {
     e.preventDefault();
 
-    fetch(`${API}/users`, {
+    fetch("http://localhost:3000/users", {
       method: "POST",
       headers: {
         Accepts: "application/json",
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ user: { username, password } }),
-    })
-      .then((res) => res.json())
-      .then((json) => {
-        console.log("Here is the something", json);
-        setUsername("");
-        setPassword("");
-        navigate("/activity_forms")
-      })
+      body: JSON.stringify({
+        username: username,
+        password: password
+      }),
+    }).then((r) => {
+      if (r.ok) {
+        r.json().then((data) => {
+          localStorage.setItem("token", data.include[0].jwt);
+          console.log(data)
+          setLoggedIn(true)
+          setUsername("");
+          setPassword("");
+          navigate("/activities")
+        });
+      } else {
+        r.json().then((err) => {
+          console.log(err);
+        });
+      }
+    });
   }
 
   return (
@@ -41,7 +46,9 @@ function SignUp({ onLogin }) {
             type="text"
             id="username"
             value={username}
-            onChange={(e) => setUsername(e.target.value)}
+            onChange={(e) => {
+              setUsername(e.target.value)
+            }}
           />
         </div>
         <div className="pass">
@@ -50,7 +57,9 @@ function SignUp({ onLogin }) {
             type="password"
             id="password"
             value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            onChange={(e) => {
+              setPassword(e.target.value)
+            }}
           />
         </div>
         <button type="submit">Register Me!</button>
@@ -63,3 +72,6 @@ function SignUp({ onLogin }) {
 }
 
 export default SignUp;
+
+
+        // Authorization: `Bearer ${localStorage.getItem("token")}`

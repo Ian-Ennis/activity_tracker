@@ -83,7 +83,9 @@ nav {
 }
 
 .activity_dropdown {
-  margin: 0px 550px 10px 550px;
+  margin: 0 auto;
+  max-width: 30%;
+  margin-bottom: 30px;
 }
 
 .forms {
@@ -106,8 +108,14 @@ nav {
   margin: 0 auto;
   border: 2px solid #000000;
   padding: 20px;
+  margin-bottom: 25px;
 }
 
 .bar_chart {
   margin: 40px 90px;
+}
+
+.resources {
+  background-color: #EFF8FA;
+  border: 2px solid #000000;
 }
