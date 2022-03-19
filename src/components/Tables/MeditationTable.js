@@ -1,7 +1,6 @@
 import React from "react";
 
 function MeditationTable({ askToDelete, meditationSessions }) {
-
   if (meditationSessions.length) {
     const table = meditationSessions.map((a) => {
       return (
@@ -27,9 +26,16 @@ function MeditationTable({ askToDelete, meditationSessions }) {
             </td>
             <td>Time dedicated</td>
             <td>Personal notes</td>
+            <td></td>
             {table}
           </tbody>
         </table>
+        <h5 id="more_resources">
+          <em>
+            Looking for some reading on these types of self-care sessions?
+            Checkout the resources section on the top menu.{" "}
+          </em>
+        </h5>
       </>
     );
   } else {

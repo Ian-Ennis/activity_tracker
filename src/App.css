@@ -6,6 +6,7 @@ nav {
 
 .header {
   text-align: center;
+  margin-bottom: 60px;
 }
 
 .App {
@@ -21,6 +22,7 @@ nav {
 
 
 .signup_login {
+  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -30,7 +32,7 @@ nav {
   border: 2px solid #000000;
   padding: 20px;
   background-color: #EFF8FA;
-  opacity: 0.95;
+  opacity: 0.97;
 }
 
 .signup_login_form {
@@ -41,12 +43,14 @@ nav {
 .username {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   gap: 0px 20px;
 }
 
 .pass {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   gap: 0px 20px;
 }
 
@@ -73,13 +77,13 @@ nav {
   padding: 16px;    
   border: 2px solid #000000;
   background-color: #EFF8FA;
-  opacity: 0.95;
+opacity: 0.97;
 }
 
 .activity_div {
   margin: 0px auto;
   width: 90%;
-  opacity: 0.95;
+opacity: 0.97;
 }
 
 .activity_dropdown {
@@ -115,7 +119,12 @@ nav {
   margin: 40px 90px;
 }
 
+#more_resources {
+  margin-top: 40px;
+}
+
 .resources {
   background-color: #EFF8FA;
   border: 2px solid #000000;
+  padding: 20px;
 }

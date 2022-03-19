@@ -17,8 +17,8 @@ export default function App() {
       <NavigationBar loggedIn={loggedIn} setLoggedIn={setLoggedIn}/>
       <Header />
       <Routes>
-        <Route path="/" element={<Signup setLoggedIn={setLoggedIn} />} />
-        <Route path="/login" element={<Login setLoggedIn={setLoggedIn} /> } />
+        <Route path="/" element={<Signup setLoggedIn={setLoggedIn} setCurrentUser={setCurrentUser} />} />
+        <Route path="/login" element={<Login setLoggedIn={setLoggedIn} setCurrentUser={setCurrentUser} /> } />
         <Route path="/activities" element={<Activities currentUser={currentUser}/>} />
         <Route path="/resources" element={<Resources currentUser={currentUser}/>} />
       </Routes>

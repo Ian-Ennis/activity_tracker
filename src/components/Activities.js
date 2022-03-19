@@ -208,7 +208,7 @@ function Activities({ currentUser, setCurrentUser }) {
         <h5>
           Down to meditate? Into yoga? Always on the move? Get a Leg-Up on life
           by logging your self-care sessions using the menu below, so you can
-          keep track of your kick-ass routines as you do them.
+          keep track of your self-care practice.
         </h5>
       </div>
       <div className="activity_div">
@@ -216,7 +216,7 @@ function Activities({ currentUser, setCurrentUser }) {
           className="activity_dropdown"
           autofocus
           isSearchable
-          placeholder="Select activity"
+          placeholder="Select an activity to submit new sessions, and see your progress!"
           options={activityOptions}
           onChange={(e) => {
             fetch(`${backend_API}`, {

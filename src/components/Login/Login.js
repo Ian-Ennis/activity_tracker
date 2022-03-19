@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-function Login({ setLoggedIn }) {
+function Login({ setLoggedIn, setCurrentUser }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
@@ -23,6 +23,7 @@ function Login({ setLoggedIn }) {
         r.json().then((data) => {
           localStorage.setItem("token", data.token);
           setLoggedIn(true);
+          setCurrentUser(data)
           setUsername("");
           setPassword("");
           navigate("/activities");
@@ -37,6 +38,7 @@ function Login({ setLoggedIn }) {
 
   return (
       <div class="signup_login">
+        <h5>Enter your login</h5>
         <form className="signup_login_form" onSubmit={handleSubmit}>
           <div className="username">
             <label htmlFor="username">Username</label>

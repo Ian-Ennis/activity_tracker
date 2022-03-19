@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-function SignUp({ setLoggedIn }) {
+function SignUp({ setLoggedIn, setCurrentUser }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
@@ -23,8 +23,8 @@ function SignUp({ setLoggedIn }) {
       if (r.ok) {
         r.json().then((data) => {
           localStorage.setItem("token", data.include[0].jwt);
-          console.log(data)
           setLoggedIn(true)
+          setCurrentUser(data)
           setUsername("");
           setPassword("");
           navigate("/activities")
@@ -39,6 +39,7 @@ function SignUp({ setLoggedIn }) {
 
   return (
     <div className="signup_login">
+      <h5>Welcome!</h5>
       <form className="signup_login_form" onSubmit={handleSubmit}>
         <div className="username">
           <label htmlFor="username">Username</label>
@@ -62,7 +63,7 @@ function SignUp({ setLoggedIn }) {
             }}
           />
         </div>
-        <button type="submit">Register Me!</button>
+        <button type="submit">Sign me up!</button>
       </form>
       <button id="have_account" onClick={() => navigate("/login")}>
         I am a returning user

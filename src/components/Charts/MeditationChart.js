@@ -1,7 +1,7 @@
 import React from "react";
 import { Bar } from "react-chartjs-2";
 
-function MeditationChart({ meditationLabels, meditationTime}) {
+function MeditationChart({ meditationLabels, meditationTime }) {
   return (
     <div className="bar_chart">
       <Bar
@@ -23,13 +23,27 @@ function MeditationChart({ meditationLabels, meditationTime}) {
               display: true,
               text: "Meditation Sessions",
               font: {
-                size: 20
-              }
+                size: 20,
+              },
             },
             legend: {
               display: false,
-           }
-          }
+            },
+            scales: {
+              yAxes: [{
+                scaleLabel: {
+                  display: true,
+                  text: 'Y text'
+                }
+              }],
+              xAxes: [{
+                scaleLabel: {
+                  display: true,
+                  text: 'X text'
+                }
+              }],
+            }     
+          },
         }}
       />
     </div>

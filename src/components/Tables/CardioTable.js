@@ -1,9 +1,7 @@
 import React from "react";
 
 function CardioTable({ cardioSessions, askToDelete }) {
-
   if (cardioSessions.length) {
-
     const table = cardioSessions.map((a) => {
       return (
         <tr key={a.id}>
@@ -18,22 +16,35 @@ function CardioTable({ cardioSessions, askToDelete }) {
         </tr>
       );
     });
-    
+
     return (
-      <table className="records">
-      <tbody>
-          <td><b><em>Cardio workout</em></b></td>
-          <td>Type of workout</td>
-          <td>Distance (miles)</td>
-          <td>Time dedicated</td>
-          <td>Notes</td>
-        {table}
-      </tbody>
-    </table>
-    )
+      <>
+        <table className="records">
+          <tbody>
+            <td>
+              <b>
+                <em>Cardio workout</em>
+              </b>
+            </td>
+            <td>Type of workout</td>
+            <td>Distance (miles)</td>
+            <td>Time dedicated</td>
+            <td>Notes</td>
+            <td></td>
+            {table}
+          </tbody>
+        </table>
+        <h5 id="more_resources">
+          <em>
+            Looking for some reading on these types of self-care sessions?
+            Checkout the resources section on the top menu.{" "}
+          </em>
+        </h5>
+      </>
+    );
   } else {
     return null;
   }
 }
 
-export default CardioTable
+export default CardioTable;

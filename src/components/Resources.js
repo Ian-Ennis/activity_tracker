@@ -7,7 +7,7 @@ function Resources() {
       <h5>
         {" "}
         <a href="htth5s://www.nytimes.com/guides/well/how-to-meditate">
-          The New York Times - Mindfulness Meditation
+          The New York Times - Getting Started with Mindfulness
         </a>{" "}
         - Meditation is a simple practice available to all, which can reduce
         stress, increase calmness and clarity and promote happiness. Learning
@@ -19,7 +19,7 @@ function Resources() {
       <h5>
         {" "}
         <a href="https://www.nytimes.com/guides/well/beginner-yoga">
-          The New York Times: Yoga
+          The New York Times: Yoga for Everyone
         </a>{" "}
         - It’s time to roll out your yoga mat and discover the combination of
         physical and mental exercises that for thousands of years have hooked
@@ -32,7 +32,7 @@ function Resources() {
       <h5>
         {" "}
         <a href="https://www.mayoclinic.org/healthy-lifestyle/fitness/in-depth/vary-cardiovascular-workouts/art-20308360">
-          May Clinic: Cardio Routine
+          May Clinic: Mix up your cardio routine with 3 quick makeovers
         </a>{" "}
         - Add variety to your cardiovascular workouts through interval training,
         new activities or short sets of multiple activities to stave off boredom
