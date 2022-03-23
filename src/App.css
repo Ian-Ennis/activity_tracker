@@ -1,12 +1,12 @@
 nav {
   font-size: 1.5em;
   border-bottom: 2px solid rgb(128, 128, 128);
-  margin-bottom: 7%;
+  margin-bottom: 5%;
 }
 
 .header {
   text-align: center;
-  margin-top: -1%;
+  margin-bottom: 60px;
 }
 
 .App {
@@ -16,60 +16,120 @@ nav {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  height: 500vh;
+  width: 97vw;
 }
 
-.sign_login {
-  margin: 0px auto;
-  margin-bottom: 100%;
-  width: 87%;
-  background-color: #EFF8FA;
-  opacity: 0.95;
-}
 
-.signin {
+.signup_login {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px 0px;
+  max-width: 20%;
+  margin: 0 auto;
+  border: 2px solid #000000;
+  padding: 20px;
+  background-color: #EFF8FA;
+  opacity: 0.97;
+}
+
+.signup_login_form {
+  display: flex;
+  flex-direction: column;
+}
+
+.username {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0px 20px;
+}
+
+.pass {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0px 20px;
+  margin-bottom: 5px;
 }
 
 .login {
-  text-align: center;
-  margin-left: 37.25%;
-  margin-right: -20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px 0px;
+  max-width: 20%;
+  margin: 0 auto;
 }
 
-#create_account {
-  margin-left: -66%;
+#have_account {
+  margin-top: -10px;
+}
+
+#need_account {
+  margin-top: -10px;
 }
 
 #logout {
-  margin-left: -72%;
+  margin-left: 0%
 }
 
-.site_info {
+.welcome_blurb {
   text-align: center;
-  margin-left: 1%;
-  margin-right: 1%;
   margin: 30px;
-  padding: 18px;    
+  padding: 16px;    
   border: 2px solid #000000;
   background-color: #EFF8FA;
-  opacity: 0.95;
+opacity: 0.97;
 }
 
 .activity_div {
-  margin: 0 auto;
-  margin-bottom: 100%;
+  margin: 0px auto;
   width: 90%;
-  background-color: #EFF8FA;
-  opacity: 0.95;
+opacity: 0.97;
 }
 
 .activity_dropdown {
-  margin-bottom: 12px;
+  margin: 0 auto;
+  max-width: 30%;
+  margin-bottom: 30px;
 }
 
 .forms {
   text-align: center;
-  margin: 0 auto;
+  margin: 0px auto;
+  padding: 20px;
   width: 80%;
   background-color: #EFF8FA;
+  border: 2px solid #000000;
+}
+
+.inputs {
+  display: flex;
+  justify-content: center;
+  grid-gap: 0px 20px;
+  gap: 0px 20px;
+}
+
+.records {
+  margin: 0 auto;
+  border: 2px solid #000000;
+  padding: 20px;
+  margin-bottom: 25px;
+}
+
+.bar_chart {
+  margin: 40px 90px;
+}
+
+#more_resources {
+  margin-top: 40px;
+}
+
+.resources {
+  background-color: #EFF8FA;
+  border: 2px solid #000000;
+  padding: 20px;
 }

@@ -1,19 +1,11 @@
 import React from "react";
 
-function MeditationTable({ activityHash, askToDelete }) {
-  const meditationSessions = [];
-
-  if (activityHash.length) {
-    activityHash.forEach((activity) => {
-      if (activity.name === "meditation") {
-        meditationSessions.push(activity);
-      }
-    });
-
+function MeditationTable({ askToDelete, meditationSessions }) {
+  if (meditationSessions.length) {
     const table = meditationSessions.map((a) => {
       return (
         <tr key={a.id}>
-          <td></td>
+          <td>{a.date}</td>
           <td>{a.minutes} minutes</td>
           <td>{a.notes}</td>
           <td>
@@ -22,20 +14,35 @@ function MeditationTable({ activityHash, askToDelete }) {
         </tr>
       );
     });
-    
+
     return (
-      <table className="records">
-      <tbody>
-          <td><b><em>Meditation Session</em></b></td>
-          <td>Length of activity</td>
-          <td>Personal notes</td>
-        {table}
-      </tbody>
-    </table>
-  )
+      <>
+        <table className="records">
+          <tbody>
+            <td>
+              <b>
+                <em>Meditation Session</em>
+              </b>
+            </td>
+            <td>Time dedicated</td>
+            <td>Personal notes</td>
+            <td></td>
+            {table}
+          </tbody>
+        </table>
+        <p id="more_resources">
+          <em>
+            <b>
+              Looking for some reading on these types of self-care sessions?
+              Checkout the resources section on the top menu.{" "}
+            </b>
+          </em>
+        </p>
+      </>
+    );
   } else {
     return null;
   }
 }
 
-export default MeditationTable
+export default MeditationTable;
