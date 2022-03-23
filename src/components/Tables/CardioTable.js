@@ -34,12 +34,14 @@ function CardioTable({ cardioSessions, askToDelete }) {
             {table}
           </tbody>
         </table>
-        <h5 id="more_resources">
+        <p id="more_resources">
           <em>
-            Looking for some reading on these types of self-care sessions?
-            Checkout the resources section on the top menu.{" "}
+            <b>
+              Looking for some reading on these types of self-care sessions?
+              Checkout the resources section on the top menu.{" "}
+            </b>
           </em>
-        </h5>
+        </p>
       </>
     );
   } else {

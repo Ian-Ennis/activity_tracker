@@ -52,6 +52,7 @@ nav {
   flex-direction: row;
   justify-content: center;
   gap: 0px 20px;
+  margin-bottom: 5px;
 }
 
 .login {
@@ -63,8 +64,12 @@ nav {
   margin: 0 auto;
 }
 
-#create_account {
-  margin-left: -66%;
+#have_account {
+  margin-top: -10px;
+}
+
+#need_account {
+  margin-top: -10px;
 }
 
 #logout {

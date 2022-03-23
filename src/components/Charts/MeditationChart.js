@@ -29,20 +29,6 @@ function MeditationChart({ meditationLabels, meditationTime }) {
             legend: {
               display: false,
             },
-            scales: {
-              yAxes: [{
-                scaleLabel: {
-                  display: true,
-                  text: 'Y text'
-                }
-              }],
-              xAxes: [{
-                scaleLabel: {
-                  display: true,
-                  text: 'X text'
-                }
-              }],
-            }     
           },
         }}
       />
