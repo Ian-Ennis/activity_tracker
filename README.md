@@ -21,8 +21,8 @@ Looking for the back-end repo? Try [here](https://github.com/Ian-Ennis/activity_
 
 
 ## Screenshots
-![description_with_chart](https://github.com/Ian-Ennis/activity_tracker/tree/main/public/description_with_chartJS.png)
+![description_with_chart](https://github.com/Ian-Ennis/activity_tracker/blob/main/public/description_with_chartJS.png)
 
-![chart_with_table](https://github.com/Ian-Ennis/sigma_shipyards/blob/main/public/deliverables/mission_select.png)
+<!-- ![chart_with_table](https://github.com/Ian-Ennis/sigma_shipyards/blob/main/public/deliverables/mission_select.png)
 
-![resouces](https://github.com/Ian-Ennis/sigma_shipyards/blob/main/public/deliverables/shipyard.png)
+![resouces](https://github.com/Ian-Ennis/sigma_shipyards/blob/main/public/deliverables/shipyard.png) -->
