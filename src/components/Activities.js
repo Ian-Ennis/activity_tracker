@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Chart from "chart.js/auto";
 import Select from "react-select";
 import MeditationTable from "./Tables/MeditationTable";
 import YogaTable from "./Tables/YogaTable";
@@ -7,14 +6,12 @@ import CardioTable from "./Tables/CardioTable";
 import MeditationChart from "./Charts/MeditationChart";
 import YogaChart from "./Charts/YogaChart";
 import CardioChart from "./Charts/CardioChart";
-import { useNavigate } from "react-router-dom";
 const backend_API = `http://localhost:3000/activities`;
 
 function Activities({ currentUser, setCurrentUser }) {
   const [activityHash, setActivityHash] = useState([]);
   const [activity, setActivity] = useState("");
   const [selected, setSelected] = useState(false);
-  const navigate = useNavigate();
 
   console.log(currentUser);
 
