@@ -2,34 +2,40 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 function Login({ setLoggedIn, setCurrentUser }) {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
+  const [formData, setFormData] = useState({ username: "", password: "" });
   const navigate = useNavigate();
+
+  function handleChange(e) {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  }
 
   function handleSubmit(e) {
     e.preventDefault();
+    const userCreds = { ...formData };
 
     fetch("http://localhost:3000/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({
-        username: username,
-        password: password,
-      }),
-    }).then((r) => {
-      if (r.ok) {
-        r.json().then((data) => {
+      body: JSON.stringify(userCreds),
+    }).then((response) => {
+      if (response.ok) {
+        response.json().then((data) => {
           localStorage.setItem("token", data.token);
           setLoggedIn(true);
           setCurrentUser(data)
-          setUsername("");
-          setPassword("");
+          setFormData({
+            username: "",
+            password: "",
+          });
           navigate("/activities");
         });
       } else {
-        r.json().then((err) => {
+        response.json().then((err) => {
           console.log(err);
         });
       }
@@ -43,19 +49,21 @@ function Login({ setLoggedIn, setCurrentUser }) {
           <div className="username">
             <label htmlFor="username">Username</label>
             <input
+              id="username-input"
               type="text"
-              id="username"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
+              name="username"
+              value={formData.username}
+              onChange={handleChange}
             />
           </div>
           <div className="pass">
             <label htmlFor="password">Password</label>
             <input
+              id="password-input"
               type="password"
-              id="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
+              name="password"
+              value={formData.password}
+              onChange={handleChange}
             />
           </div>
           <button type="submit">Login</button>
