@@ -14,7 +14,6 @@ Looking for the back-end repo? Try [here](https://github.com/Ian-Ennis/activity_
 
 - I can log in/make an account
 - Select from a list of different types of activities
-- View activities of a certain category
 - Update activity information(time/distance)
 - Delete activity
 - View informational resources about each activitiy
@@ -23,6 +22,7 @@ Looking for the back-end repo? Try [here](https://github.com/Ian-Ennis/activity_
 ## Built With
 
 * [React.js](https://reactjs.org/)
+* [Ruby on Rails](https://rubyonrails.org/)
 
 
 ## Screenshots
