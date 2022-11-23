@@ -6,7 +6,7 @@ function Resources() {
       <h2>Resources</h2>
       <h5>
         {" "}
-        <a href="htth5s://www.nytimes.com/guides/well/how-to-meditate">
+        <a href="https://www.nytimes.com/guides/well/how-to-meditate" target="_blank" rel="noreferrer">
           The New York Times - Getting Started with Mindfulness
         </a>{" "}
         - Meditation is a simple practice available to all, which can reduce
@@ -18,7 +18,7 @@ function Resources() {
       </h5>
       <h5>
         {" "}
-        <a href="https://www.nytimes.com/guides/well/beginner-yoga">
+        <a href="https://www.nytimes.com/guides/well/beginner-yoga" target="_blank" rel="noreferrer">
           The New York Times: Yoga for Everyone
         </a>{" "}
         - It’s time to roll out your yoga mat and discover the combination of
@@ -31,7 +31,7 @@ function Resources() {
       </h5>
       <h5>
         {" "}
-        <a href="https://www.mayoclinic.org/healthy-lifestyle/fitness/in-depth/vary-cardiovascular-workouts/art-20308360">
+        <a href="https://www.mayoclinic.org/healthy-lifestyle/fitness/in-depth/vary-cardiovascular-workouts/art-20308360" target="_blank" rel="noreferrer">
           May Clinic: Mix up your cardio routine with 3 quick makeovers
         </a>{" "}
         - Add variety to your cardiovascular workouts through interval training,
