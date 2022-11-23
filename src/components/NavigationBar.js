@@ -9,7 +9,7 @@ function NavigationBar({ loggedIn, setLoggedIn }) {
     return (
       <nav>
         <Link to="/">Login</Link> |{" "}
-        <Link to="/activities">Activity Tracker</Link> |{" "}
+        <Link to="/home">Home</Link> |{" "}
         <Link to="/resources">Resources</Link>
       </nav>
     );
@@ -19,14 +19,14 @@ function NavigationBar({ loggedIn, setLoggedIn }) {
         <Link
           to="/"
           onClick={() => {
-            localStorage.setItem("token", "");
+            localStorage.clear();
             setLoggedIn(false);
             navigate("/login");
           }}
         >
           Logout
         </Link>{" "}
-        | <Link to="/activities">Activity Tracker</Link> |{" "}
+        | <Link to="/home">Home</Link> |{" "}
         <Link to="/resources">Resources</Link>
       </nav>
     );

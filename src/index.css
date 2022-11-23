@@ -74,8 +74,22 @@ nav {
   #logout {
     margin-left: 0%
   }
-  
-  .welcome_blurb {
+
+  #please_login{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px 0px;
+  max-width: 20%;
+  margin: 0 auto;
+  border: 2px solid #000000;
+  padding: 20px;
+  background-color: #EFF8FA;
+  opacity: 0.97;
+  }
+    
+    .welcome_blurb {
     text-align: center;
     margin: 30px;
     padding: 16px;    
