@@ -6,7 +6,7 @@ Leg-Up is an activity tracker that helps keep track of all your physical self-ca
 Whether it's meditating, running, or hiking, see how much you've progressed and start
 building your habits for a healthier future. 
 
-Looking for the back-end repo? Try [here](https://github.com/Ian-Ennis/activity_tracker_backend)
+Looking for the back-end repo? Try [here](https://github.com/Ian-Ennis/activity_tracker_back_end)
 
 
 # User Stories
@@ -25,7 +25,7 @@ Looking for the back-end repo? Try [here](https://github.com/Ian-Ennis/activity_
   npm start
   ```
   
-## To run the [rails backend](https://github.com/Ian-Ennis/activity_tracker_backend)
+## To run the [rails backend](https://github.com/Ian-Ennis/activity_tracker_back_end)
   ```sh
   bundle install
   rails server
