@@ -19,6 +19,7 @@ Looking for the back-end repo? Try [here](https://github.com/Ian-Ennis/activity_
 - View informational resources about each activitiy
 
 ## To run:
+* clone
 * npm
   ```sh
   npm install
