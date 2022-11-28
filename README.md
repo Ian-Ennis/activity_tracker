@@ -15,10 +15,21 @@ Looking for the back-end repo? Try [here](https://github.com/Ian-Ennis/activity_
 - I can log in/make an account
 - Select from a list of different types of activities
 - Enter activity information from completed sessions (date, distance, length of time, etc)
-- Update activity information
 - Delete activity
 - View informational resources about each activitiy
 
+## To run:
+* npm
+  ```sh
+  npm install
+  npm start
+  ```
+  
+## To run the [rails backend](https://github.com/Ian-Ennis/activity_tracker_backend)
+  ```sh
+  bundle install
+  rails server
+  ```
 
 ## Built With
 
