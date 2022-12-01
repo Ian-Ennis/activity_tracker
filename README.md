@@ -39,8 +39,10 @@ Looking for the back-end repo? Try [here](https://github.com/Ian-Ennis/activity_
 
 
 ## Screenshots
-![description_with_chart](https://github.com/Ian-Ennis/activity_tracker/blob/main/public/description_with_chartJS.png)
+![login](https://github.com/Ian-Ennis/activity_tracker/blob/main/public/readme_screenshots/login.png)
 
-![chart_with_table](https://github.com/Ian-Ennis/activity_tracker/blob/main/public/meditation_chart_with_table.png)
+![description_with_chart](https://github.com/Ian-Ennis/activity_tracker/blob/main/public/readme_screenshots/description_with_chartJS.png)
 
-![resouces](https://github.com/Ian-Ennis/activity_tracker/blob/main/public/resources.png)
+![chart_with_table](https://github.com/Ian-Ennis/activity_tracker/blob/main/public/readme_screenshots/meditation_chart_with_table.png)
+
+![resouces](https://github.com/Ian-Ennis/activity_tracker/blob/main/public/readme_screenshots/resources.png)
