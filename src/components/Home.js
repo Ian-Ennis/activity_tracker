@@ -10,8 +10,6 @@ function Home({ currentUser }) {
   const [activity, setActivity] = useState("");
   const [selected, setSelected] = useState(false);
 
-  console.log('current user:', currentUser)
-
   const activityOptions = [
     { value: "meditation", label: "🧘 Meditation" },
     { value: "yoga", label: "🤸‍♂️ Yoga" },
